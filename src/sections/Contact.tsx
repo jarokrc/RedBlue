@@ -37,7 +37,7 @@ const Contact = () => {
                 ? "Let's build together"
                 : locale === "de"
                 ? "Lassen Sie uns gemeinsam bauen"
-                : "Pojdme tvorit spolu"}
+                : "Poďme tvoriť spolu"}
             </h3>
             <p className="text-sm text-slate-700 md:text-base">{t.hero.subheading}</p>
           </div>
@@ -54,7 +54,7 @@ const Contact = () => {
               href={`mailto:${email}`}
               className="rounded-lg bg-red-600 px-6 py-3 text-base font-semibold text-white shadow hover:bg-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-700 focus-visible:ring-offset-2 md:px-7 md:text-lg"
             >
-              {locale === "en" ? "Email me" : locale === "de" ? "Schreiben Sie mir" : "Napiste mi"}
+              {locale === "en" ? "Email us" : locale === "de" ? "Schreiben Sie uns" : "Napíšte nám"}
             </a>
           </div>
         </div>

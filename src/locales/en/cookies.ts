@@ -2,18 +2,26 @@ export default {
   cookies: {
     title: "Cookie policy",
     intro:
-      "Last updated: 9 Dec 2025. This website www.redblue.sk uses only essential technical cookies needed for proper site operation. We do not use analytics, marketing, or personalization cookies and we do not store data for tracking visitor behavior.",
+      "Last updated: 9 Dec 2025. The website www.redblue.sk is operated by RedBlue Solutions s. r. o. The site uses only essential technical cookies needed for proper operation. We do not use analytics, marketing, or personalization cookies and we do not store data for tracking visitor behavior.",
     sections: [
+      {
+        heading: "Service operator",
+        paragraphs: [
+          "RedBlue Solutions s. r. o., Company ID: 55522467, Tax ID: 2122005897",
+          "Registered office: Sadová 2719/3A, 905 01 Senica, Slovakia",
+          "Email: info@redblueacademy.com",
+        ],
+      },
       {
         heading: "What are cookies",
         paragraphs: [
-          "Cookies are small text files stored on your device when you visit a website. They serve mainly for: proper display of content, secure technical functioning of the site, and maintaining basic browser functions. Cookies do not contain data that would legitimately identify you as a person.",
+          "Cookies are small text files stored on your device when you visit a website. They serve mainly for proper display of content, secure technical functioning of the site, and maintaining basic browser functions. Cookies do not contain data that would legitimately identify you as a person.",
         ],
       },
       {
         heading: "Types of cookies we use",
         paragraphs: [
-          "Technical or essential cookies are needed for: secure connection to the website, basic server operation, correct page loading. They are used automatically and cannot be disabled because the site would not load or function.",
+          "Technical or essential cookies are needed for secure connection to the website, basic server operation, and correct page loading. They are used automatically and cannot be disabled because the site would not load or function.",
         ],
       },
       {
@@ -45,7 +53,7 @@ export default {
     contact: {
       heading: "Contact for cookie questions",
       paragraphs: ["If you have any questions, contact us at:"],
-      email: "jkrc.job@gmail.com",
+      email: "info@redblueacademy.com",
     },
   },
 };

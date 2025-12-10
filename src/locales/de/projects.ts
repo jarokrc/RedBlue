@@ -2,7 +2,7 @@ export default {
   projects: {
     title: "Projekte",
     intro:
-      "Ich zeige nur, was ich darf: Open-Source und freigegebene Kundenprojekte. 100+ Umsetzungen – Web, Desktop-Tools, Marketing sowie Support für PC und Mobil. Cases und Ergebnisse gern auf Anfrage.",
+      "Wir zeigen nur, was wir dürfen: Open-Source und freigegebene Kundenprojekte. 100+ Umsetzungen – Web, Desktop-Tools, Marketing sowie Support für PC und Mobil. Cases und Ergebnisse gern auf Anfrage.",
     detailLabel: "Detail / kompletter Artikel",
     githubLabel: "GitHub",
     items: [
@@ -16,18 +16,18 @@ export default {
         title: "Ozone X - Ozonreinigung & Öko-Services",
         date: "2025-07-10",
         readTime: "1 Min. Lesezeit",
-        summary: "Website für Ozone X: Ozon- und Öko-Reinigung, plus meine Rolle für Site, Videowerbung und Facebook.",
+        summary: "Website für Ozone X: Ozon- und Öko-Reinigung, plus unsere Rolle für Site, Videowerbung und Facebook.",
         body: [
           "Die Seite zeigt chemiefreie Ozonreinigung und komplette Öko-Services (Fenster, Kalkentfernung, Textilien, Leder).",
           "Eingesetzte Öko-Tech: Ozon, Dampf, ökologische Mittel, UV-Desinfektion.",
           "Fokus auf Qualität, schnelle Umsetzung, transparente Services und Referenzen.",
-          "Meine Rolle: Site-Admin, Videowerbung, komplette Facebook-Betreuung.",
+          "Unsere Rolle: Site-Admin, Videowerbung, komplette Facebook-Betreuung.",
         ],
         content: [
           "Ozone X liefert Ozonreinigung und Öko-Services. Die Seite betont Sicherheit, ökologische Methoden und moderne Techniken (Ozon, Dampf, UV).",
           "Leistungen: Ozon-Desinfektion, streifenfreie Fenster, Tiefenreinigung von Geräten, Textilreinigung, Lederpflege für Privat und Business.",
           "Öko-Ansatz klar kommuniziert – gesundheitsfreundlich, umweltschonend, langlebige Ergebnisse.",
-          "Mein Beitrag: Haupt-Admin der Seite, Videowerbung und vollständiges Facebook-Management (Content + Kampagnen).",
+          "Unser Beitrag: Haupt-Admin der Seite, Videowerbung und vollständiges Facebook-Management (Content + Kampagnen).",
         ],
         tech: ["JavaScript", "HTML", "CSS"],
         link: "https://www.ozonex.sk/",
@@ -76,8 +76,8 @@ export default {
         ],
         tech: ["Java", "JavaFX", "MySQL", "JDBC"],
         link: "https://github.com/jarokrc/Bildungsinstitute",
-        image: "projects/Sprava_vzdelavac︷h_institucii/picture1.png",
-        gallery: ["projects/Sprava_vzdelavac︷h_institucii/picture1.png", "projects/Sprava_vzdelavac︷h_institucii/picture2.png"],
+        image: "projects/Sprava_vzdelavacích_institucii/picture1.png",
+        gallery: ["projects/Sprava_vzdelavacích_institucii/picture1.png", "projects/Sprava_vzdelavacích_institucii/picture2.png"],
       },
       {
         slug: "invoice-creator-app",

@@ -5,9 +5,9 @@
 Aktuálne sekcie:
 - `Hero.tsx` – hero banner na Home.
 - `Services.tsx` – prehľad služieb.
-- `SolutionsCTA.tsx` – CTA karty na web/marketing/kontakt/academy.
-- `ProjectsPreview.tsx`, `SolutionsCTA.tsx`, `Services.tsx`, `Contact.tsx`, `AboutPreview.tsx`, `Hero.tsx`, `Contact.tsx`, `Services.tsx`, `SolutionsCTA.tsx`, `AboutPreview.tsx` (podľa potreby na stránkach).
-- `Contact.tsx` – kontaktný formulár (zdieľaný na stránke Kontakt).
+- `SolutionsCTA.tsx` – CTA karty na web/marketing/podpora/academy.
+- `ProjectsPreview.tsx`, `Services.tsx`, `Contact.tsx`, `SolutionsCTA.tsx` (podľa potreby na stránkach).
+- `Contact.tsx` – kontaktný blok (zdieľaný na stránke Kontakt).
 
 Poznámky:
 - Sekcie sú UI bloky bez routovania; majú byť jednoduché kompozity, ktoré sa dajú použiť na viacerých stránkach.

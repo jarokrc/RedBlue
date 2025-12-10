@@ -2,17 +2,17 @@
   meta: {
     homeTitle: string;
     homeDescription: string;
-    aboutTitle: string;
     projectsTitle: string;
     webTitle: string;
     marketingTitle: string;
+    supportTitle: string;
+    educationTitle: string;
     privacyTitle: string;
     cookiesTitle: string;
   };
   nav: {
     home: string;
     services: string;
-    about: string;
     projects: string;
     contact: string;
     web: string;
@@ -116,26 +116,6 @@
     ctaText: string;
     ctaPrimary: string;
     ctaSecondary: string;
-  };
-  about: {
-    title: string;
-    intro: string;
-    bullets: string[];
-    pageExtra: string;
-  };
-  aboutSummaryTitle: string;
-  aboutSummary: string[];
-  aboutProfile: {
-    name: string;
-    role: string;
-    tagline: string;
-    location: string;
-    summary: string;
-    highlights: string[];
-  };
-  aboutTech: {
-    title: string;
-    rows: { label: string; items: string[] }[];
   };
   projects: {
     title: string;

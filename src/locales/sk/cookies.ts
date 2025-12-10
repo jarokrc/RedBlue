@@ -2,18 +2,26 @@ export default {
   cookies: {
     title: "Cookie politika",
     intro:
-      "Posledná aktualizácia: 9. 12. 2025. Táto webová stránka www.redblue.sk využíva iba nevyhnutné technické cookies potrebné pre správne fungovanie stránky. Náš web nevyužíva analytické, marketingové ani personalizačné cookies a neuchováva údaje pre účely sledovania správania návštevníkov.",
+      "Posledná aktualizácia: 9. 12. 2025. Web www.redblue.sk prevádzkuje spoločnosť RedBlue Solutions s. r. o. Stránka používa iba nevyhnutné technické cookies potrebné pre správne fungovanie webu. Nepoužívame analytické, marketingové ani personalizačné cookies a neuchovávame údaje na sledovanie správania návštevníkov.",
     sections: [
+      {
+        heading: "Prevádzkovateľ služby",
+        paragraphs: [
+          "RedBlue Solutions s. r. o., IČO: 55522467, DIČ: 2122005897",
+          "Sídlo: Sadová 2719/3A, 905 01 Senica",
+          "Email: info@redblueacademy.com",
+        ],
+      },
       {
         heading: "Čo sú cookies",
         paragraphs: [
-          "Cookies sú malé textové súbory, ktoré sa ukladajú do vášho zariadenia pri návšteve webovej stránky. Slúžia najmä na: správne zobrazovanie obsahu, bezpečné technické fungovanie stránky, udržanie základných funkcií prehliadača. Cookies neobsahujú žiadne údaje, ktoré by nás oprávnene umožňovali identifikovať vašu osobu.",
+          "Cookies sú malé textové súbory, ktoré sa ukladajú do vášho zariadenia pri návšteve webovej stránky. Slúžia najmä na správne zobrazovanie obsahu, bezpečné technické fungovanie stránky a udržanie základných funkcií prehliadača. Cookies neobsahujú údaje, ktoré by nás oprávnene umožňovali identifikovať vašu osobu.",
         ],
       },
       {
         heading: "Typy cookies, ktoré používame",
         paragraphs: [
-          "Technické alebo nevyhnutné cookies sú potrebné na: bezpečné pripojenie k webovej stránke, základnú prevádzku servera, správne načítanie stránok. Používajú sa automaticky a ich používanie nie je možné deaktivovať, pretože by nebolo možné stránku načítať alebo používať.",
+          "Technické alebo nevyhnutné cookies sú potrebné na bezpečné pripojenie k webu, základnú prevádzku servera a správne načítanie stránok. Používajú sa automaticky a ich používanie nie je možné deaktivovať, inak by stránka nefungovala.",
         ],
       },
       {
@@ -26,7 +34,7 @@ export default {
         heading: "Správa cookies",
         paragraphs: [
           "Keďže používame iba technické cookies, nie je potrebné žiadať súhlas používateľa prostredníctvom cookie banneru. Tieto cookies neobsahujú osobné údaje a nevyužívajú sa na marketing ani sledovanie návštevnosti.",
-          "Svoj prehliadač si však môžete nastaviť na odstránenie cookies po zatvorení, blokovanie všetkých cookies alebo povolenie iba určitých typov. Nastavenia nájdete v sekcii Súkromie (Privacy) alebo Bezpečnosť (Security) vo svojom prehliadači.",
+          "Svoj prehliadač si môžete nastaviť na odstránenie cookies po zatvorení, blokovanie všetkých cookies alebo povolenie iba určitých typov. Nastavenia nájdete v sekcii Súkromie (Privacy) alebo Bezpečnosť (Security) vo svojom prehliadači.",
         ],
       },
       {
@@ -45,7 +53,7 @@ export default {
     contact: {
       heading: "Kontakt pre dotazy o cookies",
       paragraphs: ["V prípade akýchkoľvek otázok nás môžete kontaktovať na:"],
-      email: "jkrc.job@gmail.com",
+      email: "info@redblueacademy.com",
     },
   },
 };

@@ -2,7 +2,7 @@
   projects: {
     title: "Projects",
     intro:
-      "Sharing only what I can: open-source and client work with permission. Over 100 projects delivered—web, desktop tools, marketing, and support for PCs and mobile. Full case studies and results on request.",
+      "Sharing only what we can: open-source and client work with permission. Over 100 deliveries—web, desktop tools, marketing, and support for PCs and mobile. Full case studies and results on request.",
     detailLabel: "Detail / full article",
     githubLabel: "GitHub",
     items: [
@@ -208,18 +208,18 @@
         title: "Ozone X – ozone cleaning & eco services",
         date: "2025-07-10",
         readTime: "1 min read",
-        summary: "Website for Ozone X: ozone + eco cleaning, plus my role managing the site, video ads, and Facebook.",
+        summary: "Website for Ozone X: ozone + eco cleaning, plus our role managing the site, video ads, and Facebook.",
         body: [
           "The site presents chemical-free ozone cleaning and full eco services (windows, limescale removal, textiles, leather).",
           "Eco tech used: ozone, steam, eco agents, UV disinfection.",
           "Focus on quality, quick turnaround, transparent services and references.",
-          "My role: site admin, video ad production, and full Facebook management.",
+          "Our role: site admin, video ad production, and full Facebook management.",
         ],
         content: [
           "Ozone X delivers ozone cleaning and eco services. The site highlights safety, eco methods, and modern techniques (ozone, steam, UV).",
           "Services: ozone disinfection, streak-free windows, deep cleaning of appliances, textile deep-clean, leather care for homes and businesses.",
-          "Eco approach is clearly communicated—safe for health, kind to the environment, long-lasting results.",
-          "My involvement: main site admin, video ad creation, and complete Facebook management (content + campaigns).",
+          "Eco approach is clearly communicated-safe for health, kind to the environment, long-lasting results.",
+          "Our involvement: main site admin, video ad creation, and complete Facebook management (content + campaigns).",
         ],
         tech: ["JavaScript", "HTML", "CSS"],
         link: "https://www.ozonex.sk/",

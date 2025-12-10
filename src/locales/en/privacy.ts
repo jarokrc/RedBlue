@@ -2,8 +2,17 @@ export default {
   privacy: {
     title: "Privacy policy",
     intro:
-      "Last updated: 9 Dec 2025. The website www.redblue.sk is operated by a private individual – Jaroslav Krč (the “controller”). We process personal data in line with Regulation (EU) 2016/679 (GDPR) and Slovak Act No. 18/2018 on personal data protection. This policy explains which personal data we process, why we process it, on what legal basis, and what rights you have.",
+      "Last updated: 9 Dec 2025. The website www.redblue.sk is operated by RedBlue Solutions s. r. o., Company ID: 55522467, Tax ID: 2122005897, registered office: Sadová 2719/3A, 905 01 Senica, Slovakia (the \"controller\"). We process personal data in line with Regulation (EU) 2016/679 (GDPR) and Slovak Act No. 18/2018 on personal data protection. This policy explains which personal data we process, why we process it, on what legal basis, and what rights you have.",
     sections: [
+      {
+        heading: "Service operator",
+        paragraphs: [
+          "RedBlue Solutions s. r. o., Company ID: 55522467, Tax ID: 2122005897",
+          "Registered office: Sadová 2719/3A, 905 01 Senica, Slovakia",
+          "Email: info@redblueacademy.com",
+          "The site www.redblue.sk is a marketing presentation of services and projects of RedBlue Solutions s. r. o.",
+        ],
+      },
       {
         heading: "Data we process (contact form)",
         paragraphs: [
@@ -51,7 +60,7 @@ export default {
       {
         heading: "Your rights",
         paragraphs: [
-          "You have the right to: ask for confirmation whether we process your data; access your data; request rectification; request erasure; restrict processing; object to processing based on legitimate interest; request data portability; withdraw consent if given. You can exercise your rights by contacting jkrc.job@gmail.com.",
+          "You have the right to: ask for confirmation whether we process your data; access your data; request rectification; request erasure; restrict processing; object to processing based on legitimate interest; request data portability; withdraw consent if given. You can exercise your rights by contacting info@redblueacademy.com.",
         ],
       },
       {
@@ -73,7 +82,7 @@ export default {
       paragraphs: [
         "If you want to reach us about this policy or to exercise your rights, email:",
       ],
-      email: "jkrc.job@gmail.com",
+      email: "info@redblueacademy.com",
     },
   },
 };

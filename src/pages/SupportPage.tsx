@@ -10,7 +10,7 @@ const SupportPage = () => {
   return (
     <div className="space-y-10">
       <Helmet>
-        <title>{t.meta.webTitle}</title>
+        <title>{t.meta.supportTitle}</title>
       </Helmet>
 
       <section className="grid gap-8 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-blue-900 px-8 py-12 text-white shadow-lg ring-1 ring-blue-900/30 md:grid-cols-[1.1fr,0.9fr] md:items-center md:px-12 md:py-14">

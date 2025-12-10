@@ -1,18 +1,42 @@
-﻿export default {
+export default {
   projects: {
-    title: "Moje projekty",
-    intro: "Zdieľam len to, čo môžem: open-source a firemné projekty s povolením. Za mnou je 100+ realizácií – weby, desktop nástroje, marketing aj support pre PC a mobily. Case studies a výsledky ukážem na požiadanie.",
+    title: "Naše projekty",
+    intro:
+      "Zdieľame len to, čo môžeme: open-source a klientské projekty s povolením. Za nami je 100+ realizácií – weby, desktop nástroje, marketing aj support pre PC a mobily. Case studies a výsledky ukážeme na požiadanie.",
     detailLabel: "Detail / celý článok",
     githubLabel: "GitHub",
     items: [
-      { name: "Konzultačný web pre lokálnu firmu", summary: "Jednoduchý landing s formulárom, SEO základy a napojenie na mailing." },
+      { name: "Konzultačný web pre lokálnu firmu", summary: "Jednoduchý landing s formulárom, SEO základmi a napojením na mailing." },
       { name: "Produktová mikrostránka", summary: "Rýchly rollout kampaňovej stránky s meraním konverzií a A/B CTA." },
-      { name: "Obsahový web", summary: "Blog + knižnica zdrojov s filtrami, príprava na headless CMS backend." },
+      { name: "Obsahový web", summary: "Blog + knižnica zdrojov s filtrami, pripravené na headless CMS backend." },
     ],
     blog: [
       {
+        slug: "ozonex",
+        title: "Ozone X - ozónové čistenie a eko služby",
+        date: "2025-07-10",
+        readTime: "1 min čítanie",
+        summary: "Web pre Ozone X: ozónové a eko čistenie + naša správa webu, videoreklám a Facebooku.",
+        body: [
+          "Web prezentuje ozónové čistenie bez chémie a kompletné eko služby (okná, vodný kameň, tepovanie, koža).",
+          "Použité eko technológie: ozón, para, ekologické prostriedky, UV dezinfekcia.",
+          "Zameranie na kvalitu a rýchlu realizáciu, transparentné služby a referencie.",
+          "Naša úloha: hlavná správa webu, tvorba videoreklám a kompletná správa Facebooku.",
+        ],
+        content: [
+          "Ozone X poskytuje ozónové čistenie bez chémie a eko čistiace služby na mieru. Web zdôrazňuje bezpečnosť, ekologický prístup a moderné metódy (ozón, para, UV).",
+          "Služby: dezinfekcia ozónom, umývanie okien, odstránenie vodného kameňa, tepovanie textílií, starostlivosť o kožu – pre domácnosti aj firmy.",
+          "Eko technológie sú komunikované jasne a prehľadne, s dôrazom na šetrnosť k prírode a zdraviu.",
+          "Naša úloha na projekte: hlavná správa webu, tvorba videoreklám a kompletná správa Facebooku vrátane obsahu a kampaní.",
+        ],
+        tech: ["JavaScript", "HTML", "CSS"],
+        link: "https://www.ozonex.sk/",
+        image: "projects/OzoneX/webka.png",
+        gallery: ["projects/OzoneX/webka.png", "projects/OzoneX/webka2.png", "projects/OzoneX/code1.png", "projects/OzoneX/code2.png"],
+      },
+      {
         slug: "redblue-academy",
-        title: "RedBlue Academy – správa lekcií a rezervácií",
+        title: "RedBlue Academy - správa lekcií a rezervácií",
         date: "2025-03-28",
         readTime: "2 min čítanie",
         summary: "Inovatívna webová aplikácia na správu lekcií a študijných hodín s bezpečnou autentifikáciou, interaktívnym kalendárom a admin dashboardom.",
@@ -22,11 +46,11 @@
           "Admin dashboard umožňuje kontrolu objednávok a rezervácií v reálnom čase. Backend beží na Django, frontend na Reacte, čo prináša výkon a plynulé UX pre študentov aj adminov.",
         ],
         content: [
-          "RedBlue Academy je inovatívna webová aplikácia, ktorá zjednodušuje spôsob, akým študenti a lektori spravujú rezervácie lekcií a študijné hodiny. Umožňuje rezervovať si lekcie prispôsobené rozvrhu a zároveň efektívne sledovať študijné hodiny.",
+          "RedBlue Academy je inovatívna webová aplikácia, ktorá zjednodušuje spôsob, akým študenti a lektori spravujú rezervácie lekcií a študijné hodiny. Umožňuje rezervovať si lekcie prispôsobené rozvrhu a zároveň efektívne sledovať študijný čas.",
           "Kľúčové vlastnosti: bezpečný autentifikačný systém chráni údaje používateľov; interaktívny kalendár uľahčuje plánovanie študijných stretnutí a rezervácií; jednoduché objednanie ďalších hodín zabezpečuje flexibilitu pre individuálne vedenie.",
           "Administrácia: admini sledujú všetky objednávky a rezervácie cez integrovaný dashboard s prehľadom o aktivitách a zapojení používateľov, čo umožňuje robiť rozhodnutia na základe dát.",
-          "Technológie: silný backend na Django a responzívny frontend na Reacte prinášajú vysoký výkon a plynulé používateľské prostredie pre študentov aj administrátorov.",
-          "Záver: RedBlue Academy je nástroj na správu rezervácií lekcií a študijných hodín so bezpečnou architektúrou, intuitívnym rozhraním a efektívnymi admin nástrojmi. Spojuje funkcie do jedného riešenia pre moderných študentov aj administrátorov.",
+          "Technológie: silný backend na Django a responzívny frontend na Reacte prinášajú vysoký výkon a plynulé prostredie pre študentov aj administrátorov.",
+          "Záver: RedBlue Academy je nástroj na správu rezervácií lekcií a študijných hodín s bezpečnou architektúrou, intuitívnym rozhraním a efektívnymi admin nástrojmi. Spája funkcie do jedného riešenia pre moderných študentov aj administrátorov.",
         ],
         tech: ["Django", "React", "REST API", "MySQL"],
         link: "https://github.com/SZF-KRC/RedBlue",
@@ -56,14 +80,11 @@
         tech: ["Java", "JavaFX", "MySQL", "JDBC"],
         link: "https://github.com/jarokrc/Bildungsinstitute",
         image: "projects/Sprava_vzdelavacích_institucii/picture1.png",
-        gallery: [
-          "projects/Sprava_vzdelavacích_institucii/picture1.png",
-          "projects/Sprava_vzdelavacích_institucii/picture2.png",
-        ],
+        gallery: ["projects/Sprava_vzdelavacích_institucii/picture1.png", "projects/Sprava_vzdelavacích_institucii/picture2.png"],
       },
       {
         slug: "invoice-creator-app",
-        title: "InvoiceCreatorApp – fakturácia na mieru",
+        title: "InvoiceCreatorApp - fakturácia na mieru",
         date: "2024-06-06",
         readTime: "2 min čítanie",
         summary: "WPF/MVVM aplikácia pre freelance a SMB: tvorba faktúr, správa zákazníkov a produktov, mesačné bilancie, zabezpečený prístup.",
@@ -104,7 +125,7 @@
         content: [
           "Program prináša inovatívne riešenia pre manažérov futbalových klubov a tímov: správa klubov, tímov, hráčov, trénerov a ich vzájomných vzťahov v jednej aplikácii.",
           "Hlavné výhody: jednoduchá správa klubov (pridanie, úprava, odstránenie), manažment tímov, bezpečné ukladanie údajov v databáze, transfery hráčov/trénerov a správa voľných hráčov/trénerov.",
-          "Užívateľská prívetivosť: jasné menu v CLI a detailný manuál (EN/DE) šetria čas a zjednodušujú prácu manažéra.",
+          "Používateľská prívetivosť: jasné menu v CLI a detailný manuál (EN/DE) šetria čas a zjednodušujú prácu manažéra.",
           "Prečo si vybrať: flexibilné riešenie pre malé aj veľké kluby, ktoré potrebujú rýchlo reagovať na personálne zmeny a mať dáta v poriadku.",
         ],
         tech: ["Java", "MySQL", "JDBC", "CLI"],
@@ -119,7 +140,7 @@
       },
       {
         slug: "data-vista",
-        title: "DataVista – spracovanie API a dát",
+        title: "DataVista - spracovanie API a dát",
         date: "2024-07-04",
         readTime: "1 min čítanie",
         summary: "WPF/MVVM aplikácia na získavanie a zobrazovanie dát z viacerých API (forex, ISS pozícia, Wall Street Journal, počasie) s JSON spracovaním.",
@@ -133,7 +154,7 @@
           "DataVista je nástroj na získavanie a zobrazovanie dát z rôznych API (forex kurzy, ISS pozícia, WSJ články, počasie). Odpovede v JSONe sa transformujú na C# objekty a zobrazia v prehľadnom GUI.",
           "Využitie: forex kurzy, sledovanie ISS v reálnom čase, články Wall Street Journal, počasie na základe kliknutia na mapu (zoom/pan).",
           "Silné stránky: asynchrónne spracovanie dát (UI sa neblokuje), jednoduchá serializácia/deserializácia s Newtonsoft.Json, modulárna architektúra (samostatné moduly pre kurzy, ISS, news, počasie), WPF UI pre interaktívne zobrazenie.",
-          "Prečo si vybrať: rýchla integrácia rôznych API, čistá MVVM architektúra, robustné error handling v HTTP kliente a prehľadné UI na Windows.",
+          "Prečo si vybrať: rýchla integrácia rôznych API, čistá MVVM architektúra, robustný error handling v HTTP kliente a prehľadné UI na Windows.",
         ],
         tech: ["C#", "WPF", "MVVM", "HTTP Client", "Newtonsoft.Json", "API integrácie"],
         link: "https://github.com/jarokrc/DataVista",
@@ -147,7 +168,7 @@
       },
       {
         slug: "simple-note",
-        title: "SimpleNote – inovatívny program na správu úloh",
+        title: "SimpleNote - inovatívny program na správu úloh",
         date: "2024-06-13",
         readTime: "2 min čítanie",
         summary: "WPF/MVVM aplikácia na prehľadnú správu úloh s prioritami, CSV export/import a prepínaním jazykov.",
@@ -202,35 +223,6 @@
           "projects/PersonenData/code2.png",
         ],
       },
-      {
-        slug: "ozonex",
-        title: "Ozone X – ozónové čistenie a eko služby",
-        date: "2025-07-10",
-        readTime: "1 min čítanie",
-        summary: "Web pre Ozone X: ozónové a eko čistenie + moja správa webu, videoreklám a Facebooku.",
-        body: [
-          "Web prezentuje ozónové čistenie bez chémie a kompletné eko služby (okná, vodný kameň, tepovanie, koža).",
-          "Použité eko technológie: ozón, para, ekologické prostriedky, UV dezinfekcia.",
-          "Zameranie na kvalitu a rýchlu realizáciu, transparentné služby a referencie.",
-          "Moja úloha: hlavný admin webu, tvorba videoreklám a kompletná správa Facebooku.",
-        ],
-        content: [
-          "Ozone X poskytuje ozónové čistenie bez chémie a eko čistiace služby na mieru. Web zdôrazňuje bezpečnosť, ekologický prístup a moderné metódy (ozón, para, UV).",
-          "Služby: dezinfekcia ozónom, umývanie okien, odstránenie vodného kameňa, tepovanie textílií, starostlivosť o kožu – pre domácnosti aj firmy.",
-          "Eko technológie sú komunikované jasne a prehľadne, s dôrazom na šetrnosť k prírode a zdravie.",
-          "Moja úloha na projekte: hlavný admin webu, tvorba videoreklám a kompletná správa Facebooku vrátane obsahu a kampaní.",
-        ],
-        tech: ["JavaScript", "HTML", "CSS"],
-        link: "https://www.ozonex.sk/",
-        image: "projects/OzoneX/webka.png",
-        gallery: [
-          "projects/OzoneX/webka.png",
-          "projects/OzoneX/webka2.png",
-          "projects/OzoneX/code1.png",
-          "projects/OzoneX/code2.png",
-        ],
-      },
     ],
   },
 };
-

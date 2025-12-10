@@ -2,8 +2,17 @@ export default {
   privacy: {
     title: "Zásady ochrany osobných údajov",
     intro:
-      "Posledná aktualizácia: 9. 12. 2025. Webová stránka www.redblue.sk je prevádzkovaná súkromnou osobou – Jaroslavom Krčom (ďalej len „prevádzkovateľ“). Pri spracúvaní osobných údajov postupujeme v súlade s Nariadením Európskeho parlamentu a Rady (EÚ) 2016/679 (GDPR) a so zákonom č. 18/2018 Z.z. o ochrane osobných údajov. Tieto zásady vysvetľujú, aké osobné údaje spracúvame, prečo ich spracúvame, na akom právnom základe a aké práva máte ako dotknutá osoba.",
+      "Posledná aktualizácia: 9. 12. 2025. Web www.redblue.sk prevádzkuje spoločnosť RedBlue Solutions s. r. o., IČO: 55522467, DIČ: 2122005897, so sídlom Sadová 2719/3A, 905 01 Senica (ďalej len \"prevádzkovateľ\"). Pri spracovaní osobných údajov postupujeme v súlade s Nariadením Európskeho parlamentu a Rady (EÚ) 2016/679 (GDPR) a so zákonom č. 18/2018 Z.z. o ochrane osobných údajov. Tieto zásady vysvetľujú, aké osobné údaje spracúvame, prečo ich spracúvame, na akom právnom základe a aké práva máte ako dotknutá osoba.",
     sections: [
+      {
+        heading: "Prevádzkovateľ služby",
+        paragraphs: [
+          "RedBlue Solutions s. r. o., IČO: 55522467, DIČ: 2122005897",
+          "Sídlo: Sadová 2719/3A, 905 01 Senica",
+          "Email: info@redblueacademy.com",
+          "Web www.redblue.sk je marketingovou prezentáciou služieb a projektov RedBlue Solutions s. r. o.",
+        ],
+      },
       {
         heading: "Aké údaje spracúvame (kontaktný formulár)",
         paragraphs: [
@@ -51,7 +60,7 @@ export default {
       {
         heading: "Vaše práva",
         paragraphs: [
-          "Máte právo: požiadať o potvrdenie, či spracúvame vaše údaje; získať prístup k svojim údajom; požiadať o opravu nepresných údajov; požiadať o výmaz; obmedziť spracovanie; namietať voči spracovaniu založenému na oprávnenom záujme; požiadať o prenositeľnosť údajov; odvolať súhlas, ak bol udelený. Svoje práva môžete uplatniť kontaktovaním jkrc.job@gmail.com.",
+          "Máte právo: požiadať o potvrdenie, či spracúvame vaše údaje; získať prístup k svojim údajom; požiadať o opravu nepresných údajov; požiadať o výmaz; obmedziť spracovanie; namietať voči spracovaniu založenému na oprávnenom záujme; požiadať o prenositeľnosť údajov; odvolať súhlas, ak bol udelený. Svoje práva môžete uplatniť kontaktovaním info@redblueacademy.com.",
         ],
       },
       {
@@ -73,7 +82,7 @@ export default {
       paragraphs: [
         "Ak nás chcete kontaktovať k týmto zásadám alebo k uplatneniu práv, napíšte na:",
       ],
-      email: "jkrc.job@gmail.com",
+      email: "info@redblueacademy.com",
     },
   },
 };

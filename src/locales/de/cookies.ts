@@ -2,18 +2,26 @@ export default {
   cookies: {
     title: "Cookie-Richtlinie",
     intro:
-      "Letzte Aktualisierung: 9. 12. 2025. Diese Website www.redblue.sk verwendet nur unbedingt erforderliche technische Cookies für den ordnungsgemäßen Betrieb der Seite. Wir nutzen keine Analyse-, Marketing- oder Personalisierungs-Cookies und speichern keine Daten zur Verfolgung des Besucherverhaltens.",
+      "Letzte Aktualisierung: 9. 12. 2025. Die Website www.redblue.sk wird von RedBlue Solutions s. r. o. betrieben und verwendet nur unbedingt erforderliche technische Cookies für den ordnungsgemäßen Betrieb der Seite. Wir nutzen keine Analyse-, Marketing- oder Personalisierungs-Cookies und speichern keine Daten zur Verfolgung des Besucherverhaltens.",
     sections: [
+      {
+        heading: "Diensteanbieter",
+        paragraphs: [
+          "RedBlue Solutions s. r. o., Firmen-ID: 55522467, Steuer-ID: 2122005897",
+          "Sitz: Sadová 2719/3A, 905 01 Senica, Slowakei",
+          "E-Mail: info@redblueacademy.com",
+        ],
+      },
       {
         heading: "Was sind Cookies",
         paragraphs: [
-          "Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden, wenn Sie eine Website besuchen. Sie dienen vor allem: der korrekten Darstellung von Inhalten, dem sicheren technischen Betrieb der Seite und dem Aufrechterhalten grundlegender Browserfunktionen. Cookies enthalten keine Daten, die uns berechtigt wären, Sie als Person zu identifizieren.",
+          "Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden, wenn Sie eine Website besuchen. Sie dienen vor allem der korrekten Darstellung von Inhalten, dem sicheren technischen Betrieb der Seite und dem Aufrechterhalten grundlegender Browserfunktionen. Cookies enthalten keine Daten, die uns berechtigt wären, Sie als Person zu identifizieren.",
         ],
       },
       {
         heading: "Arten von Cookies, die wir verwenden",
         paragraphs: [
-          "Technische bzw. notwendige Cookies sind erforderlich für: sichere Verbindung zur Website, grundlegenden Serverbetrieb, korrektes Laden der Seiten. Sie werden automatisch genutzt und können nicht deaktiviert werden, da die Seite sonst nicht geladen oder genutzt werden könnte.",
+          "Technische bzw. notwendige Cookies sind erforderlich für eine sichere Verbindung zur Website, grundlegenden Serverbetrieb und korrektes Laden der Seiten. Sie werden automatisch genutzt und können nicht deaktiviert werden, da die Seite sonst nicht geladen oder genutzt werden könnte.",
         ],
       },
       {
@@ -45,7 +53,7 @@ export default {
     contact: {
       heading: "Kontakt für Cookie-Anfragen",
       paragraphs: ["Bei Fragen können Sie uns kontaktieren unter:"],
-      email: "jkrc.job@gmail.com",
+      email: "info@redblueacademy.com",
     },
   },
 };

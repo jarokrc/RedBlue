@@ -1,7 +1,6 @@
 import { lazy, type ReactElement } from "react";
 
 const HomePage = lazy(() => import("@/pages/HomePage"));
-const AboutPage = lazy(() => import("@/pages/AboutPage"));
 const ProjectsPage = lazy(() => import("@/pages/ProjectsPage"));
 const ProjectDetailPage = lazy(() => import("@/pages/ProjectDetailPage"));
 const WebSolutionsPage = lazy(() => import("@/pages/WebSolutionsPage"));
@@ -20,7 +19,6 @@ export type AppRoute = {
 
 export const appRoutes: AppRoute[] = [
   { path: "/", element: <HomePage /> },
-  { path: "/o-mne", element: <AboutPage /> },
   { path: "/projekty", element: <ProjectsPage /> },
   { path: "/projekty/:slug", element: <ProjectDetailPage /> },
   { path: "/web-riesenia", element: <WebSolutionsPage /> },

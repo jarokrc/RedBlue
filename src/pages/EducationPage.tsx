@@ -1,17 +1,23 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useI18n } from "@/app/I18nProvider";
+import { detectCountryCode } from "@/lib/locale";
 import educationImg from "@/assets-webp/education/education.webp";
 
 const EducationPage = () => {
-  const { t } = useI18n();
-  const { hero, intro, offeringsTitle, offerings, marketingTitle, marketingText, commsTitle, comms, academyTitle, academyText, academyLink } =
-    t.educationPage;
+  const { t, locale } = useI18n();
+  const country = detectCountryCode().toUpperCase();
+  const academyHref =
+    locale === "sk" || country === "SK" || country === "CZ"
+      ? "https://redblueacademy.com/"
+      : "https://redblueacademy.com/en";
+
+  const { hero, intro, offeringsTitle, offerings, marketingTitle, marketingText, commsTitle, comms, academyTitle, academyText } = t.educationPage;
 
   return (
     <div className="space-y-10">
       <Helmet>
-        <title>{t.meta.aboutTitle}</title>
+        <title>{t.meta.educationTitle}</title>
       </Helmet>
 
       <section className="grid gap-8 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-blue-900 px-8 py-12 text-white shadow-lg ring-1 ring-blue-900/30 md:grid-cols-[1.1fr,0.9fr] md:items-center md:px-12 md:py-14">
@@ -93,7 +99,7 @@ const EducationPage = () => {
             <h3 className="text-2xl font-bold text-slate-900 md:text-3xl">{academyTitle}</h3>
           </div>
           <a
-            href={academyLink}
+            href={academyHref}
             className="inline-flex w-fit items-center gap-2 rounded-lg bg-blue-700 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
             target="_blank"
             rel="noreferrer"

@@ -8,8 +8,8 @@
   - `home.ts` – hero, services, solutions.
   - `web.ts` – web riešenia (stacks, process, legal, addons, audience).
   - `marketing.ts` – marketing bloky, intro, support.
-  - `about.ts` – obsah “O mne”.
   - `projects.ts` – obsah projektov (zoznam + detaily).
+  - `education.ts`, `support.ts` – obsah podstránok vzdelávanie / podpora.
   - `privacy.ts`, `cookies.ts` – plné texty zásad a cookie politiky.
 - `resources.ts` – spája všetky namespacy do jedného objektu podľa jazyka.
 - `types.ts` – typová definícia prekladového objektu `Translation`.

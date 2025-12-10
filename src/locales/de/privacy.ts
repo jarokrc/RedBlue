@@ -2,8 +2,17 @@ export default {
   privacy: {
     title: "Datenschutz",
     intro:
-      "Letzte Aktualisierung: 9. 12. 2025. Die Website www.redblue.sk wird von einer Privatperson betrieben – Jaroslav Krč („Verantwortlicher“). Wir verarbeiten personenbezogene Daten gemäß Verordnung (EU) 2016/679 (DSGVO) und dem slowakischen Gesetz Nr. 18/2018 über den Schutz personenbezogener Daten. Diese Richtlinie erläutert, welche personenbezogenen Daten wir verarbeiten, warum wir sie verarbeiten, auf welcher Rechtsgrundlage und welche Rechte Sie haben.",
+      "Letzte Aktualisierung: 9. 12. 2025. Die Website www.redblue.sk wird von RedBlue Solutions s. r. o., Firmen-ID: 55522467, Steuer-ID: 2122005897, mit Sitz Sadová 2719/3A, 905 01 Senica, Slowakei, betrieben (nachfolgend der \"Verantwortliche\"). Wir verarbeiten personenbezogene Daten gemäß Verordnung (EU) 2016/679 (DSGVO) und dem slowakischen Gesetz Nr. 18/2018 über den Schutz personenbezogener Daten. Diese Richtlinie erläutert, welche personenbezogenen Daten wir verarbeiten, warum wir sie verarbeiten, auf welcher Rechtsgrundlage und welche Rechte Sie haben.",
     sections: [
+      {
+        heading: "Diensteanbieter",
+        paragraphs: [
+          "RedBlue Solutions s. r. o., Firmen-ID: 55522467, Steuer-ID: 2122005897",
+          "Sitz: Sadová 2719/3A, 905 01 Senica, Slowakei",
+          "E-Mail: info@redblueacademy.com",
+          "Die Website www.redblue.sk ist eine Marketingpräsentation von Dienstleistungen und Projekten der RedBlue Solutions s. r. o.",
+        ],
+      },
       {
         heading: "Welche Daten wir verarbeiten (Kontaktformular)",
         paragraphs: [
@@ -51,7 +60,7 @@ export default {
       {
         heading: "Ihre Rechte",
         paragraphs: [
-          "Sie haben das Recht: eine Bestätigung zu verlangen, ob wir Ihre Daten verarbeiten; Zugang zu Ihren Daten zu erhalten; die Berichtigung unrichtiger Daten zu verlangen; die Löschung zu verlangen; die Verarbeitung einzuschränken; der Verarbeitung aus berechtigtem Interesse zu widersprechen; die Übertragbarkeit der Daten zu verlangen; eine Einwilligung zu widerrufen, falls erteilt. Sie können Ihre Rechte ausüben, indem Sie uns unter jkrc.job@gmail.com kontaktieren.",
+          "Sie haben das Recht: eine Bestätigung zu verlangen, ob wir Ihre Daten verarbeiten; Zugang zu Ihren Daten zu erhalten; die Berichtigung unrichtiger Daten zu verlangen; die Löschung zu verlangen; die Verarbeitung einzuschränken; der Verarbeitung aus berechtigtem Interesse zu widersprechen; die Übertragbarkeit der Daten zu verlangen; eine Einwilligung zu widerrufen, falls erteilt. Sie können Ihre Rechte ausüben, indem Sie uns unter info@redblueacademy.com kontaktieren.",
         ],
       },
       {
@@ -73,7 +82,7 @@ export default {
       paragraphs: [
         "Wenn Sie uns zu dieser Richtlinie oder zur Ausübung Ihrer Rechte kontaktieren möchten, schreiben Sie an:",
       ],
-      email: "jkrc.job@gmail.com",
+      email: "info@redblueacademy.com",
     },
   },
 };

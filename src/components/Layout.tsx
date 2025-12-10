@@ -32,7 +32,6 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
   const navItems = [
     { to: "/", label: t.nav.home },
-    { to: "/o-mne", label: t.nav.about },
     { to: "/projekty", label: t.nav.projects },
     { to: "/kontakt", label: t.nav.contact },
   ];

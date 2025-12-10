@@ -1,18 +1,18 @@
 export default {
   meta: {
     homeTitle: "RedBlue.sk | Web, Desktop, Marketing, Support und Schulung",
-    homeDescription: "Web, Desktop-Miniapps, Marketing und IT-Support aus einer Hand.",
-    aboutTitle: "Über mich | RedBlue.sk",
+    homeDescription: "Web, Desktop-Tools, Marketing und IT-Support aus einer Hand.",
     projectsTitle: "Projekte | RedBlue.sk",
     webTitle: "Web-Lösungen | RedBlue.sk",
     marketingTitle: "Marketing | RedBlue.sk",
+    supportTitle: "TechCare & IT Support | RedBlue.sk",
+    educationTitle: "Bildung | RedBlue.sk",
     privacyTitle: "Datenschutz | RedBlue.sk",
     cookiesTitle: "Cookie-Richtlinie | RedBlue.sk",
   },
   nav: {
     home: "Home",
     services: "Leistungen",
-    about: "Über mich",
     projects: "Projekte",
     contact: "Kontakt",
     web: "Web-Lösungen",
@@ -24,9 +24,9 @@ export default {
   },
   contact: {
     title: "Kontakt",
-    subtitle: "Schreib mir, ich melde mich und wir vereinbaren einen kurzen Call.",
+    subtitle: "Schreiben Sie uns, wir melden uns und planen einen kurzen Call.",
     phone: "+49 000 000 000",
-    email: "info@redblue.sk",
+    email: "info@redblueacademy.com",
     button: "Nachricht senden",
     success: "Nachricht gesendet (Mock)",
   },

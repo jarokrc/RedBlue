@@ -1,6 +1,6 @@
 # RedBlue Frontend
 
-Vite + React 18 + TypeScript + Tailwind static site with multiple pages and i18n (SK/EN/DE). Pages: Home, About, Projects (+detail), Web Solutions, Marketing, TechCare & IT Support, Education, Contact, Privacy, Cookies, 404.
+Vite + React 18 + TypeScript + Tailwind static site with multiple pages and i18n (SK/EN/DE). Pages: Home, Projects (+detail), Web Solutions, Marketing, TechCare & IT Support, Education, Contact, Privacy, Cookies, 404.
 
 ## Scripts
 - `npm install` (or `pnpm install`) to install deps
