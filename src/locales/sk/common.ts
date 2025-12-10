@@ -1,0 +1,38 @@
+export default {
+  meta: {
+    homeTitle: "RedBlue.sk | Web, desktop, marketing, podpora a vzdelávanie",
+    homeDescription: "Weby, desktopové nástroje, marketing a IT podpora na jednom mieste.",
+    aboutTitle: "O mne | RedBlue.sk",
+    projectsTitle: "Moje projekty | RedBlue.sk",
+    webTitle: "Web riešenia | RedBlue.sk",
+    marketingTitle: "Marketing | RedBlue.sk",
+    privacyTitle: "Zásady ochrany osobných údajov | RedBlue.sk",
+    cookiesTitle: "Cookie politika | RedBlue.sk",
+  },
+  nav: {
+    home: "Home",
+    services: "Služby",
+    about: "O mne",
+    projects: "Moje projekty",
+    contact: "Kontakt",
+    web: "Web riešenia",
+    marketing: "Marketing",
+    support: "TechCare & IT Support",
+    education: "Vzdelávanie",
+    privacy: "Ochrana osobných údajov (GDPR)",
+    cookies: "Cookie politika",
+  },
+  contact: {
+    title: "Kontakt",
+    subtitle: "Napíšte mi, ozvem sa späť a dohodneme si krátky call.",
+    phone: "+421 000 000 000",
+    email: "info@redblue.sk",
+    button: "Odoslať správu",
+    success: "Správa odoslaná (mock)",
+  },
+  notFound: {
+    title: "Stránka nenájdená",
+    description: "Hľadaná stránka neexistuje.",
+    back: "Späť na úvod",
+  },
+};

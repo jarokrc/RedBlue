@@ -1,0 +1,77 @@
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { useI18n } from "@/app/I18nProvider";
+
+const PrivacyPage = () => {
+  const { t } = useI18n();
+  return (
+    <div className="space-y-6">
+      <Helmet>
+        <title>{t.meta.privacyTitle}</title>
+      </Helmet>
+      <div className="space-y-3">
+        <h1 className="text-3xl font-bold text-slate-900 md:text-4xl">{t.privacy.title}</h1>
+        <p className="text-sm leading-relaxed text-slate-700 md:text-base">{t.privacy.intro}</p>
+      </div>
+
+      <div className="space-y-6">
+        {t.privacy.sections.map((section, sectionIndex) => (
+          <section
+            key={`${section.heading}-${sectionIndex}`}
+            className="space-y-3"
+          >
+            <h2 className="text-lg font-semibold text-slate-900 md:text-xl">
+              {section.heading}
+            </h2>
+            {section.paragraphs.map((paragraph, paragraphIndex) => (
+              <p
+                key={`${section.heading}-paragraph-${paragraphIndex}`}
+                className="text-sm leading-relaxed text-slate-700 md:text-base"
+              >
+                {paragraph}
+              </p>
+            ))}
+            {section.list && section.list.length > 0 && (
+              <ul className="list-disc space-y-1 pl-5 text-sm leading-relaxed text-slate-700 md:text-base">
+                {section.list.map((item, itemIndex) => (
+                  <li key={`${section.heading}-item-${itemIndex}`}>{item}</li>
+                ))}
+              </ul>
+            )}
+            {section.links && section.links.length > 0 && (
+              <div className="flex flex-wrap gap-3 text-sm font-medium text-sky-700 md:text-base">
+                {section.links.map((link) => (
+                  <Link key={link.href} to={link.href} className="hover:text-sky-800">
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </section>
+        ))}
+
+        <section className="space-y-2 border-t border-slate-200 pt-4">
+          <h2 className="text-lg font-semibold text-slate-900 md:text-xl">
+            {t.privacy.contact.heading}
+          </h2>
+          {t.privacy.contact.paragraphs.map((paragraph, paragraphIndex) => (
+            <p
+              key={`contact-paragraph-${paragraphIndex}`}
+              className="text-sm leading-relaxed text-slate-700 md:text-base"
+            >
+              {paragraph}
+            </p>
+          ))}
+          <a
+            className="text-sm font-medium text-sky-700 hover:text-sky-800 md:text-base"
+            href={`mailto:${t.privacy.contact.email}`}
+          >
+            {t.privacy.contact.email}
+          </a>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default PrivacyPage;

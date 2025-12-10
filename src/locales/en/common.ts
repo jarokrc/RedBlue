@@ -1,0 +1,38 @@
+export default {
+  meta: {
+    homeTitle: "RedBlue.sk | Web, desktop, marketing, support and training",
+    homeDescription: "Web, desktop mini-apps, marketing and IT support in one place.",
+    aboutTitle: "About me | RedBlue.sk",
+    projectsTitle: "Projects | RedBlue.sk",
+    webTitle: "Web solutions | RedBlue.sk",
+    marketingTitle: "Marketing | RedBlue.sk",
+    privacyTitle: "Privacy policy | RedBlue.sk",
+    cookiesTitle: "Cookie policy | RedBlue.sk",
+  },
+  nav: {
+    home: "Home",
+    services: "Services",
+    about: "About",
+    projects: "Projects",
+    contact: "Contact",
+    web: "Web solutions",
+    marketing: "Marketing",
+    support: "TechCare & IT Support",
+    education: "Education",
+    privacy: "Privacy policy (GDPR)",
+    cookies: "Cookies",
+  },
+  contact: {
+    title: "Contact",
+    subtitle: "Send a note, I will reply and schedule a quick call.",
+    phone: "+421 000 000 000",
+    email: "info@redblue.sk",
+    button: "Send message",
+    success: "Message sent (mock)",
+  },
+  notFound: {
+    title: "Page not found",
+    description: "The page you are looking for does not exist.",
+    back: "Back to home",
+  },
+};

@@ -1,0 +1,202 @@
+﻿export type Translation = {
+  meta: {
+    homeTitle: string;
+    homeDescription: string;
+    aboutTitle: string;
+    projectsTitle: string;
+    webTitle: string;
+    marketingTitle: string;
+    privacyTitle: string;
+    cookiesTitle: string;
+  };
+  nav: {
+    home: string;
+    services: string;
+    about: string;
+    projects: string;
+    contact: string;
+    web: string;
+    marketing: string;
+    support: string;
+    education: string;
+    privacy: string;
+    cookies: string;
+  };
+  hero: {
+    label: string;
+    heading: string;
+    subheading: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+  };
+  services: {
+    title: string;
+    subtitle: string;
+    items: { title: string; description: string }[];
+  };
+  solutions: {
+    web: { title: string; description: string; cta: string };
+    marketing: { title: string; description: string; cta: string };
+    support: { title: string; description: string; cta: string };
+    academy: { title: string; description: string; cta: string };
+  };
+  marketingPage: {
+    intro: string;
+    hero: {
+      badge: string;
+      title: string;
+      subtitle: string;
+      positioning: string[];
+      ctaPrimary: string;
+      ctaSecondary: string;
+    };
+    offeringsTitle: string;
+    offerings: string[];
+    marketingTitle: string;
+    marketingText: string;
+    packagesTitle: string;
+    packages: { icon: string; title: string; description: string }[];
+  };
+  educationPage: {
+    intro: string;
+    hero: {
+      badge: string;
+      title: string;
+      subtitle: string;
+      positioning: string[];
+      ctaPrimary: string;
+      ctaSecondary: string;
+      academyCta: string;
+    };
+    offeringsTitle: string;
+    offerings: string[];
+    marketingTitle: string;
+    marketingText: string;
+    commsTitle: string;
+    comms: string[];
+    academyTitle: string;
+    academyText: string;
+    academyLink: string;
+  };
+  supportPage: {
+    hero: {
+      badge: string;
+      title: string;
+      subtitle: string;
+      ctaPrimary: string;
+      ctaSecondary: string;
+    };
+    intro: string;
+    offeringsTitle: string;
+    offerings: string[];
+    packagesTitle: string;
+    packages: { icon: string; title: string; description: string }[];
+  };
+  webPage: {
+    intro: string;
+    hero: {
+      badge: string;
+      title: string;
+      subtitle: string;
+      positioning: string[];
+      ctaPrimary: string;
+      ctaSecondary: string;
+    };
+    offeringsTitle: string;
+    offerings: string[];
+    marketingTitle: string;
+    marketingText: string;
+    packagesTitle: string;
+    packages: { icon: string; title: string; description: string }[];
+    processTitle: string;
+    process: string[];
+    stackTitle: string;
+    stacks: { title: string; items: string[] }[];
+    ctaTitle: string;
+    ctaText: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+  };
+  about: {
+    title: string;
+    intro: string;
+    bullets: string[];
+    pageExtra: string;
+  };
+  aboutSummaryTitle: string;
+  aboutSummary: string[];
+  aboutProfile: {
+    name: string;
+    role: string;
+    tagline: string;
+    location: string;
+    summary: string;
+    highlights: string[];
+  };
+  aboutTech: {
+    title: string;
+    rows: { label: string; items: string[] }[];
+  };
+  projects: {
+    title: string;
+    intro: string;
+    items: { name: string; summary: string }[];
+    detailLabel?: string;
+    githubLabel?: string;
+    blog: {
+      slug: string;
+      title: string;
+      date: string;
+      readTime: string;
+      summary: string;
+      body: string[];
+      content: string[];
+      tech: string[];
+      link?: string;
+      image?: string;
+      gallery?: string[];
+    }[];
+  };
+  contact: {
+    title: string;
+    subtitle: string;
+    phone: string;
+    email: string;
+    button: string;
+    success: string;
+  };
+  notFound: {
+    title: string;
+    description: string;
+    back: string;
+  };
+  privacy: {
+    title: string;
+    intro: string;
+    sections: {
+      heading: string;
+      paragraphs: string[];
+      list?: string[];
+      links?: { label: string; href: string }[];
+    }[];
+    contact: {
+      heading: string;
+      paragraphs: string[];
+      email: string;
+    };
+  };
+  cookies: {
+    title: string;
+    intro: string;
+    sections: {
+      heading: string;
+      paragraphs: string[];
+      list?: string[];
+    }[];
+    contact: {
+      heading: string;
+      paragraphs: string[];
+      email: string;
+    };
+  };
+};
