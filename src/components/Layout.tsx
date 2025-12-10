@@ -3,6 +3,9 @@ import { useEffect, useState, type ReactNode } from "react";
 import { useI18n } from "@/app/I18nProvider";
 import { Locale, countryFlag, detectCountryCode } from "@/lib/locale";
 import logoImg from "@/assets-webp/logo/logo.webp";
+import skIcon from "@/assets-webp/icons/sk.webp?inline";
+import enIcon from "@/assets-webp/icons/en.webp?inline";
+import deIcon from "@/assets-webp/icons/de.webp?inline";
 
 const localeOptions: { value: Locale; label: string }[] = [
   { value: "sk", label: "SK" },
@@ -135,14 +138,31 @@ const Layout = ({ children }: { children: ReactNode }) => {
     </nav>
   );
 
+  const localeIcons: Record<Locale, string> = {
+    sk: skIcon,
+    en: enIcon,
+    de: deIcon,
+  };
+
   const LangSelect = () => (
-    <div className="flex items-center gap-2">
-      <span aria-hidden>{userFlag}</span>
+    <div className="relative inline-flex items-center gap-2">
+      <div className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white/80 px-3 py-2 text-sm font-medium leading-none text-slate-900 shadow-md">
+        <img
+          src={localeIcons[locale]}
+          alt={`${locale.toUpperCase()} icon`}
+          className="h-7 w-7 rounded-full border border-slate-200 bg-white object-cover shadow-sm"
+          loading="lazy"
+          decoding="async"
+        />
+        <span aria-hidden className="text-base">
+          {userFlag}
+        </span>
+      </div>
       <select
         aria-label="Select language"
         value={locale}
         onChange={(e) => setLocale(e.target.value as Locale)}
-        className="rounded border border-slate-300 bg-white px-2 py-1 text-sm focus:border-blue-700 focus:outline-none"
+        className="absolute inset-0 h-full w-full cursor-pointer opacity-0"
       >
         {localeOptions.map((opt) => (
           <option key={opt.value} value={opt.value}>
@@ -163,28 +183,26 @@ const Layout = ({ children }: { children: ReactNode }) => {
       </a>
       <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3 md:flex">
             <img src={logoImg} alt="RedBlue.sk logo" className="h-9 w-auto" />
-            <span className="text-lg font-semibold text-slate-900 tracking-tight md:text-xl md:font-bold">
-              From concept to future.
-            </span>
           </Link>
           <div className="hidden items-center gap-4 text-sm font-semibold text-slate-800 md:text-base md:flex">
             <NavLinks />
             <LangSelect />
           </div>
           <div className="flex items-center gap-3 md:hidden">
-            <LangSelect />
             <button
               type="button"
               aria-label="Toggle menu"
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
               onClick={() => setMenuOpen((prev) => !prev)}
-              className="rounded border border-slate-300 px-3.5 py-2.5 text-sm font-semibold text-slate-800 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white/80 px-4 py-2 text-sm font-semibold text-slate-900 shadow-md transition hover:border-blue-700 hover:text-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
             >
-              Menu
+              <span aria-hidden>☰</span>
+              <span>Menu</span>
             </button>
+            <LangSelect />
           </div>
         </div>
         {menuOpen && (
@@ -199,9 +217,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
       </main>
 
       <footer className="border-t border-slate-200 bg-white/80 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl justify-between px-6 py-6 text-sm text-slate-600">
-          <span>© {new Date().getFullYear()} RedBlue.sk</span>
-          <div className="flex items-center gap-4">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-6 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
+          <span className="text-center md:text-left">© {new Date().getFullYear()} RedBlue.sk</span>
+          <div className="flex flex-wrap items-center justify-center gap-4 md:justify-end">
             <Link to="/web-riesenia" className="hover:text-blue-700">
               {t.nav.web}
             </Link>
