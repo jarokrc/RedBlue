@@ -3,7 +3,8 @@ import mapImg from "@/assets-webp/contact/mapa.webp";
 
 const Contact = () => {
   const { t, locale } = useI18n();
-  const email = ["jkrc", "job"].join(".") + "@" + ["gmail", "com"].join(".");
+  const emailParts = ["info", "redblueacademy", "com"];
+  const email = `${emailParts[0]}@${emailParts[1]}.${emailParts[2]}`;
 
   const regionText =
     locale === "en"
