@@ -4,7 +4,7 @@ export default {
       badge: "TechCare & IT Support",
       title: "Keep things running, reliable and fast.",
       subtitle: "Operations without downtime. Reliable tech, data and access to information. Help when you need a rapid response.",
-      ctaPrimary: "Contact",
+      ctaPrimary: "Call IT Rescue",
       ctaSecondary: "Support packages",
     },
     intro: "Diagnostics and data recovery, component replacement, PC/laptop service, remote software support, help with cloud and Office, IT infra consulting.",

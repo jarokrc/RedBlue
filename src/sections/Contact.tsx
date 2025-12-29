@@ -1,24 +1,53 @@
-﻿import { useI18n } from "@/app/I18nProvider";
+import { useMemo, useState } from "react";
+import { useI18n } from "@/app/I18nProvider";
 import mapImg from "@/assets-webp/contact/mapa.webp";
 
 const Contact = () => {
-  const { t, locale } = useI18n();
-  const emailParts = ["info", "redblueacademy", "com"];
-  const email = `${emailParts[0]}@${emailParts[1]}.${emailParts[2]}`;
+  const { t } = useI18n();
+  const { contactSection } = t;
 
-  const regionText =
-    locale === "en"
-      ? "Clients in SK / CZ / AT"
-      : locale === "de"
-      ? "Kunden in SK / CZ / AT"
-      : "Klienti v SK / CZ / AT";
+  const [revealed, setRevealed] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const [captchaInput, setCaptchaInput] = useState("");
+  const [error, setError] = useState("");
+  const [honeypotFilled, setHoneypotFilled] = useState(false);
+  const [captcha] = useState(() => {
+    const a = Math.floor(Math.random() * 4) + 2; // 2-5
+    const b = Math.floor(Math.random() * 5) + 3; // 3-7
+    return { question: `${a} + ${b}`, answer: a + b };
+  });
 
-  const responseText =
-    locale === "en"
-      ? "Response within 1 business day"
-      : locale === "de"
-      ? "Antwort innerhalb eines Werktags"
-      : "Odpoved do 1 pracovneho dna";
+  const email = useMemo(
+    () =>
+      [105, 110, 102, 111, 64, 114, 101, 100, 98, 108, 117, 101, 46, 115, 107]
+        .map((c) => String.fromCharCode(c))
+        .join(""),
+    []
+  );
+
+  const isCaptchaValid = Number(captchaInput.trim()) === captcha.answer && !honeypotFilled;
+
+  const handleReveal = () => {
+    if (revealed || honeypotFilled) return;
+    if (!isCaptchaValid) {
+      setError(contactSection.captchaError);
+      return;
+    }
+    setError("");
+    setRevealed(true);
+    setCopied(false);
+    window.location.href = `mailto:${email}`;
+  };
+
+  const handleCopy = async () => {
+    if (!revealed) return;
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+    } catch {
+      setCopied(false);
+    }
+  };
 
   return (
     <section id="contact" className="space-y-4">
@@ -33,36 +62,73 @@ const Contact = () => {
             {t.hero.label}
           </div>
           <div className="space-y-2">
-            <h3 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              {locale === "en"
-                ? "Let's build together"
-                : locale === "de"
-                ? "Lassen Sie uns gemeinsam bauen"
-                : "Poďme tvoriť spolu"}
-            </h3>
-            <p className="text-sm text-slate-700 md:text-base">{t.hero.subheading}</p>
+            <h3 className="text-2xl font-bold text-slate-900 md:text-3xl">{contactSection.heading}</h3>
+            <p className="text-sm text-slate-700 md:text-base">{contactSection.description}</p>
           </div>
           <div className="flex flex-wrap gap-3 text-sm text-slate-700">
             <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 font-semibold text-slate-800">
-              {regionText}
+              {contactSection.regionTag}
             </span>
             <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 font-semibold text-slate-800">
-              {responseText}
+              {contactSection.responseTag}
             </span>
           </div>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href={`mailto:${email}`}
-              className="rounded-lg bg-red-600 px-6 py-3 text-base font-semibold text-white shadow hover:bg-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-700 focus-visible:ring-offset-2 md:px-7 md:text-lg"
-            >
-              {locale === "en" ? "Email us" : locale === "de" ? "Schreiben Sie uns" : "Napíšte nám"}
-            </a>
+          <div className="space-y-3">
+            <div className="underline-sweep-fast flex flex-wrap items-center gap-3">
+              <label className="text-sm font-semibold text-slate-800">
+                {contactSection.captchaPrompt} {captcha.question}?
+              </label>
+              <span className="rounded-md bg-slate-100 px-3 py-2 font-mono text-sm text-slate-900">{captcha.question}</span>
+              <input
+                type="number"
+                inputMode="numeric"
+                value={captchaInput}
+                onChange={(e) => setCaptchaInput(e.target.value)}
+                placeholder={contactSection.captchaPlaceholder}
+                className="w-36 rounded-md border border-slate-200 px-3 py-2 text-sm outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 md:w-44"
+              />
+              <input
+                type="text"
+                name="contact_hp"
+                tabIndex={-1}
+                autoComplete="off"
+                className="hidden"
+                onChange={(e) => setHoneypotFilled(Boolean(e.target.value))}
+                aria-hidden="true"
+              />
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3">
+              <button
+                type="button"
+                onClick={handleReveal}
+                disabled={!isCaptchaValid}
+                className="rounded-lg bg-red-600 px-6 py-3 text-base font-semibold text-white shadow hover:bg-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-700 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:bg-red-600 md:px-7 md:text-lg"
+              >
+                {revealed ? contactSection.openingCta : contactSection.revealCta}
+              </button>
+
+              {revealed && (
+                <div className="inline-flex items-center gap-2 rounded-lg bg-slate-100 px-3 py-2 text-sm text-slate-800">
+                  <span className="font-mono">{email}</span>
+                  <button
+                    type="button"
+                    onClick={handleCopy}
+                    className="rounded px-2 py-1 font-semibold text-blue-700 hover:text-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                  >
+                    {copied ? contactSection.copied : contactSection.copy}
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {error && <p className="text-sm text-red-600">{error}</p>}
           </div>
         </div>
         <div className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50/80 shadow-sm">
           <img
             src={mapImg}
-            alt="Map of clients in SK/CZ/AT region"
+            alt={contactSection.mapAlt}
             className="h-full w-full object-cover"
             loading="lazy"
             decoding="async"

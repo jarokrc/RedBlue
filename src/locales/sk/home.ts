@@ -4,8 +4,8 @@ export default {
     heading: "RedBlue",
     subheading: "Partner pre weby, desktopové nástroje, marketing a IT podporu na jednom mieste.",
     ctaPrimary: "Spojme sa",
-    ctaSecondary: "Prezrieť ponuku",
   },
+  offerHeading: "Naša ponuka na mieru",
   services: {
     title: "Čo viem doručiť",
     subtitle: "Weby, desktop mini-apky, marketing, podpora, vzdelávanie",

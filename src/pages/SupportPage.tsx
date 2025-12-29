@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useI18n } from "@/app/I18nProvider";
+import TypewriterText from "@/components/TypewriterText";
 import supportImg from "@/assets-webp/support/support.webp";
 
 const SupportPage = () => {
@@ -19,11 +20,11 @@ const SupportPage = () => {
             {hero.badge}
           </div>
           <h1 className="text-3xl font-bold leading-tight md:text-4xl">{hero.title}</h1>
-          <p className="max-w-2xl text-base text-blue-100 md:text-lg">{hero.subtitle}</p>
+          <TypewriterText text={hero.subtitle} className="max-w-2xl text-base text-blue-100 md:text-lg" />
           <div className="flex flex-wrap gap-3">
             <Link
               to="/kontakt"
-              className="rounded-lg bg-red-500 px-5 py-3 text-base font-semibold text-white shadow hover:bg-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 md:text-lg"
+              className="glow-cta rounded-lg bg-red-500 px-5 py-3 text-base font-semibold text-white shadow hover:bg-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 md:text-lg"
             >
               {hero.ctaPrimary}
             </Link>
@@ -39,7 +40,7 @@ const SupportPage = () => {
           <img
             src={supportImg}
             alt="TechCare & IT Support"
-            className="h-full w-full object-cover"
+            className="heartbeat h-full w-full object-cover"
             loading="lazy"
             decoding="async"
           />

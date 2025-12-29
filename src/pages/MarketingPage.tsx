@@ -1,7 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useI18n } from "@/app/I18nProvider";
+import TypewriterText from "@/components/TypewriterText";
 import marketingImg from "@/assets-webp/marketing/marketing.webp";
+import promoVideo from "@/assets-webp/marketing/promo.webm";
 
 const MarketingPage = () => {
   const { t } = useI18n();
@@ -18,8 +20,8 @@ const MarketingPage = () => {
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-blue-100">
             {hero.badge}
           </div>
-          <h1 className="text-3xl font-bold leading-tight md:text-4xl">{hero.title}</h1>
-          <p className="max-w-2xl text-base text-blue-100 md:text-lg">{hero.subtitle}</p>
+          <h1 className="shine-text text-3xl font-bold leading-tight md:text-4xl">{hero.title}</h1>
+          <TypewriterText text={hero.subtitle} className="max-w-2xl text-base text-blue-100 md:text-lg" />
           <div className="flex flex-wrap gap-2">
             {hero.positioning.map((item) => (
               <span key={item} className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-blue-100">
@@ -30,7 +32,7 @@ const MarketingPage = () => {
           <div className="flex flex-wrap gap-3">
             <Link
               to="/kontakt"
-              className="rounded-lg bg-red-500 px-5 py-3 text-base font-semibold text-white shadow hover:bg-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 md:text-lg"
+              className="wiggle-cta rounded-lg bg-red-500 px-5 py-3 text-base font-semibold text-white shadow hover:bg-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 md:text-lg"
             >
               {hero.ctaPrimary}
             </Link>
@@ -43,12 +45,15 @@ const MarketingPage = () => {
           </div>
         </div>
         <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-blue-500/20 shadow-2xl shadow-blue-900/30">
-          <img
-            src={marketingImg}
-            alt="Ukážka marketingového obsahu"
+          <video
+            src={promoVideo}
+            poster={marketingImg}
             className="h-full w-full object-cover"
-            loading="lazy"
-            decoding="async"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
           />
         </div>
       </section>
@@ -67,13 +72,13 @@ const MarketingPage = () => {
       </section>
 
       <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
-        <h3 className="text-xl font-semibold text-slate-900 md:text-2xl">{marketingTitle}</h3>
+        <h3 className="shine-text text-xl font-semibold text-slate-900 md:text-2xl">{marketingTitle}</h3>
         <p className="mt-3 text-sm leading-relaxed text-slate-700 md:text-base">{marketingText}</p>
       </section>
 
       <section id="packages" className="space-y-4">
         <div className="flex items-center justify-between">
-          <h3 className="text-2xl font-bold text-slate-900 md:text-3xl">{packagesTitle}</h3>
+          <h3 className="underline-sweep text-2xl font-bold text-slate-900 md:text-3xl">{packagesTitle}</h3>
           <span className="text-sm font-semibold text-blue-700">3 balíky +</span>
         </div>
         <div className="grid gap-4 md:grid-cols-3">

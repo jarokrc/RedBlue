@@ -4,7 +4,7 @@ export default {
       badge: "TechCare & IT Support",
       title: "Aby veci bežali, fungovali, nezdržovali.",
       subtitle: "Prevádzka bez zastavení. Spoľahlivá technika, dáta a prístup k informáciám. Pomoc, keď treba rýchlo reagovať.",
-      ctaPrimary: "Kontaktovať",
+      ctaPrimary: "Privolať IT záchranku",
       ctaSecondary: "Balíky podpory",
     },
     intro: "Diagnostika a obnova dát, výmeny komponentov, servis PC/notebookov, remote podpora softvéru, pomoc s cloudom a Office, konzultácie IT infra.",

@@ -9,3 +9,315 @@
 body {
   min-height: 100vh;
 }
+
+.wiggle-cta {
+  animation: wigglePulse 7s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.zoom-cta {
+  animation: zoomPulse 7s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.glow-cta {
+  animation: glowPulse 7s ease-in-out infinite;
+  box-shadow: 0 10px 35px rgba(59, 130, 246, 0.25);
+  transform-origin: center;
+  will-change: transform, box-shadow;
+}
+
+.heartbeat {
+  animation: heartbeat 1.8s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.shine-text {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  isolation: isolate;
+}
+
+.shine-text::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.65) 40%, transparent 70%);
+  mix-blend-mode: screen;
+  transform: translateX(-130%);
+  animation: shineText 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.underline-sweep {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-sweep::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 3px;
+  width: 30%;
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.65), rgba(236, 72, 153, 0.75), rgba(59, 130, 246, 0.65));
+  border-radius: 9999px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: underlineSweep 5.5s ease-in-out infinite;
+}
+
+.underline-sweep-fast {
+  position: relative;
+}
+
+.underline-sweep-fast::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.65), rgba(236, 72, 153, 0.75), rgba(59, 130, 246, 0.65));
+  border-radius: 9999px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: underlineSweep 3s ease-in-out infinite;
+}
+
+.pulse-border {
+  position: relative;
+  overflow: hidden;
+  animation: ctaPop 5s ease-in-out infinite;
+  box-shadow: 0 12px 35px rgba(239, 68, 68, 0.25);
+  transform-origin: center;
+  will-change: transform, box-shadow;
+}
+
+.pulse-border::after {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.35), transparent 60%);
+  opacity: 0;
+  transform: scale(0.6);
+  animation: pulseBorder 5s ease-out infinite;
+  pointer-events: none;
+}
+
+.orbit-glow {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transform-origin: center;
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.25);
+}
+
+.orbit-glow::before {
+  content: "";
+  position: absolute;
+  inset: -45%;
+  border-radius: 9999px;
+  background: conic-gradient(from 0deg, rgba(59, 130, 246, 0.65), rgba(59, 130, 246, 0.08), rgba(239, 68, 68, 0.4), rgba(59, 130, 246, 0.65));
+  animation: orbitGlow 5s linear infinite;
+  filter: blur(10px);
+  opacity: 0.9;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.orbit-glow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0));
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes wigglePulse {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  64% {
+    transform: translateY(-2px) rotate(-1.5deg) scale(1.02);
+  }
+  68% {
+    transform: translateY(1px) rotate(1.5deg) scale(1.02);
+  }
+  72% {
+    transform: translateY(-1px) rotate(-0.5deg) scale(1.01);
+  }
+  76% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes zoomPulse {
+  0%,
+  22%,
+  100% {
+    transform: scale(1);
+  }
+  4% {
+    transform: scale(1.05);
+  }
+  8% {
+    transform: scale(1.09);
+  }
+  12% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.05);
+  }
+  18% {
+    transform: scale(1.1);
+  }
+  20% {
+    transform: scale(1);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 10px 35px rgba(59, 130, 246, 0.25);
+  }
+  64% {
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 14px 45px rgba(59, 130, 246, 0.4);
+  }
+  68% {
+    transform: translateY(1px) scale(1.06);
+    box-shadow: 0 16px 55px rgba(59, 130, 246, 0.45);
+  }
+  72% {
+    transform: translateY(0) scale(1.04);
+    box-shadow: 0 12px 40px rgba(59, 130, 246, 0.35);
+  }
+  76% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 10px 35px rgba(59, 130, 246, 0.25);
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  40%,
+  100% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.06);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  30% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shineText {
+  0%,
+  50% {
+    transform: translateX(-130%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(130%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(130%);
+    opacity: 0;
+  }
+}
+
+@keyframes ctaPop {
+  0%,
+  20%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 12px 35px rgba(239, 68, 68, 0.25);
+  }
+  6% {
+    transform: scale(1.08);
+    box-shadow: 0 16px 45px rgba(239, 68, 68, 0.35);
+  }
+  12% {
+    transform: scale(1.16);
+    box-shadow: 0 20px 55px rgba(239, 68, 68, 0.4);
+  }
+  16% {
+    transform: scale(1.08);
+    box-shadow: 0 16px 45px rgba(239, 68, 68, 0.35);
+  }
+}
+
+@keyframes orbitGlow {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.08);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes underlineSweep {
+  0%,
+  55% {
+    transform: scaleX(0);
+  }
+  65% {
+    transform: scaleX(1.05);
+  }
+  75% {
+    transform: scaleX(0.25);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes pulseBorder {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  6% {
+    opacity: 0.9;
+    transform: scale(1.2);
+  }
+  12% {
+    opacity: 0.6;
+    transform: scale(1.6);
+  }
+  18% {
+    opacity: 0;
+    transform: scale(2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}

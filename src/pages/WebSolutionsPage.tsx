@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useI18n } from "@/app/I18nProvider";
+import TypewriterText from "@/components/TypewriterText";
 import websolutionsImg from "@/assets-webp/websolutions/websolutions.webp";
 
 const WebSolutionsPage = () => {
@@ -19,7 +20,7 @@ const WebSolutionsPage = () => {
             {hero.badge}
           </div>
           <h1 className="text-3xl font-bold leading-tight md:text-4xl">{hero.title}</h1>
-          <p className="max-w-2xl text-base text-blue-100 md:text-lg">{hero.subtitle}</p>
+          <TypewriterText text={hero.subtitle} className="max-w-2xl text-base text-blue-100 md:text-lg" />
           <div className="flex flex-wrap gap-2">
             {hero.positioning.map((item) => (
               <span key={item} className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-blue-100">
@@ -30,7 +31,7 @@ const WebSolutionsPage = () => {
           <div className="flex flex-wrap gap-3">
             <Link
               to="/kontakt"
-              className="rounded-lg bg-red-500 px-5 py-3 text-base font-semibold text-white shadow hover:bg-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 md:text-lg"
+              className="zoom-cta rounded-lg bg-red-500 px-5 py-3 text-base font-semibold text-white shadow hover:bg-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 md:text-lg"
             >
               {hero.ctaPrimary}
             </Link>

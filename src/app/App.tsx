@@ -1,11 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Suspense } from "react";
 import Layout from "@/components/Layout";
+import ScrollToTop from "@/components/ScrollToTop";
 import { appRoutes } from "@/routes";
 
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Layout>
         <Suspense fallback={<div className="py-10 text-center text-slate-600">Loading...</div>}>
           <Routes>

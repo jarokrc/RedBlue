@@ -4,7 +4,7 @@ export default {
       badge: "TechCare & IT Support",
       title: "Damit alles läuft, funktioniert und nicht bremst.",
       subtitle: "Betrieb ohne Stopps. Zuverlässige Technik, Daten und Informationszugang. Hilfe, wenn schnelle Reaktion zählt.",
-      ctaPrimary: "Kontakt",
+      ctaPrimary: "IT-Rettung rufen",
       ctaSecondary: "Support-Pakete",
     },
     intro: "Diagnose und Datenrettung, Komponentenwechsel, Service für PC/Laptop, Remote-Support für Software, Hilfe bei Cloud und Office, IT-Infra-Beratung.",

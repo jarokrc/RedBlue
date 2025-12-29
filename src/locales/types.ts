@@ -27,8 +27,8 @@
     heading: string;
     subheading: string;
     ctaPrimary: string;
-    ctaSecondary: string;
   };
+  offerHeading: string;
   services: {
     title: string;
     subtitle: string;
@@ -136,6 +136,20 @@
       image?: string;
       gallery?: string[];
     }[];
+  };
+  contactSection: {
+    heading: string;
+    description: string;
+    regionTag: string;
+    responseTag: string;
+    captchaPrompt: string;
+    captchaPlaceholder: string;
+    captchaError: string;
+    revealCta: string;
+    openingCta: string;
+    copy: string;
+    copied: string;
+    mapAlt: string;
   };
   contact: {
     title: string;

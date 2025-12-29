@@ -6,7 +6,7 @@ export default {
       title: "Viditeľnosť, dôvera, jasné posolstvo",
       subtitle: "Krátke médiá, storytelling a konzistentná komunikácia pre rast značky.",
       positioning: ["Obsah + video", "Plán + reporting", "Jasný messaging"],
-      ctaPrimary: "Poďme na obsah",
+      ctaPrimary: "Poďme spolu tvoriť",
       ctaSecondary: "Pozrieť balíčky",
     },
     offeringsTitle: "Čo sem patrí",

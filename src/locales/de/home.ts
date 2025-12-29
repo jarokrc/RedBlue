@@ -1,11 +1,11 @@
-﻿export default {
+export default {
   hero: {
     label: "Web, Desktop, Marketing, Support & Schulung",
     heading: "RedBlue",
     subheading: "Partner für Websites, Desktop-Tools, Marketing und IT-Support an einem Ort.",
     ctaPrimary: "Kontakt",
-    ctaSecondary: "Angebot ansehen",
   },
+  offerHeading: "Unser maßgeschneidertes Angebot",
   services: {
     title: "Was ich liefere",
     subtitle: "Web, Desktop-Miniapps, Marketing, Support, Schulung",

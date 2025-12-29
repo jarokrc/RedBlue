@@ -3,9 +3,9 @@ export default {
     label: "Web, desktop, marketing, support & training",
     heading: "RedBlue",
     subheading: "Partner for websites, desktop tools, marketing and IT support in one place.",
-    ctaPrimary: "Contact me",
-    ctaSecondary: "See the offer",
+    ctaPrimary: "Contact us",
   },
+  offerHeading: "Our tailored offer",
   services: {
     title: "What I deliver",
     subtitle: "Web, desktop mini-apps, marketing, support, training",

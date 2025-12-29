@@ -22,12 +22,6 @@ const Hero = () => {
           >
             {t.hero.ctaPrimary}
           </Link>
-          <Link
-            to="/web-riesenia"
-            className="rounded-lg border border-blue-200/70 bg-white/5 px-5 py-3 text-base font-semibold text-blue-50 hover:bg-white/10 md:text-lg"
-          >
-            {t.hero.ctaSecondary}
-          </Link>
         </div>
       </div>
     </section>
