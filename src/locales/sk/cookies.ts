@@ -9,19 +9,19 @@ export default {
         paragraphs: [
           "RedBlue Solutions s. r. o., IČO: 55522467, DIČ: 2122005897",
           "Sídlo: Sadová 2719/3A, 905 01 Senica",
-          "Email: info@redblueacademy.com",
+          "Kontakt: pozrite si chránený e-mail nižšie.",
         ],
       },
       {
         heading: "Čo sú cookies",
         paragraphs: [
-          "Cookies sú malé textové súbory, ktoré sa ukladajú do vášho zariadenia pri návšteve webovej stránky. Slúžia najmä na správne zobrazovanie obsahu, bezpečné technické fungovanie stránky a udržanie základných funkcií prehliadača. Cookies neobsahujú údaje, ktoré by nás oprávnene umožňovali identifikovať vašu osobu.",
+          "Cookies sú malé textové súbory, ktoré sa ukladajú do vášho zariadenia pri návšteve webovej stránky. Slúžia najmä na správne zobrazovanie obsahu, bezpečné technické fungovanie stránky a udržiavanie základných funkcií prehliadača. Cookies neobsahujú údaje, ktoré by nás oprávnene umožňovali identifikovať vašu osobu.",
         ],
       },
       {
         heading: "Typy cookies, ktoré používame",
         paragraphs: [
-          "Technické alebo nevyhnutné cookies sú potrebné na bezpečné pripojenie k webu, základnú prevádzku servera a správne načítanie stránok. Používajú sa automaticky a ich používanie nie je možné deaktivovať, inak by stránka nefungovala.",
+          "Technické alebo nevyhnutné cookies sú potrebné na bezpečné pripojenie k webu, základnú prevádzku servera a správne načítanie stránok. Používajú sa automaticky a nie je možné ich deaktivovať, inak by stránka nefungovala.",
         ],
       },
       {
@@ -52,8 +52,8 @@ export default {
     ],
     contact: {
       heading: "Kontakt pre dotazy o cookies",
-      paragraphs: ["V prípade akýchkoľvek otázok nás môžete kontaktovať na:"],
-      email: "info@redblueacademy.com",
+      paragraphs: ["V prípade akýchkoľvek otázok nás môžete kontaktovať na chránený e-mail nižšie:"],
+      email: "info@redblue.sk",
     },
   },
 };

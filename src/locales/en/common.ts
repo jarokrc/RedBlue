@@ -24,9 +24,9 @@ export default {
   },
   contact: {
     title: "Contact",
-    subtitle: "Send us a note; we’ll reply and schedule a quick call.",
+    subtitle: "Send us a note; we'll reply and schedule a quick call.",
     phone: "+421 000 000 000",
-    email: "info@redblueacademy.com",
+    email: "info@redblue.sk",
     button: "Send message",
     success: "Message sent (mock)",
   },

@@ -26,7 +26,7 @@ export default {
     title: "Kontakt",
     subtitle: "Schreiben Sie uns, wir melden uns und planen einen kurzen Call.",
     phone: "+49 000 000 000",
-    email: "info@redblueacademy.com",
+    email: "info@redblue.sk",
     button: "Nachricht senden",
     success: "Nachricht gesendet (Mock)",
   },

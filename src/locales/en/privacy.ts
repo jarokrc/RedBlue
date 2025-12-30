@@ -9,7 +9,7 @@ export default {
         paragraphs: [
           "RedBlue Solutions s. r. o., Company ID: 55522467, Tax ID: 2122005897",
           "Registered office: Sadová 2719/3A, 905 01 Senica, Slovakia",
-          "Email: info@redblueacademy.com",
+          "Contact: see the protected email below.",
           "The site www.redblue.sk is a marketing presentation of services and projects of RedBlue Solutions s. r. o.",
         ],
       },
@@ -60,7 +60,7 @@ export default {
       {
         heading: "Your rights",
         paragraphs: [
-          "You have the right to: ask for confirmation whether we process your data; access your data; request rectification; request erasure; restrict processing; object to processing based on legitimate interest; request data portability; withdraw consent if given. You can exercise your rights by contacting info@redblueacademy.com.",
+          "You have the right to: ask for confirmation whether we process your data; access your data; request rectification; request erasure; restrict processing; object to processing based on legitimate interest; request data portability; withdraw consent if given. You can exercise your rights by contacting us via the protected email below.",
         ],
       },
       {
@@ -82,7 +82,7 @@ export default {
       paragraphs: [
         "If you want to reach us about this policy or to exercise your rights, email:",
       ],
-      email: "info@redblueacademy.com",
+      email: "info@redblue.sk",
     },
   },
 };

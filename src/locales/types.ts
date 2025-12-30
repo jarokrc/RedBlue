@@ -55,7 +55,12 @@
     marketingTitle: string;
     marketingText: string;
     packagesTitle: string;
-    packages: { icon: string; title: string; description: string }[];
+    packagesIntro: string;
+    packages: { icon: string; title: string; subtitle: string; description: string; bullets: string[]; note?: string }[];
+    packagesCtaTitle: string;
+    packagesCtaText: string;
+    packagesCtaPrimary: string;
+    packagesCtaDownload: string;
   };
   educationPage: {
     intro: string;
@@ -107,9 +112,14 @@
     marketingTitle: string;
     marketingText: string;
     packagesTitle: string;
-    packages: { icon: string; title: string; description: string }[];
+    packagesIntro: string;
+    packages: { icon: string; title: string; subtitle: string; description: string; bullets: string[]; note?: string }[];
+    packagesCtaTitle: string;
+    packagesCtaText: string;
+    packagesCtaPrimary: string;
+    packagesCtaDownload: string;
     processTitle: string;
-    process: string[];
+    process: { title: string; description: string; note?: string }[];
     stackTitle: string;
     stacks: { title: string; items: string[] }[];
     ctaTitle: string;

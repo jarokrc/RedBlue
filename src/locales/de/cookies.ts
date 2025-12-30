@@ -2,14 +2,14 @@ export default {
   cookies: {
     title: "Cookie-Richtlinie",
     intro:
-      "Letzte Aktualisierung: 9. 12. 2025. Die Website www.redblue.sk wird von RedBlue Solutions s. r. o. betrieben und verwendet nur unbedingt erforderliche technische Cookies für den ordnungsgemäßen Betrieb der Seite. Wir nutzen keine Analyse-, Marketing- oder Personalisierungs-Cookies und speichern keine Daten zur Verfolgung des Besucherverhaltens.",
+      "Letzte Aktualisierung: 9. 12. 2025. Die Website www.redblue.sk wird von RedBlue Solutions s. r. o. betrieben und verwendet nur unbedingt erforderliche technische Cookies für den ordnungsgemäßen Betrieb. Wir nutzen keine Analyse-, Marketing- oder Personalisierungs-Cookies und speichern keine Daten zur Verfolgung des Besucherverhaltens.",
     sections: [
       {
         heading: "Diensteanbieter",
         paragraphs: [
           "RedBlue Solutions s. r. o., Firmen-ID: 55522467, Steuer-ID: 2122005897",
           "Sitz: Sadová 2719/3A, 905 01 Senica, Slowakei",
-          "E-Mail: info@redblueacademy.com",
+          "Kontakt: geschützte E-Mail siehe unten.",
         ],
       },
       {
@@ -52,8 +52,8 @@ export default {
     ],
     contact: {
       heading: "Kontakt für Cookie-Anfragen",
-      paragraphs: ["Bei Fragen können Sie uns kontaktieren unter:"],
-      email: "info@redblueacademy.com",
+      paragraphs: ["Bei Fragen kontaktieren Sie uns über die geschützte E-Mail unten:"],
+      email: "info@redblue.sk",
     },
   },
 };

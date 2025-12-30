@@ -26,7 +26,7 @@ export default {
     title: "Kontakt",
     subtitle: "Napíšte nám, ozveme sa späť a dohodneme si krátky call.",
     phone: "+421 000 000 000",
-    email: "info@redblueacademy.com",
+    email: "info@redblue.sk",
     button: "Odoslať správu",
     success: "Správa odoslaná (mock)",
   },

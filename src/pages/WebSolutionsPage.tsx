@@ -3,10 +3,32 @@ import { Link } from "react-router-dom";
 import { useI18n } from "@/app/I18nProvider";
 import TypewriterText from "@/components/TypewriterText";
 import websolutionsImg from "@/assets-webp/websolutions/websolutions.webp";
+// import pricingPdf from "@/data/cenník_v_skratke.pdf";
 
 const WebSolutionsPage = () => {
   const { t } = useI18n();
-  const { hero, offerings, offeringsTitle, marketingTitle, marketingText, packages, packagesTitle, process, processTitle, stackTitle, stacks, ctaTitle, ctaText, ctaPrimary, ctaSecondary } = t.webPage;
+  const {
+    hero,
+    offerings,
+    offeringsTitle,
+    marketingTitle,
+    marketingText,
+    packages,
+    packagesTitle,
+    packagesIntro,
+    packagesCtaTitle,
+    packagesCtaText,
+    packagesCtaPrimary,
+    packagesCtaDownload,
+    process,
+    processTitle,
+    stackTitle,
+    stacks,
+    ctaTitle,
+    ctaText,
+    ctaPrimary,
+    ctaSecondary,
+  } = t.webPage;
 
   return (
     <div className="space-y-10">
@@ -72,41 +94,68 @@ const WebSolutionsPage = () => {
         <p className="mt-3 text-sm leading-relaxed text-slate-700 md:text-base">{marketingText}</p>
       </section>
 
-      <section id="packages" className="space-y-4">
-        <div className="flex items-center justify-between">
+      <section id="packages" className="space-y-6">
+        <div className="space-y-2">
           <h3 className="text-2xl font-bold text-slate-900 md:text-3xl">{packagesTitle}</h3>
-          <span className="text-sm font-semibold text-blue-700">4 balíčky</span>
+          <p className="text-sm text-slate-700 md:text-base">{packagesIntro}</p>
         </div>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {packages.map((pack) => (
             <article key={pack.title} className="flex h-full flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
               <div className="inline-flex w-fit items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-sm font-semibold text-blue-800">
                 <span aria-hidden>{pack.icon}</span>
-                {pack.title}
+                <span>{pack.title}</span>
               </div>
+              <p className="text-sm font-semibold text-slate-900 md:text-base">{pack.subtitle}</p>
               <p className="text-sm text-slate-700 md:text-base">{pack.description}</p>
-              <div className="flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
-                {hero.positioning.map((tag) => (
-                  <span key={`${pack.title}-${tag}`} className="rounded-full bg-slate-100 px-2 py-1 text-[11px] text-slate-700">
-                    {tag}
-                  </span>
+              <ul className="space-y-2 text-sm text-slate-700 md:text-base">
+                {pack.bullets.map((bullet) => (
+                  <li key={bullet} className="flex items-start gap-2">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-blue-700" aria-hidden />
+                    <span>{bullet}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
+              {pack.note ? <p className="text-sm font-semibold text-blue-800 md:text-base">{pack.note}</p> : null}
             </article>
           ))}
+        </div>
+        <div className="flex flex-col gap-3 rounded-2xl border border-blue-100 bg-blue-50 p-5 shadow-sm md:flex-row md:items-center md:justify-between md:p-6">
+          <div className="space-y-1">
+            <p className="text-base font-semibold text-slate-900 md:text-lg">{packagesCtaTitle}</p>
+            <p className="text-sm text-slate-700 md:text-base">{packagesCtaText}</p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              to="/kontakt"
+              className="rounded-lg bg-blue-700 px-5 py-3 text-base font-semibold text-white shadow hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-50"
+            >
+              {packagesCtaPrimary}
+            </Link>
+            {/* <a
+              href={pricingPdf}
+              download
+              className="rounded-lg border border-blue-200 bg-white px-5 py-3 text-base font-semibold text-blue-800 shadow hover:bg-white/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-50"
+            >
+              {packagesCtaDownload}
+            </a> */}
+          </div>
         </div>
       </section>
 
       <section className="space-y-4">
         <h3 className="text-2xl font-bold text-slate-900 md:text-3xl">{processTitle}</h3>
-        <div className="grid gap-3 md:grid-cols-5 sm:grid-cols-2">
+        <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3">
           {process.map((step, index) => (
-            <article key={step} className="h-full rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <div className="flex items-center gap-2 text-sm font-semibold text-blue-800">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-sm font-bold text-blue-800">{index + 1}</span>
-                <span>{hero.badge}</span>
+            <article key={step.title} className="h-full rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+              <div className="flex items-start gap-3">
+                <span className="mt-1 flex h-9 w-9 items-center justify-center rounded-full bg-blue-50 text-sm font-bold text-blue-800">{index + 1}</span>
+                <div className="space-y-2">
+                  <p className="text-sm font-semibold text-slate-900 md:text-base">{step.title}</p>
+                  <p className="text-sm text-slate-700 md:text-base">{step.description}</p>
+                  {step.note ? <p className="text-sm font-semibold text-blue-800 md:text-base">{step.note}</p> : null}
+                </div>
               </div>
-              <p className="mt-2 text-sm text-slate-700 md:text-base">{step}</p>
             </article>
           ))}
         </div>

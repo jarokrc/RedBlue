@@ -23,20 +23,116 @@ export default {
     marketingTitle: "In marketing words",
     marketingText:
       "Stable solutions for entrepreneurs, organizations and services. From the first idea to a live product with support and care.",
-    packagesTitle: "Package options",
+    packagesTitle: "Possible solutions by project scope",
+    packagesIntro:
+      "Every project is tailored individually. These indicative packages help quickly define the scope and direction.",
     packages: [
-      { icon: "🎯", title: "Web Start Pack", description: "Simple presentation site with clear CTA and fast launch." },
-      { icon: "🔄", title: "Web System Pro", description: "Bookings, admin, accounts, notifications and reports in one place." },
-      { icon: "🧱", title: "Custom Data/API platform", description: "Tailored APIs, data models, integrations and system links." },
-      { icon: "☁️", title: "Hosting & care", description: "Deployment, monitoring, SSL, domains, email services and support." },
+      {
+        icon: "🎯",
+        title: "Web Start Pack",
+        subtitle: "Fast, professional online presence",
+        description:
+          "Great for freelancers, small businesses and simple sites where the goal is clear presentation and lead capture — without ongoing content management.",
+        bullets: [
+          "modern presentation website",
+          "solid, easy-to-scan structure",
+          "responsive design (mobile / tablet)",
+          "contact form and essential SEO",
+          "quick launch with zero tech hassle",
+        ],
+        note: "👉 Ideal if you want a site that works without needing ongoing management.",
+      },
+      {
+        icon: "🔄",
+        title: "Web System Pro",
+        subtitle: "A site that actively works with inquiries and bookings",
+        description:
+          "For teams that need more than a presentation — a site with system-level logic and room to grow.",
+        bullets: [
+          "booking or inquiry forms",
+          "custom admin and logic",
+          "notifications, reports and analytics",
+          "performance and speed optimization",
+          "ready for future expansion",
+        ],
+        note: "👉 When the site should truly save time and deliver results.",
+      },
+      {
+        icon: "🧱",
+        title: "Custom Data / API Platform",
+        subtitle: "Custom backend, data and integrations",
+        description:
+          "For projects that need their own data logic, automation or integrations with other systems.",
+        bullets: [
+          "architecture and data model design",
+          "tailored APIs (REST)",
+          "integrations with external systems",
+          "stable platform prepared to scale",
+        ],
+        note: "👉 Fits as a standalone platform or an extension of your existing system.",
+      },
+      {
+        icon: "🛠️",
+        title: "PRO – CMS solution",
+        subtitle: "Full control over content and features",
+        description:
+          "For clients who want to manage content, products or users themselves and keep the solution ready for long-term growth.",
+        bullets: [
+          "admin interface (CMS)",
+          "content, pages and media management",
+          "user accounts and authentication",
+          "backend as part of the solution",
+          "options for e-commerce, bookings and integrations",
+        ],
+        note: "👉 Ideal for sites and systems that should grow alongside your business.",
+      },
+      {
+        icon: "☁️",
+        title: "Hosting & care",
+        subtitle: "Operations, security and technical upkeep",
+        description: "I ensure your site or system runs reliably and securely.",
+        bullets: [
+          "deployment to hosting or VPS",
+          "SSL, domains and email services",
+          "monitoring and technical support",
+          "long-term maintenance and care",
+        ],
+        note: "👉 You focus on business, I handle the tech.",
+      },
     ],
+    packagesCtaTitle: "Not sure which option is right for you?",
+    packagesCtaText: "I’ll propose a solution tailored to your needs and goals.",
+    packagesCtaPrimary: "Request a tailored solution",
+    packagesCtaDownload: "Download quick price overview (PDF)",
     processTitle: "How I work",
     process: [
-      "Discovery & UX design (flows, content, logic)",
-      "Architecture and data model",
-      "Frontend, backend and API development",
-      "Testing, hardening, SSL and monitoring",
-      "Launch, operations and support",
+      {
+        title: "1️⃣ First, I understand your goal",
+        description:
+          "We clarify what the website or system should accomplish — who it’s for, which problem it should solve, and what outcome it needs to deliver.",
+        note: "👉 No unnecessary features, only what makes real sense.",
+      },
+      {
+        title: "2️⃣ I design the logic and structure",
+        description:
+          "I design UX, content and data logic so the system stays clear, extensible and sustainable in the long run.",
+        note: "👉 Built with the future in mind, not just the first launch.",
+      },
+      {
+        title: "3️⃣ I build it — frontend, backend and API",
+        description: "I develop the site or system including the admin layer, backend and integrations.",
+        note: "👉 Everything works together as one whole.",
+      },
+      {
+        title: "4️⃣ I test, secure and prep for production",
+        description: "Testing, hardening, SSL, monitoring and technical stability.",
+        note: "👉 The site isn’t just “done”; it’s ready for real traffic.",
+      },
+      {
+        title: "5️⃣ I deploy it and run the operations",
+        description: "I deploy to hosting/VPS and handle maintenance, support and further development.",
+        note: "👉 You focus on business, I take care of the tech.",
+      },
     ],
     stackTitle: "Tech stack",
     stacks: [

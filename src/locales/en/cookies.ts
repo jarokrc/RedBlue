@@ -9,7 +9,7 @@ export default {
         paragraphs: [
           "RedBlue Solutions s. r. o., Company ID: 55522467, Tax ID: 2122005897",
           "Registered office: Sadová 2719/3A, 905 01 Senica, Slovakia",
-          "Email: info@redblueacademy.com",
+          "Contact: see the protected email below.",
         ],
       },
       {
@@ -52,8 +52,8 @@ export default {
     ],
     contact: {
       heading: "Contact for cookie questions",
-      paragraphs: ["If you have any questions, contact us at:"],
-      email: "info@redblueacademy.com",
+      paragraphs: ["If you have any questions, contact us at the protected email below:"],
+      email: "info@redblue.sk",
     },
   },
 };
