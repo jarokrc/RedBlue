@@ -143,6 +143,7 @@
       content: string[];
       tech: string[];
       link?: string;
+      linkLabel?: string;
       image?: string;
       gallery?: string[];
     }[];

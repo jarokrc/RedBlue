@@ -28,6 +28,16 @@ import ozoneWeb1 from "@/assets-webp/projects/OzoneX/webka.webp";
 import ozoneWeb2 from "@/assets-webp/projects/OzoneX/webka2.webp";
 import ozoneCode1 from "@/assets-webp/projects/OzoneX/code1.webp";
 import ozoneCode2 from "@/assets-webp/projects/OzoneX/code2.webp";
+import webCalc1 from "@/assets-webp/projects/WEB_calculator/1.webp";
+import webCalc2 from "@/assets-webp/projects/WEB_calculator/2.webp";
+import webCalc3 from "@/assets-webp/projects/WEB_calculator/3.webp";
+import webCalc4 from "@/assets-webp/projects/WEB_calculator/4.webp";
+import webCalc5 from "@/assets-webp/projects/WEB_calculator/5.webp";
+import miku1 from "@/assets-webp/projects/MiKuBegleitung/1.webp";
+import miku2 from "@/assets-webp/projects/MiKuBegleitung/2.webp";
+import miku3 from "@/assets-webp/projects/MiKuBegleitung/3.webp";
+import miku4 from "@/assets-webp/projects/MiKuBegleitung/4.webp";
+import miku5 from "@/assets-webp/projects/MiKuBegleitung/5.webp";
 
 const imageMap: Record<string, string> = {
   "redblue-academy": redblueAcademyImg,
@@ -38,6 +48,8 @@ const imageMap: Record<string, string> = {
   "simple-note": simpleAll,
   "personen-data": personenHero,
   "ozonex": ozoneWeb1,
+  "miku-begleitung": miku1,
+  "web-calculator": webCalc1,
 };
 
 const galleryMap: Record<string, string[]> = {
@@ -49,6 +61,8 @@ const galleryMap: Record<string, string[]> = {
   "simple-note": [simpleAll, simpleEn, simpleCode1, simpleCode2],
   "personen-data": [personenHero, personen1, personenCode1, personenCode2],
   "ozonex": [ozoneWeb1, ozoneWeb2, ozoneCode1, ozoneCode2],
+  "miku-begleitung": [miku2, miku3, miku4, miku5],
+  "web-calculator": [webCalc2, webCalc3, webCalc4, webCalc5],
 };
 
 const ProjectDetailPage = () => {
@@ -147,7 +161,7 @@ const ProjectDetailPage = () => {
           rel="noreferrer"
           className="inline-flex w-fit rounded-lg bg-blue-700 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-blue-800 md:text-base"
         >
-          GitHub / Zdrojovy kod
+          {post.linkLabel || t.projects.githubLabel || "GitHub"}
         </a>
       )}
     </div>

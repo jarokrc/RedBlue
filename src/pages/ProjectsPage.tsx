@@ -54,7 +54,7 @@ const ProjectsPage = () => {
                       rel="noreferrer"
                       className="text-sm font-semibold text-blue-700 hover:text-blue-800 md:text-base"
                     >
-                      {t.projects.githubLabel || "GitHub"}
+                      {post.linkLabel || t.projects.githubLabel || "GitHub"}
                     </a>
                   )}
                 </div>
