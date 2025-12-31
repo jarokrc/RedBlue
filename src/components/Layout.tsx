@@ -1,11 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState, type ReactNode } from "react";
 import { useI18n } from "@/app/I18nProvider";
-import { Locale, countryFlag, detectCountryCode } from "@/lib/locale";
+import { Locale } from "@/lib/locale";
 import logoImg from "@/assets-webp/logo/logo.webp";
 import skIcon from "@/assets-webp/icons/sk.webp?inline";
 import enIcon from "@/assets-webp/icons/en.webp?inline";
 import deIcon from "@/assets-webp/icons/de.webp?inline";
+import BackToTopButton from "@/components/BackToTopButton";
 
 const localeOptions: { value: Locale; label: string }[] = [
   { value: "sk", label: "SK" },
@@ -17,10 +18,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   const { t, locale, setLocale } = useI18n();
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const userCountry = detectCountryCode();
-  const userFlag = countryFlag(userCountry);
-
-  const country = (userCountry || "US").toUpperCase();
+  const country = "US";
   const academyHref =
     locale === "sk" || country === "SK" || country === "CZ"
       ? "https://redblueacademy.com/"
@@ -153,9 +151,6 @@ const Layout = ({ children }: { children: ReactNode }) => {
           loading="lazy"
           decoding="async"
         />
-        <span aria-hidden className="text-base">
-          {userFlag}
-        </span>
       </div>
       <select
         aria-label="Select language"
@@ -240,6 +235,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
           </div>
         </div>
       </footer>
+
+      <BackToTopButton />
     </div>
   );
 };

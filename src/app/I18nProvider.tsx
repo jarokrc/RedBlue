@@ -1,5 +1,5 @@
-import { createContext, ReactNode, useContext, useEffect, useMemo, useState } from "react";
-import { detectLocale, Locale } from "@/lib/locale";
+import { createContext, ReactNode, useContext, useMemo, useState } from "react";
+import { detectLocale, Locale, saveLocale } from "@/lib/locale";
 import { translations } from "@/locales/resources";
 import type { Translation } from "@/locales/types";
 
@@ -12,16 +12,17 @@ interface I18nContextValue {
 const I18nContext = createContext<I18nContextValue | null>(null);
 
 export const I18nProvider = ({ children }: { children: ReactNode }) => {
-  const [locale, setLocale] = useState<Locale>("en");
+  const [locale, setLocaleState] = useState<Locale>(() => detectLocale());
 
-  useEffect(() => {
-    setLocale(detectLocale());
-  }, []);
+  const setLocale = (next: Locale) => {
+    setLocaleState(next);
+    saveLocale(next);
+  };
 
   const value = useMemo(() => ({
     locale,
     setLocale,
-    t: translations[locale],
+    t: translations[locale] || translations.en,
   }), [locale]);
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
