@@ -5,6 +5,7 @@ type ProtectedEmailTexts = {
   placeholder: string;
   error: string;
   revealCta: string;
+  openingCta?: string;
   copy: string;
   copied: string;
 };
