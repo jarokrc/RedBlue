@@ -11,13 +11,13 @@ describe("Layout navigation and footer", () => {
       { route: "/" }
     );
 
-    const servicesToggle = screen.getByRole("button", { name: /sluŽ§by|services/i });
+    const servicesToggle = screen.getByRole("button", { name: /služby|services/i });
     servicesToggle.click();
 
-    expect(screen.getByRole("link", { name: /web rie‘óenia|web solutions/i })).toHaveAttribute("href", "/web-riesenia");
+    expect(screen.getByRole("link", { name: /web riešenia|web solutions/i })).toHaveAttribute("href", "/web-riesenia");
     expect(screen.getByRole("link", { name: /marketing/i })).toHaveAttribute("href", "/marketing");
     expect(screen.getByRole("link", { name: /techcare|support/i })).toHaveAttribute("href", "/podpora");
-    expect(screen.getByRole("link", { name: /ochrana osobn†ch ¥dajov|privacy|datenschutz/i })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /ochrana osobných údajov|privacy|datenschutz/i })).toHaveAttribute(
       "href",
       "/zasady-ochrany-osobnych-udajov"
     );

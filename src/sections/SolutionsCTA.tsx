@@ -2,6 +2,16 @@
 import { useI18n } from "@/app/I18nProvider";
 import { detectCountryCode } from "@/lib/locale";
 
+type SolutionCardData = {
+  title: string;
+  description: string;
+  cta: string;
+};
+
+type SolutionCard =
+  | { external: true; href: string; data: SolutionCardData }
+  | { external?: false; to: string; data: SolutionCardData };
+
 const SolutionsCTA = () => {
   const { t, locale } = useI18n();
   const country = detectCountryCode().toUpperCase();
@@ -10,7 +20,7 @@ const SolutionsCTA = () => {
     ? "https://redblueacademy.com/"
     : "https://redblueacademy.com/en";
 
-  const cards = [
+  const cards: SolutionCard[] = [
     { to: "/web-riesenia", data: t.solutions.web, external: false },
     { to: "/marketing", data: t.solutions.marketing, external: false },
     { to: "/podpora", data: t.solutions.support, external: false },
@@ -20,7 +30,7 @@ const SolutionsCTA = () => {
   return (
     <section className="grid gap-4 md:grid-cols-2">
       {cards.map((card, index) => (
-        <article key={card.to || card.href || index} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-7">
+        <article key={(card.external ? card.href : card.to) || index} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-7">
           <h3 className="text-xl font-bold leading-tight text-slate-900 md:text-2xl">
             {card.data.title}
           </h3>
