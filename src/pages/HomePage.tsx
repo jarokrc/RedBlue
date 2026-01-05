@@ -1,8 +1,8 @@
-import { Helmet } from "react-helmet-async";
 import { useEffect, useRef, useState } from "react";
 import Hero from "@/sections/Hero";
 import SolutionsCTA from "@/sections/SolutionsCTA";
 import { useI18n } from "@/app/I18nProvider";
+import Seo from "@/components/Seo";
 
 const HomePage = () => {
   const { t } = useI18n();
@@ -47,10 +47,7 @@ const HomePage = () => {
 
   return (
     <div className="space-y-8 md:space-y-12">
-      <Helmet>
-        <title>{t.meta.homeTitle}</title>
-        <meta name="description" content={t.meta.homeDescription} />
-      </Helmet>
+      <Seo title={t.meta.homeTitle} description={t.meta.homeDescription} path="/" />
       <Hero />
       <div
         ref={offerRef}

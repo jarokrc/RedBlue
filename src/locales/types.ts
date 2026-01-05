@@ -3,12 +3,20 @@
     homeTitle: string;
     homeDescription: string;
     projectsTitle: string;
+    projectsDescription: string;
     webTitle: string;
+    webDescription: string;
     marketingTitle: string;
+    marketingDescription: string;
     supportTitle: string;
+    supportDescription: string;
     educationTitle: string;
+    educationDescription: string;
     privacyTitle: string;
+    privacyDescription: string;
     cookiesTitle: string;
+    cookiesDescription: string;
+    contactDescription: string;
   };
   nav: {
     home: string;

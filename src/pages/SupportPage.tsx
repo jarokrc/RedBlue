@@ -1,8 +1,8 @@
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useI18n } from "@/app/I18nProvider";
 import TypewriterText from "@/components/TypewriterText";
 import supportImg from "@/assets-webp/support/support.webp";
+import Seo from "@/components/Seo";
 
 const SupportPage = () => {
   const { t } = useI18n();
@@ -10,9 +10,11 @@ const SupportPage = () => {
 
   return (
     <div className="space-y-10">
-      <Helmet>
-        <title>{t.meta.supportTitle}</title>
-      </Helmet>
+      <Seo
+        title={t.meta.supportTitle}
+        description={t.meta.supportDescription || t.meta.homeDescription}
+        path="/podpora"
+      />
 
       <section className="grid gap-8 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-blue-900 px-8 py-12 text-white shadow-lg ring-1 ring-blue-900/30 md:grid-cols-[1.1fr,0.9fr] md:items-center md:px-12 md:py-14">
         <div className="space-y-4">

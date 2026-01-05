@@ -1,8 +1,8 @@
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useI18n } from "@/app/I18nProvider";
 import TypewriterText from "@/components/TypewriterText";
 import websolutionsImg from "@/assets-webp/websolutions/websolutions.webp";
+import Seo from "@/components/Seo";
 // import pricingPdf from "@/data/cenník_v_skratke.pdf";
 
 const WebSolutionsPage = () => {
@@ -32,9 +32,11 @@ const WebSolutionsPage = () => {
 
   return (
     <div className="space-y-10">
-      <Helmet>
-        <title>{t.meta.webTitle}</title>
-      </Helmet>
+      <Seo
+        title={t.meta.webTitle}
+        description={t.meta.webDescription || t.meta.homeDescription}
+        path="/web-riesenia"
+      />
 
       <section className="grid gap-8 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-blue-900 px-8 py-12 text-white shadow-lg ring-1 ring-blue-900/30 md:grid-cols-[1.1fr,0.9fr] md:items-center md:px-12 md:py-14">
         <div className="space-y-4">

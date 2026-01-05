@@ -1,7 +1,7 @@
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useI18n } from "@/app/I18nProvider";
 import ProtectedEmail from "@/components/ProtectedEmail";
+import Seo from "@/components/Seo";
 
 const PrivacyPage = () => {
   const { t } = useI18n();
@@ -34,9 +34,11 @@ const PrivacyPage = () => {
 
   return (
     <div className="space-y-6">
-      <Helmet>
-        <title>{t.meta.privacyTitle}</title>
-      </Helmet>
+      <Seo
+        title={t.meta.privacyTitle}
+        description={t.meta.privacyDescription || t.meta.homeDescription}
+        path="/zasady-ochrany-osobnych-udajov"
+      />
       <div className="space-y-3">
         <h1 className="text-3xl font-bold text-slate-900 md:text-4xl">{t.privacy.title}</h1>
         <p className="text-sm leading-relaxed text-slate-700 md:text-base">{t.privacy.intro}</p>

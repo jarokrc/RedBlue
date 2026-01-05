@@ -1,6 +1,6 @@
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useI18n } from "@/app/I18nProvider";
+import Seo from "@/components/Seo";
 
 const ProjectsPage = () => {
   const { t } = useI18n();
@@ -12,9 +12,11 @@ const ProjectsPage = () => {
 
   return (
     <div className="space-y-8">
-      <Helmet>
-        <title>{t.meta.projectsTitle}</title>
-      </Helmet>
+      <Seo
+        title={t.meta.projectsTitle}
+        description={t.meta.projectsDescription || t.meta.homeDescription}
+        path="/projekty"
+      />
       <h1 className="text-3xl font-bold text-slate-900 md:text-4xl">{t.projects.title}</h1>
       <p className="text-slate-700 md:text-base">{t.projects.intro}</p>
 

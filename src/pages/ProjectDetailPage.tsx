@@ -1,6 +1,6 @@
-﻿import { Helmet } from "react-helmet-async";
 import { Link, useParams } from "react-router-dom";
 import { useI18n } from "@/app/I18nProvider";
+import Seo from "@/components/Seo";
 import redblueAcademyImg from "@/assets-webp/projects/RedBlueAcademy/redblueacademy_sk.webp";
 import eduMgmt1 from "@/assets-webp/projects/Sprava_vzdelavacich_institucii/picture1.webp";
 import eduMgmt2 from "@/assets-webp/projects/Sprava_vzdelavacich_institucii/picture2.webp";
@@ -70,13 +70,13 @@ const ProjectDetailPage = () => {
   const { t } = useI18n();
 
   const post = t.projects.blog.find((p) => p.slug === slug);
+  const canonicalPath = `/projekty/${slug || ""}`;
+  const metaDescription = post?.summary || t.meta.projectsDescription || t.meta.homeDescription;
 
   if (!post) {
     return (
       <div className="space-y-4">
-        <Helmet>
-          <title>{t.notFound.title}</title>
-        </Helmet>
+        <Seo title={t.notFound.title} description={t.notFound.description} path="/projekty" noindex />
         <h1 className="text-3xl font-bold text-slate-900 md:text-4xl">{t.notFound.title}</h1>
         <p className="text-sm text-slate-700 md:text-base">{t.notFound.description}</p>
         <Link to="/projekty" className="text-blue-700 font-semibold hover:text-blue-800 md:text-base">
@@ -91,13 +91,11 @@ const ProjectDetailPage = () => {
 
   return (
     <div className="space-y-6">
-      <Helmet>
-        <title>{post.title}</title>
-      </Helmet>
+      <Seo title={post.title} description={metaDescription} path={canonicalPath} />
 
       <div className="space-y-2">
         <Link to="/projekty" className="text-sm font-semibold text-blue-700 hover:text-blue-800 md:text-base">
-          ← {t.nav.projects}
+           {t.nav.projects}
         </Link>
         <p className="text-xs font-semibold uppercase tracking-[0.15em] text-blue-700">
           {post.date} - {post.readTime}

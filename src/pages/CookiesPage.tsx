@@ -1,6 +1,6 @@
-import { Helmet } from "react-helmet-async";
 import { useI18n } from "@/app/I18nProvider";
 import ProtectedEmail from "@/components/ProtectedEmail";
+import Seo from "@/components/Seo";
 
 const CookiesPage = () => {
   const { t } = useI18n();
@@ -33,9 +33,11 @@ const CookiesPage = () => {
 
   return (
     <div className="space-y-6">
-      <Helmet>
-        <title>{t.meta.cookiesTitle}</title>
-      </Helmet>
+      <Seo
+        title={t.meta.cookiesTitle}
+        description={t.meta.cookiesDescription || t.meta.homeDescription}
+        path="/cookies"
+      />
 
       <div className="space-y-3">
         <h1 className="text-3xl font-bold text-slate-900 md:text-4xl">{t.cookies.title}</h1>
