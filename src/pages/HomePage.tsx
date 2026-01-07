@@ -56,9 +56,12 @@ const HomePage = () => {
         }`}
       >
         <div className="absolute left-3 top-1/2 h-1 w-12 -translate-y-1/2 bg-gradient-to-r from-blue-700 to-transparent opacity-80 blur-[1px]" aria-hidden />
-        <p className="pl-8 text-lg font-semibold text-slate-900 md:pl-10 md:text-xl">
-          {typed}
-          {typed.length < t.offerHeading.length && <span className="ml-1 inline-block animate-pulse">▌</span>}
+        <p className="relative pl-8 text-lg font-semibold text-slate-900 md:pl-10 md:text-xl">
+          <span className="pointer-events-none select-none opacity-0">{t.offerHeading}</span>
+          <span aria-hidden className="absolute inset-0 pl-8 md:pl-10">
+            {typed}
+            {typed.length < t.offerHeading.length && <span className="ml-1 inline-block animate-pulse">▌</span>}
+          </span>
         </p>
       </div>
       <SolutionsCTA />

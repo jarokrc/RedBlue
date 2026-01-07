@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState, type ReactNode } from "react";
 import { useI18n } from "@/app/I18nProvider";
-import { Locale } from "@/lib/locale";
+import { detectCountryCode, Locale } from "@/lib/locale";
 import logoImg from "@/assets-webp/logo/logo.webp";
 import skIcon from "@/assets-webp/icons/sk.webp?inline";
 import enIcon from "@/assets-webp/icons/en.webp?inline";
@@ -18,7 +18,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   const { t, locale, setLocale } = useI18n();
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const country = "US";
+  const country = detectCountryCode().toUpperCase();
   const academyHref =
     locale === "sk" || country === "SK" || country === "CZ"
       ? "https://redblueacademy.com/"
@@ -73,41 +73,25 @@ const Layout = ({ children }: { children: ReactNode }) => {
         >
           <div className="w-64 rounded-xl border border-slate-200 bg-white p-3 shadow-lg shadow-slate-300/50">
             <ul className="space-y-2">
-              {servicesLinks.map((link) =>
-                link.external ? (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="flex items-center gap-2 whitespace-nowrap rounded px-2 py-1 text-sm font-semibold text-slate-800 hover:bg-slate-50 hover:text-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
-                      onClick={() => {
-                        setServicesOpen(false);
-                        onClick?.();
-                      }}
-                    >
-                      <span aria-hidden>{link.icon}</span>
-                      <span className="whitespace-nowrap">{link.label}</span>
-                    </a>
-                  </li>
-                ) : (
-                  <li key={link.to}>
-                    <NavLink
-                      to={link.to!}
-                      onClick={() => {
-                        setServicesOpen(false);
-                        onClick?.();
-                      }}
-                      className={({ isActive }) =>
-                        `flex items-center gap-2 whitespace-nowrap rounded px-2 py-1 text-sm font-semibold text-slate-800 hover:bg-slate-50 hover:text-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2 ${
-                          isActive ? "text-blue-700" : ""
-                        }`
-                      }
-                    >
-                      <span aria-hidden>{link.icon}</span>
-                      <span className="whitespace-nowrap">{link.label}</span>
-                    </NavLink>
-                  </li>
-                )
-              )}
+              {servicesLinks.map((link) => (
+                <li key={link.to}>
+                  <NavLink
+                    to={link.to}
+                    onClick={() => {
+                      setServicesOpen(false);
+                      onClick?.();
+                    }}
+                    className={({ isActive }) =>
+                      `flex items-center gap-2 whitespace-nowrap rounded px-2 py-1 text-sm font-semibold text-slate-800 hover:bg-slate-50 hover:text-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2 ${
+                        isActive ? "text-blue-700" : ""
+                      }`
+                    }
+                  >
+                    <span aria-hidden>{link.icon}</span>
+                    <span className="whitespace-nowrap">{link.label}</span>
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -150,6 +134,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
           className="h-7 w-7 rounded-full border border-slate-200 bg-white object-cover shadow-sm"
           loading="lazy"
           decoding="async"
+          width={28}
+          height={28}
         />
       </div>
       <select
@@ -178,7 +164,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <Link to="/" className="flex items-center gap-3 md:flex">
-            <img src={logoImg} alt="RedBlue.sk logo" className="h-9 w-auto" />
+            <img src={logoImg} alt="RedBlue.sk logo" className="h-9 w-auto" width={1208} height={395} />
           </Link>
           <div className="hidden items-center gap-4 text-sm font-semibold text-slate-800 md:text-base md:flex">
             <NavLinks />

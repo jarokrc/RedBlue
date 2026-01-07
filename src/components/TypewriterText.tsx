@@ -45,9 +45,12 @@ const TypewriterText = ({ text, className = "", duration = 1000, threshold = 0.3
   }, [ready, text, duration]);
 
   return (
-    <p ref={ref} className={className}>
-      {display}
+    <p ref={ref} className={className ? `relative ${className}` : "relative"}>
+      <span className="pointer-events-none select-none opacity-0">{text}</span>
+      <span aria-hidden className="absolute inset-0">
+        {display}
       {cursor && display.length < text.length && <span className="ml-1 inline-block animate-pulse">▌</span>}
+      </span>
     </p>
   );
 };

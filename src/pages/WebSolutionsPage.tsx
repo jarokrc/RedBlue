@@ -67,13 +67,18 @@ const WebSolutionsPage = () => {
             </a>
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-blue-500/20 shadow-2xl shadow-blue-900/30">
+        <div
+          className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-blue-500/20 shadow-2xl shadow-blue-900/30"
+          style={{ aspectRatio: "3 / 2" }}
+        >
           <img
             src={websolutionsImg}
             alt="Ukážka web a desktop riešenia"
             className="h-full w-full object-cover"
             loading="lazy"
             decoding="async"
+            width={1536}
+            height={1024}
           />
         </div>
       </section>

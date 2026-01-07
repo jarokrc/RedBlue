@@ -46,13 +46,18 @@ const Contact = () => {
             className="space-y-3"
           />
         </div>
-        <div className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50/80 shadow-sm">
+        <div
+          className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50/80 shadow-sm"
+          style={{ aspectRatio: "3 / 2" }}
+        >
           <img
             src={mapImg}
             alt={contactSection.mapAlt}
             className="h-full w-full object-cover"
             loading="lazy"
             decoding="async"
+            width={1536}
+            height={1024}
           />
         </div>
       </div>

@@ -46,7 +46,10 @@ const MarketingPage = () => {
             </a>
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-blue-500/20 shadow-2xl shadow-blue-900/30">
+        <div
+          className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-blue-500/20 shadow-2xl shadow-blue-900/30"
+          style={{ aspectRatio: "3 / 2" }}
+        >
           <video
             src={promoVideo}
             poster={marketingImg}
@@ -56,6 +59,8 @@ const MarketingPage = () => {
             loop
             playsInline
             preload="metadata"
+            width={1536}
+            height={1024}
           />
         </div>
       </section>

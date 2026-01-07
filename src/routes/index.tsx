@@ -1,6 +1,6 @@
 import { lazy, type ReactElement } from "react";
+import HomePage from "@/pages/HomePage";
 
-const HomePage = lazy(() => import("@/pages/HomePage"));
 const ProjectsPage = lazy(() => import("@/pages/ProjectsPage"));
 const ProjectDetailPage = lazy(() => import("@/pages/ProjectDetailPage"));
 const WebSolutionsPage = lazy(() => import("@/pages/WebSolutionsPage"));
