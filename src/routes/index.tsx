@@ -1,5 +1,6 @@
 import { lazy, type ReactElement } from "react";
 import HomePage from "@/pages/HomePage";
+import IntroPage from "@/pages/IntroPage";
 
 const ProjectsPage = lazy(() => import("@/pages/ProjectsPage"));
 const ProjectDetailPage = lazy(() => import("@/pages/ProjectDetailPage"));
@@ -18,7 +19,8 @@ export type AppRoute = {
 };
 
 export const appRoutes: AppRoute[] = [
-  { path: "/", element: <HomePage /> },
+  { path: "/", element: <IntroPage /> },
+  { path: "/home", element: <HomePage /> },
   { path: "/projekty", element: <ProjectsPage /> },
   { path: "/projekty/:slug", element: <ProjectDetailPage /> },
   { path: "/web-riesenia", element: <WebSolutionsPage /> },

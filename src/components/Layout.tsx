@@ -1,11 +1,8 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState, type ReactNode } from "react";
 import { useI18n } from "@/app/I18nProvider";
 import { detectCountryCode, Locale } from "@/lib/locale";
 import logoImg from "@/assets-webp/logo/logo.webp";
-import skIcon from "@/assets-webp/icons/sk.webp?inline";
-import enIcon from "@/assets-webp/icons/en.webp?inline";
-import deIcon from "@/assets-webp/icons/de.webp?inline";
 import BackToTopButton from "@/components/BackToTopButton";
 
 const localeOptions: { value: Locale; label: string }[] = [
@@ -19,6 +16,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const country = detectCountryCode().toUpperCase();
+  const location = useLocation();
+  const isIntro = location.pathname === "/";
   const academyHref =
     locale === "sk" || country === "SK" || country === "CZ"
       ? "https://redblueacademy.com/"
@@ -29,7 +28,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   }, [menuOpen]);
 
   const navItems = [
-    { to: "/", label: t.nav.home },
+    { to: "/home", label: t.nav.home },
     { to: "/projekty", label: t.nav.projects },
     { to: "/kontakt", label: t.nav.contact },
   ];
@@ -44,7 +43,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   const NavLinks = ({ onClick, isMobile }: { onClick?: () => void; isMobile?: boolean }) => (
     <nav className="flex flex-col gap-3 md:flex-row md:items-center md:gap-4" aria-label="Main navigation">
       <NavLink
-        to="/"
+        to="/home"
         onClick={() => {
           setServicesOpen(false);
           onClick?.();
@@ -98,7 +97,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       </div>
 
       {navItems
-        .filter((item) => item.to !== "/")
+        .filter((item) => item.to !== "/home")
         .map((item) => (
           <NavLink
             key={item.to}
@@ -119,24 +118,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
     </nav>
   );
 
-  const localeIcons: Record<Locale, string> = {
-    sk: skIcon,
-    en: enIcon,
-    de: deIcon,
-  };
-
   const LangSelect = () => (
     <div className="relative inline-flex items-center gap-2">
-      <div className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white/80 px-3 py-2 text-sm font-medium leading-none text-slate-900 shadow-md">
-        <img
-          src={localeIcons[locale]}
-          alt={`${locale.toUpperCase()} icon`}
-          className="h-7 w-7 rounded-full border border-slate-200 bg-white object-cover shadow-sm"
-          loading="lazy"
-          decoding="async"
-          width={28}
-          height={28}
-        />
+      <div className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white/80 px-3 py-2 text-sm font-semibold leading-none text-slate-900 shadow-md">
+        <span>{locale.toUpperCase()}</span>
       </div>
       <select
         aria-label="Select language"
@@ -161,11 +146,15 @@ const Layout = ({ children }: { children: ReactNode }) => {
       >
         Skip to content
       </a>
-      <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/80 backdrop-blur">
+      {!isIntro && (
+        <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-          <Link to="/" className="flex items-center gap-3 md:flex">
-            <img src={logoImg} alt="RedBlue.sk logo" className="h-9 w-auto" width={1208} height={395} />
-          </Link>
+            <Link to="/home" className="flex items-center gap-3 md:flex">
+              <img src={logoImg} alt="RedBlue.sk logo" className="h-9 w-auto" width={1208} height={395} />
+              <span className="hidden text-xs font-semibold uppercase tracking-[0.22em] text-slate-500 md:inline">
+                Think Forward. Think Beyond Code.
+              </span>
+            </Link>
           <div className="hidden items-center gap-4 text-sm font-semibold text-slate-800 md:text-base md:flex">
             <NavLinks />
             <LangSelect />
@@ -190,13 +179,15 @@ const Layout = ({ children }: { children: ReactNode }) => {
             <NavLinks onClick={() => setMenuOpen(false)} isMobile />
           </div>
         )}
-      </header>
+        </header>
+      )}
 
-      <main id="main-content" className="mx-auto max-w-6xl flex-1 px-6 py-10">
+      <main id="main-content" className={isIntro ? "flex-1" : "mx-auto max-w-6xl flex-1 px-6 py-10"}>
         {children}
       </main>
 
-      <footer className="border-t border-slate-200 bg-white/80 backdrop-blur">
+      {!isIntro && (
+        <footer className="border-t border-slate-200 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-6 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
           <span className="text-center md:text-left">© {new Date().getFullYear()} RedBlue.sk</span>
           <div className="flex flex-wrap items-center justify-center gap-4 md:justify-end">
@@ -220,9 +211,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
             </Link>
           </div>
         </div>
-      </footer>
+        </footer>
+      )}
 
-      <BackToTopButton />
+      {!isIntro && <BackToTopButton />}
     </div>
   );
 };

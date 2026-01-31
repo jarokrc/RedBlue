@@ -1,6 +1,6 @@
 export default {
   hero: {
-    label: "Web, desktop, marketing, podpora & vzdelávanie",
+    label: "Web, desktop, marketing & podpora",
     heading: "RedBlue",
     subheading: "Partner pre weby, desktopové nástroje, marketing a IT podporu na jednom mieste.",
     ctaPrimary: "Spojme sa",

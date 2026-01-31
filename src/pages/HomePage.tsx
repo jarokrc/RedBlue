@@ -47,7 +47,7 @@ const HomePage = () => {
 
   return (
     <div className="space-y-8 md:space-y-12">
-      <Seo title={t.meta.homeTitle} description={t.meta.homeDescription} path="/" />
+      <Seo title={t.meta.homeTitle} description={t.meta.homeDescription} path="/home" />
       <Hero />
       <div
         ref={offerRef}

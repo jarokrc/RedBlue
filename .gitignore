@@ -2,6 +2,19 @@
 node_modules/
 dist/
 .vite/
+# assets & media
+assets-webp/
+src/assets-webp/
+public/
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.webp
+**/*.svg
+**/*.gif
+**/*.avif
+**/*.mp4
+**/*.webm
 
 # tests & coverage
 .vitest/

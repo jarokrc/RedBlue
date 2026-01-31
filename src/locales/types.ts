@@ -30,6 +30,18 @@
     privacy: string;
     cookies: string;
   };
+  intro: {
+    brand: string;
+    title: string;
+    subtitle: string;
+    redblueTitle: string;
+    redblueDescription: string;
+    redblueCta: string;
+    academyTitle: string;
+    academyDescription: string;
+    academyCta: string;
+    languageLabel: string;
+  };
   hero: {
     label: string;
     heading: string;

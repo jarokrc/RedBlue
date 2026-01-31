@@ -1,19 +1,18 @@
-import { Link } from "react-router-dom";
 import { useI18n } from "@/app/I18nProvider";
-import TypewriterText from "@/components/TypewriterText";
-import { detectCountryCode } from "@/lib/locale";
 import educationImg from "@/assets-webp/education/education.webp";
+import introVideoWebm from "@/assets-webp/education/intro1.webm";
+import introVideoMp4 from "@/assets-webp/education/intro1.mp4";
 import Seo from "@/components/Seo";
 
 const EducationPage = () => {
-  const { t, locale } = useI18n();
-  const country = detectCountryCode().toUpperCase();
-  const academyHref =
-    locale === "sk" || country === "SK" || country === "CZ"
-      ? "https://redblueacademy.com/"
-      : "https://redblueacademy.com/en";
+  const { t } = useI18n();
+  const academyHref = "https://academy.redblue.sk/";
 
   const { hero, intro, offeringsTitle, offerings, marketingTitle, marketingText, commsTitle, comms, academyTitle, academyText } = t.educationPage;
+  const introParts = intro.split("||").map((part) => part.trim());
+  const introEn = introParts[0] || "";
+  const introLocal = introParts.length >= 3 ? introParts[1] : "";
+  const introBody = introParts.length >= 3 ? introParts.slice(2).join(" ").trim() : introParts[1] || introParts[0] || "";
 
   return (
     <div className="space-y-10">
@@ -29,7 +28,7 @@ const EducationPage = () => {
             {hero.badge}
           </div>
           <h1 className="text-3xl font-bold leading-tight md:text-4xl">{hero.title}</h1>
-          <TypewriterText text={hero.subtitle} className="max-w-2xl text-base text-blue-100 md:text-lg" />
+          <p className="max-w-2xl text-base text-blue-100 md:text-lg">{hero.subtitle}</p>
           <div className="flex flex-wrap gap-2">
             {hero.positioning.map((item) => (
               <span key={item} className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-blue-100">
@@ -38,14 +37,16 @@ const EducationPage = () => {
             ))}
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link
-              to="/kontakt"
+            <a
+              href={academyHref}
               className="orbit-glow rounded-lg bg-red-500 px-5 py-3 text-base font-semibold text-white shadow hover:bg-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 md:text-lg"
+              target="_blank"
+              rel="noreferrer"
             >
               {hero.ctaPrimary}
-            </Link>
+            </a>
             <a
-              href="#academy"
+              href="#why"
               className="rounded-lg border border-white/40 bg-white/10 px-5 py-3 text-base font-semibold text-white shadow hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 md:text-lg"
             >
               {hero.ctaSecondary}
@@ -56,32 +57,33 @@ const EducationPage = () => {
           className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-blue-500/20 shadow-2xl shadow-blue-900/30"
           style={{ aspectRatio: "3 / 2" }}
         >
-          <img
-            src={educationImg}
-            alt="Education & Tech Leadership"
+          <video
             className="h-full w-full object-cover"
-            loading="lazy"
-            decoding="async"
-            width={1536}
-            height={1024}
-          />
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster={educationImg}
+            aria-label="RedBlue Academy intro"
+          >
+            <source src={introVideoWebm} type="video/webm" />
+            <source src={introVideoMp4} type="video/mp4" />
+            <img
+              src={educationImg}
+              alt="RedBlue Academy intro"
+              className="h-full w-full object-cover"
+              width={1536}
+              height={1024}
+            />
+          </video>
         </div>
       </section>
 
       <section className="space-y-3">
-        <p className="text-slate-700 md:text-base">{intro}</p>
-      </section>
-
-      <section className="space-y-4">
-        <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">{offeringsTitle}</h2>
-        <div className="grid gap-3 md:grid-cols-2">
-          {offerings.map((item) => (
-            <div key={item} className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
-              <span className="mt-1 h-2 w-2 rounded-full bg-blue-700" aria-hidden />
-              <p className="text-sm text-slate-800 md:text-base">{item}</p>
-            </div>
-          ))}
-        </div>
+        {introEn && <p className="text-sm font-semibold text-blue-600 md:text-base">{introEn}</p>}
+        {introLocal && <p className="text-sm font-semibold text-red-600 md:text-base">{introLocal}</p>}
+        <p className="text-slate-700 md:text-base">{introBody}</p>
       </section>
 
       <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
@@ -91,10 +93,22 @@ const EducationPage = () => {
 
       <section className="space-y-3 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
         <h3 className="text-xl font-semibold text-slate-900 md:text-2xl">{commsTitle}</h3>
-        <div className="grid gap-2 md:grid-cols-2">
+        <div className="grid gap-3 md:grid-cols-3">
           {comms.map((item) => (
-            <div key={item} className="rounded-lg border border-slate-100 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-800 shadow-inner">
+            <div key={item} className="rounded-xl border border-slate-100 bg-slate-50 px-4 py-4 text-sm font-semibold text-slate-800 shadow-inner">
               {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="why" className="space-y-4">
+        <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">{offeringsTitle}</h2>
+        <div className="grid gap-3 md:grid-cols-2">
+          {offerings.map((item) => (
+            <div key={item} className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
+              <span className="mt-1 h-2 w-2 rounded-full bg-blue-700" aria-hidden />
+              <p className="text-sm text-slate-800 md:text-base">{item}</p>
             </div>
           ))}
         </div>
