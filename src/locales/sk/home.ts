@@ -5,7 +5,7 @@ export default {
     subheading: "Partner pre weby, desktopové nástroje, marketing a IT podporu na jednom mieste.",
     ctaPrimary: "Spojme sa",
   },
-  offerHeading: "Posledné voľné termíny na tvorbu webu – teraz za akciové ceny so zľavou až 60 %.",
+  offerHeading: "Posledné voľné termíny pre február na tvorbu webu – teraz za akciové ceny so zľavou až 60 %.",
 
   offerPromo: "",
   services: {

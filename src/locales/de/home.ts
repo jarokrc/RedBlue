@@ -5,7 +5,7 @@ export default {
     subheading: "Partner für Websites, Desktop-Tools, Marketing und IT-Support an einem Ort.",
     ctaPrimary: "Kontakt",
   },
-  offerHeading: "Letzte freie Termine für Ihre Website – Aktionspreise mit bis zu 60 % Rabatt.",
+  offerHeading: "Letzte freie Termine im Februar für die Erstellung von Websites – Aktionspreise mit bis zu 60 % Rabatt.",
 
   offerPromo: "",
   services: {

@@ -27,6 +27,13 @@ const Layout = ({ children }: { children: ReactNode }) => {
     if (!menuOpen) setServicesOpen(false);
   }, [menuOpen]);
 
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onScroll = () => setMenuOpen(false);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [menuOpen]);
+
   const navItems = [
     { to: "/home", label: t.nav.home },
     { to: "/projekty", label: t.nav.projects },
@@ -118,9 +125,13 @@ const Layout = ({ children }: { children: ReactNode }) => {
     </nav>
   );
 
-  const LangSelect = () => (
-    <div className="relative inline-flex items-center gap-2">
-      <div className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white/80 px-3 py-2 text-sm font-semibold leading-none text-slate-900 shadow-md">
+  const LangSelect = ({ fullWidth = false }: { fullWidth?: boolean }) => (
+    <div className={`relative inline-flex items-center gap-2 ${fullWidth ? "w-full" : ""}`}>
+      <div
+        className={`inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white/80 px-3 py-2 text-sm font-semibold leading-none text-slate-900 shadow-md ${
+          fullWidth ? "w-full justify-between" : ""
+        }`}
+      >
         <span>{locale.toUpperCase()}</span>
       </div>
       <select
@@ -166,17 +177,23 @@ const Layout = ({ children }: { children: ReactNode }) => {
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
               onClick={() => setMenuOpen((prev) => !prev)}
-              className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white/80 px-4 py-2 text-sm font-semibold text-slate-900 shadow-md transition hover:border-blue-700 hover:text-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
+              className="inline-flex items-center justify-center rounded border border-slate-300 bg-white p-2 text-slate-700 transition hover:border-blue-700 hover:text-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
             >
-              <span aria-hidden>☰</span>
-              <span>Menu</span>
+              <span className="sr-only">Menu</span>
+              <span className="flex flex-col gap-1.5" aria-hidden>
+                <span className="h-0.5 w-6 bg-slate-700" />
+                <span className="h-0.5 w-6 bg-slate-700" />
+                <span className="h-0.5 w-6 bg-slate-700" />
+              </span>
             </button>
-            <LangSelect />
           </div>
         </div>
         {menuOpen && (
           <div id="mobile-menu" className="md:hidden border-t border-slate-200 bg-white px-6 py-4 shadow-sm">
             <NavLinks onClick={() => setMenuOpen(false)} isMobile />
+            <div className="mt-4 border-t border-slate-200 pt-4">
+              <LangSelect />
+            </div>
           </div>
         )}
         </header>
