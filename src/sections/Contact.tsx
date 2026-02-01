@@ -7,7 +7,7 @@ const Contact = () => {
   const { contactSection } = t;
 
   return (
-    <section id="contact" className="space-y-4">
+    <section id="contact" className="content-visibility-auto space-y-4">
       <div>
         <p className="text-sm font-semibold text-blue-700">{t.contact.title}</p>
         <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">{t.contact.subtitle}</h2>

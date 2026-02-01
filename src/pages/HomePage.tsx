@@ -1,8 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { Suspense, lazy, useEffect, useRef, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Hero from "@/sections/Hero";
-import SolutionsCTA from "@/sections/SolutionsCTA";
 import { useI18n } from "@/app/I18nProvider";
 import Seo from "@/components/Seo";
+import heroWebp from "@/assets-webp/home/hero_.webp";
+
+const SolutionsCTA = lazy(() => import("@/sections/SolutionsCTA"));
 
 const HomePage = () => {
   const { t } = useI18n();
@@ -48,6 +51,9 @@ const HomePage = () => {
   return (
     <div className="space-y-8 md:space-y-12">
       <Seo title={t.meta.homeTitle} description={t.meta.homeDescription} path="/home" />
+      <Helmet>
+        <link rel="preload" as="image" href={heroWebp} type="image/webp" />
+      </Helmet>
       <Hero />
       <div
         ref={offerRef}
@@ -56,7 +62,7 @@ const HomePage = () => {
         }`}
       >
         <div className="absolute left-3 top-1/2 h-1 w-12 -translate-y-1/2 bg-gradient-to-r from-blue-700 to-transparent opacity-80 blur-[1px]" aria-hidden />
-        <p className="relative pl-8 text-lg font-semibold text-slate-900 md:pl-10 md:text-xl">
+        <p className="relative pl-8 text-lg font-semibold text-red-600 md:pl-10 md:text-xl">
           <span className="pointer-events-none select-none opacity-0">{t.offerHeading}</span>
           <span aria-hidden className="absolute inset-0 pl-8 md:pl-10">
             {typed}
@@ -64,7 +70,9 @@ const HomePage = () => {
           </span>
         </p>
       </div>
-      <SolutionsCTA />
+      <Suspense fallback={<div className="min-h-[320px] rounded-2xl border border-slate-200 bg-white/70" />}>
+        <SolutionsCTA />
+      </Suspense>
     </div>
   );
 };

@@ -1,6 +1,8 @@
-import Contact from "@/sections/Contact";
+import { Suspense, lazy } from "react";
 import { useI18n } from "@/app/I18nProvider";
 import Seo from "@/components/Seo";
+
+const Contact = lazy(() => import("@/sections/Contact"));
 
 const ContactPage = () => {
   const { t } = useI18n();
@@ -12,7 +14,9 @@ const ContactPage = () => {
         description={t.meta.contactDescription || t.meta.homeDescription}
         path="/kontakt"
       />
-      <Contact />
+      <Suspense fallback={<div className="min-h-[520px] rounded-2xl border border-slate-200 bg-white/70" />}>
+        <Contact />
+      </Suspense>
     </div>
   );
 };

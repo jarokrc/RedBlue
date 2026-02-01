@@ -1,6 +1,5 @@
 ﻿import { Link } from "react-router-dom";
 import { useI18n } from "@/app/I18nProvider";
-import { detectCountryCode } from "@/lib/locale";
 
 type SolutionCardData = {
   title: string;
@@ -13,22 +12,18 @@ type SolutionCard =
   | { external?: false; to: string; data: SolutionCardData };
 
 const SolutionsCTA = () => {
-  const { t, locale } = useI18n();
-  const country = detectCountryCode().toUpperCase();
-
-  const academyHref = locale === "sk" || country === "SK" || country === "CZ"
-    ? "https://redblueacademy.com/"
-    : "https://redblueacademy.com/en";
+  const { t } = useI18n();
+  const academyHref = "https://academy.redblue.sk/";
 
   const cards: SolutionCard[] = [
     { to: "/web-riesenia", data: t.solutions.web, external: false },
     { to: "/marketing", data: t.solutions.marketing, external: false },
     { to: "/podpora", data: t.solutions.support, external: false },
-    { to: "/vzdelavanie", data: t.solutions.academy, external: false },
+    { href: academyHref, data: t.solutions.academy, external: true },
   ];
 
   return (
-    <section className="grid gap-4 md:grid-cols-2">
+    <section className="content-visibility-auto grid gap-4 md:grid-cols-2">
       {cards.map((card, index) => (
         <article key={(card.external ? card.href : card.to) || index} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-7">
           <h3 className="text-xl font-bold leading-tight text-slate-900 md:text-2xl">

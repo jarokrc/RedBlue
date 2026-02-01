@@ -390,19 +390,7 @@ const IntroPage = () => {
       setBootDone(true);
       return;
     }
-    const introStorageKey = "rb-intro-last-seen";
-    if (typeof localStorage !== "undefined") {
-      const now = new Date();
-      const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(
-        now.getDate()
-      ).padStart(2, "0")}`;
-      const lastSeen = localStorage.getItem(introStorageKey);
-      if (lastSeen === today) {
-        setBootDone(true);
-        return;
-      }
-      localStorage.setItem(introStorageKey, today);
-    }
+    // Disabled daily intro lock for debugging.
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setBootDone(true);
       return;

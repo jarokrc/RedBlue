@@ -5,7 +5,8 @@ export default {
     subheading: "Partner for websites, desktop tools, marketing and IT support in one place.",
     ctaPrimary: "Contact us",
   },
-  offerHeading: "Our tailored offer",
+  offerHeading: "Last available slots for your website — promo pricing with up to 60% off.",
+  offerPromo: "",
   services: {
     title: "What I deliver",
     subtitle: "Web, desktop mini-apps, marketing, support, training",

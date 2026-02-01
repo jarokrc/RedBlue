@@ -5,14 +5,16 @@ export default {
     subheading: "Partner pre weby, desktopové nástroje, marketing a IT podporu na jednom mieste.",
     ctaPrimary: "Spojme sa",
   },
-  offerHeading: "Naša ponuka na mieru",
+  offerHeading: "Posledné voľné termíny na tvorbu webu – teraz za akciové ceny so zľavou až 60 %.",
+
+  offerPromo: "",
   services: {
-    title: "Čo viem doručiť",
+    title: "Čo viem doruiť",
     subtitle: "Weby, desktop mini-apky, marketing, podpora, vzdelávanie",
     items: [
       {
         title: "Web a desktop riešenia",
-        description: "Weby, micro-apky a systémy s API, hostingom a správou na kľúč.",
+        description: "Weby, micro-apky a systémy s API, hostingom a správou na kľú.",
       },
       {
         title: "Marketing",
@@ -30,8 +32,8 @@ export default {
   },
   solutions: {
     web: {
-      title: "🌐 Web riešenia",
-      description: "Landingy, firemné weby, e-shopy, API a desktop nástroje s legislatívou na kľúč.",
+      title: " Web riešenia",
+      description: "Landingy, firemné weby, e-shopy, API a desktop nástroje s legislatívou na kľú.",
       cta: "Pozrieť web riešenia",
     },
     marketing: {
@@ -40,7 +42,7 @@ export default {
       cta: "Pozrieť marketing",
     },
     support: {
-      title: "🛠️ TechCare & IT Support",
+      title: "🛠 TechCare & IT Support",
       description:
         "Diagnostika a obnova dát, výmeny komponentov, servis PC/notebookov, remote podpora softvéru, pomoc s cloudom a Office, konzultácie IT infra.",
       cta: "Pozrieť podpora",
@@ -52,3 +54,7 @@ export default {
     },
   },
 };
+
+
+
+

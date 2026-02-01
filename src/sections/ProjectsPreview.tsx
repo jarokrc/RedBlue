@@ -4,7 +4,7 @@ import { useI18n } from "@/app/I18nProvider";
 const ProjectsPreview = () => {
   const { t } = useI18n();
   return (
-    <section className="space-y-4">
+    <section className="content-visibility-auto space-y-4">
       <div className="flex items-center justify-between">
         <div>
           <p className="text-sm font-semibold text-blue-700">{t.nav.projects}</p>

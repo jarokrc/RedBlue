@@ -11,6 +11,8 @@ import appleTouchIcon from "@/assets-webp/favicon/apple-touch-icon.png";
 import android192 from "@/assets-webp/favicon/android-chrome-192x192.png";
 import android512 from "@/assets-webp/favicon/android-chrome-512x512.png";
 import siteManifest from "@/assets-webp/favicon/site.webmanifest";
+import manrope400LatinExt from "@/assets/fonts/Manrope-400-latin-ext.woff2";
+import manrope700LatinExt from "@/assets/fonts/Manrope-700-latin-ext.woff2";
 import { useI18n } from "./I18nProvider";
 import type { Locale } from "@/lib/locale";
 
@@ -102,6 +104,8 @@ const App = () => {
         <link rel="icon" type="image/png" sizes="192x192" href={android192} />
         <link rel="icon" type="image/png" sizes="512x512" href={android512} />
         <link rel="manifest" href={siteManifest} />
+        <link rel="preload" as="font" href={manrope400LatinExt} type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" as="font" href={manrope700LatinExt} type="font/woff2" crossOrigin="anonymous" />
       </Helmet>
       <BrowserRouter>
         <ScrollToTop />

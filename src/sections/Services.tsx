@@ -3,7 +3,7 @@ import { useI18n } from "@/app/I18nProvider";
 const Services = () => {
   const { t } = useI18n();
   return (
-    <section id="services" className="space-y-4">
+    <section id="services" className="content-visibility-auto space-y-4">
       <div>
         <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">{t.services.title}</h2>
       </div>

@@ -1,14 +1,28 @@
 ﻿import { Link } from "react-router-dom";
 import { useI18n } from "@/app/I18nProvider";
-import logoImg from "@/assets-webp/logo/logo.webp";
+import heroPng from "@/assets-webp/home/hero_.png";
+import heroWebp from "@/assets-webp/home/hero_.webp";
 
 const Hero = () => {
   const { t } = useI18n();
   return (
     <section className="grid gap-8 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-blue-900 px-8 py-12 text-white shadow-lg ring-1 ring-blue-900/30 md:grid-cols-[auto,1fr] md:items-center md:px-12 md:py-14">
       <div className="flex justify-center md:justify-start">
-        <div className="rounded-3xl bg-white/90 p-8 shadow-lg ring-1 ring-slate-200/60 md:p-9">
-          <img src={logoImg} alt="RedBlue logo" className="h-auto w-64 object-contain md:w-80" width={1208} height={395} />
+        <div className="rounded-3xl bg-white/90 p-0 shadow-lg ring-1 ring-slate-200/60 overflow-hidden">
+          <picture>
+            <source srcSet={heroWebp} type="image/webp" />
+            <img
+              src={heroPng}
+              alt="RedBlue hero visual"
+              className="h-auto w-80 object-cover md:w-[26rem]"
+              width={1208}
+              height={395}
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+              sizes="(min-width: 768px) 26rem, 20rem"
+            />
+          </picture>
         </div>
       </div>
       <div className="space-y-4">

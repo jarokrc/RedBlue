@@ -5,7 +5,9 @@ export default {
     subheading: "Partner für Websites, Desktop-Tools, Marketing und IT-Support an einem Ort.",
     ctaPrimary: "Kontakt",
   },
-  offerHeading: "Unser maßgeschneidertes Angebot",
+  offerHeading: "Letzte freie Termine für Ihre Website – Aktionspreise mit bis zu 60 % Rabatt.",
+
+  offerPromo: "",
   services: {
     title: "Was ich liefere",
     subtitle: "Web, Desktop-Miniapps, Marketing, Support, Schulung",
@@ -51,3 +53,5 @@ export default {
     },
   },
 };
+
+
