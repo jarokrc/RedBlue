@@ -1,9 +1,11 @@
 ﻿import { Link } from "react-router-dom";
 import { useI18n } from "@/app/I18nProvider";
-import heroPng from "@/assets-webp/home/hero_.png";
-import heroWebp from "@/assets-webp/home/hero_.webp";
+type HeroProps = {
+  heroPng: string;
+  heroWebp: string;
+};
 
-const Hero = () => {
+const Hero = ({ heroPng, heroWebp }: HeroProps) => {
   const { t } = useI18n();
   return (
     <section className="grid gap-8 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-blue-900 px-8 py-12 text-white shadow-lg ring-1 ring-blue-900/30 md:grid-cols-[auto,1fr] md:items-center md:px-12 md:py-14">

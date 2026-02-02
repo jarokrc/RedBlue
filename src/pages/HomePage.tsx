@@ -3,16 +3,22 @@ import { Helmet } from "react-helmet-async";
 import Hero from "@/sections/Hero";
 import { useI18n } from "@/app/I18nProvider";
 import Seo from "@/components/Seo";
-import heroWebp from "@/assets-webp/home/hero_.webp";
+import heroSkPng from "@/assets-webp/home/hero_.png";
+import heroSkWebp from "@/assets-webp/home/hero_.webp";
+import heroIntlPng from "@/assets-webp/home/hero_2.png";
+import heroIntlWebp from "@/assets-webp/home/hero_2.webp";
 
 const SolutionsCTA = lazy(() => import("@/sections/SolutionsCTA"));
 
 const HomePage = () => {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [typed, setTyped] = useState("");
   const [visible, setVisible] = useState(false);
   const [hasTriggered, setHasTriggered] = useState(false);
   const offerRef = useRef<HTMLDivElement | null>(null);
+  const heroImage = locale === "sk"
+    ? { png: heroSkPng, webp: heroSkWebp }
+    : { png: heroIntlPng, webp: heroIntlWebp };
 
   useEffect(() => {
     const el = offerRef.current;
@@ -52,9 +58,9 @@ const HomePage = () => {
     <div className="space-y-8 md:space-y-12">
       <Seo title={t.meta.homeTitle} description={t.meta.homeDescription} path="/home" />
       <Helmet>
-        <link rel="preload" as="image" href={heroWebp} type="image/webp" />
+        <link rel="preload" as="image" href={heroImage.webp} type="image/webp" />
       </Helmet>
-      <Hero />
+      <Hero heroPng={heroImage.png} heroWebp={heroImage.webp} />
       <div
         ref={offerRef}
         className={`relative overflow-hidden rounded-xl border border-blue-100 bg-white/80 px-4 py-3 shadow-sm transition duration-700 ease-out md:px-5 ${
