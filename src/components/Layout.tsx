@@ -2,7 +2,8 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState, type ReactNode } from "react";
 import { useI18n } from "@/app/I18nProvider";
 import { detectCountryCode, Locale } from "@/lib/locale";
-import logoImg from "@/assets-webp/logo/logo.webp";
+import logoWebp from "@/assets/logo/webp/logo.webp";
+import logoPng from "@/assets/logo/png/logo.png";
 import BackToTopButton from "@/components/BackToTopButton";
 
 const localeOptions: { value: Locale; label: string }[] = [
@@ -161,7 +162,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
         <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
             <Link to="/home" className="flex items-center gap-3 md:flex">
-              <img src={logoImg} alt="RedBlue.sk logo" className="h-9 w-auto" width={1208} height={395} />
+              <picture>
+                <source srcSet={logoWebp} type="image/webp" />
+                <img src={logoPng} alt="RedBlue.sk logo" className="h-9 w-auto" width={90} height={36} />
+              </picture>
               <span className="hidden text-xs font-semibold uppercase tracking-[0.22em] text-slate-500 md:inline">
                 Think Forward. Think Beyond Code.
               </span>

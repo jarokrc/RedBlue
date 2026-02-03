@@ -1,19 +1,23 @@
-*pages/*
+# pages/
 
-Účel: stránkové komponenty pre jednotlivé route cesty.
+Purpose: route-level page components.
 
-Aktuálne stránky:
-- `HomePage.tsx` – landing (Hero, Services, SolutionsCTA).
-- `ProjectsPage.tsx` + `ProjectDetailPage.tsx` – zoznam a detail projektov.
-- `WebSolutionsPage.tsx` – web riešenia.
-- `MarketingPage.tsx` – marketing.
-- `SupportPage.tsx` – TechCare & IT Support.
-- `EducationPage.tsx` – vzdelávanie.
-- `ContactPage.tsx` – kontakt.
-- `PrivacyPage.tsx` – zásady ochrany osobných údajov.
-- `CookiesPage.tsx` – cookie politika.
-- `NotFoundPage.tsx` – 404.
+Current pages:
+- `home/HomePage.tsx` - landing page
+- `projects/ProjectsPage.tsx` + `projects/ProjectDetailPage.tsx` - project list + detail
+- `web-solutions/WebSolutionsPage.tsx` - web solutions
+- `marketing/MarketingPage.tsx` - marketing
+- `support/SupportPage.tsx` - TechCare & IT Support
+- `education/EducationPage.tsx` - education
+- `contact/ContactPage.tsx` - contact
+- `privacy/PrivacyPage.tsx` - privacy policy
+- `cookies/CookiesPage.tsx` - cookie policy
+- `not-found/NotFoundPage.tsx` - 404 page
+- `intro/IntroPage.tsx` - active intro route (`/`)
+- `intro2/IntroPage2.tsx` - temporarily disabled (kept for later edits, not routed)
 
-Poznámky:
-- Stránky sú tenké kompozície; logiku/komponenty držte v `sections/` alebo vo feature balíčkoch.
-- Routing je definovaný v `src/routes/index.tsx` a používame ho v `app/App.tsx`.
+Notes:
+- Keep pages thin (composition + SEO + route-level logic).
+- Put page-specific UI blocks in each page's `sections/` folder.
+- Put shared cross-page modules in `features/` (for example `features/legal/sections`).
+- Routing is defined in `src/routes/index.tsx`.

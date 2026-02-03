@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { useI18n } from "@/app/I18nProvider";
 import type { Locale } from "@/lib/locale";
-import ogImage from "@/assets-webp/logo/logo.webp";
-import logo512 from "@/assets-webp/favicon/android-chrome-512x512.png";
+import ogImage from "@/assets/logo/webp/logo.webp";
+import logo512 from "@/assets/favicon/android-chrome-512x512.png";
 
 const SITE_URL = "https://www.redblue.sk";
 const SUPPORTED_LOCALES: Locale[] = ["sk", "en", "de"];

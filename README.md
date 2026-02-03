@@ -10,11 +10,11 @@ Vite + React 18 + TypeScript + Tailwind static site with multiple pages and i18n
 
 ## Structure
 - `src/app` – app shell, router, I18nProvider
-- `src/pages` – page components
-- `src/sections` – shared sections (hero, services, CTA, contact, previews)
+- `src/pages` - route pages (with page-local `sections/`)
+- `src/features` - shared modules reused across pages (for example legal sections)
 - `src/components` – layout/UI
 - `src/locales/{sk,en,de}` – all copy split by language (common, home, web, marketing, support, education, about, projects, privacy, cookies)
-- `src/assets-webp` – optimized WebP assets (logo, about, projects, marketing, websolutions, support, education, contact)
+- `src/assets` - unified media assets with modern + fallback formats (webp/png, webm/mp4, favicon, logo, etc.)
 - `src/styles` – Tailwind entry (global.css)
 - `src/routes` – route definitions
 - `src/lib` – utilities (locale detection)

@@ -33,14 +33,11 @@ export default {
   contact: {
     title: "Contact",
     subtitle: "Send us a note; we'll reply and schedule a quick call.",
-    phone: "+421 000 000 000",
-    email: "info@redblue.sk",
-    button: "Send message",
-    success: "Message sent (mock)",
   },
   notFound: {
-    title: "Page not found",
-    description: "The page you are looking for does not exist.",
+    title: "Oops, looks like you got lost.",
+    description: "This page does not exist.",
+    redirectIn: "In {seconds} seconds we will send you back to the right path.",
     back: "Back to home",
   },
 };

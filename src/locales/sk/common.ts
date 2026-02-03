@@ -33,14 +33,11 @@ export default {
   contact: {
     title: "Kontakt",
     subtitle: "Napíšte nám, ozveme sa späť a dohodneme si krátky call.",
-    phone: "+421 000 000 000",
-    email: "info@redblue.sk",
-    button: "Odoslať správu",
-    success: "Správa odoslaná (mock)",
   },
   notFound: {
-    title: "Stránka nenájdená",
-    description: "Hľadaná stránka neexistuje.",
-    back: "Späť na úvod",
+    title: "Ups, vyzerá to, že ste sa stratili.",
+    description: "Táto stránka neexistuje.",
+    redirectIn: "O {seconds} sekúnd vás vrátime späť na správnu cestu.",
+    back: "Späť na domovskú stránku",
   },
 };

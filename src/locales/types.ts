@@ -185,14 +185,11 @@
   contact: {
     title: string;
     subtitle: string;
-    phone: string;
-    email: string;
-    button: string;
-    success: string;
   };
   notFound: {
     title: string;
     description: string;
+    redirectIn: string;
     back: string;
   };
   privacy: {

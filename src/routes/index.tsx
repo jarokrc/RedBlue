@@ -1,17 +1,17 @@
 import { lazy, type ReactElement } from "react";
-import HomePage from "@/pages/HomePage";
-import IntroPage2 from "@/pages/IntroPage2";
+import HomePage from "@/pages/home/HomePage";
+import IntroPage from "@/pages/intro/IntroPage";
 
-const ProjectsPage = lazy(() => import("@/pages/ProjectsPage"));
-const ProjectDetailPage = lazy(() => import("@/pages/ProjectDetailPage"));
-const WebSolutionsPage = lazy(() => import("@/pages/WebSolutionsPage"));
-const MarketingPage = lazy(() => import("@/pages/MarketingPage"));
-const SupportPage = lazy(() => import("@/pages/SupportPage"));
-const EducationPage = lazy(() => import("@/pages/EducationPage"));
-const ContactPage = lazy(() => import("@/pages/ContactPage"));
-const PrivacyPage = lazy(() => import("@/pages/PrivacyPage"));
-const CookiesPage = lazy(() => import("@/pages/CookiesPage"));
-const NotFoundPage = lazy(() => import("@/pages/NotFoundPage"));
+const ProjectsPage = lazy(() => import("@/pages/projects/ProjectsPage"));
+const ProjectDetailPage = lazy(() => import("@/pages/projects/ProjectDetailPage"));
+const WebSolutionsPage = lazy(() => import("@/pages/web-solutions/WebSolutionsPage"));
+const MarketingPage = lazy(() => import("@/pages/marketing/MarketingPage"));
+const SupportPage = lazy(() => import("@/pages/support/SupportPage"));
+const EducationPage = lazy(() => import("@/pages/education/EducationPage"));
+const ContactPage = lazy(() => import("@/pages/contact/ContactPage"));
+const PrivacyPage = lazy(() => import("@/pages/privacy/PrivacyPage"));
+const CookiesPage = lazy(() => import("@/pages/cookies/CookiesPage"));
+const NotFoundPage = lazy(() => import("@/pages/not-found/NotFoundPage"));
 
 export type AppRoute = {
   path: string;
@@ -19,8 +19,7 @@ export type AppRoute = {
 };
 
 export const appRoutes: AppRoute[] = [
-  { path: "/", element: <IntroPage2 /> },
-  { path: "/intro2", element: <IntroPage2 /> },
+  { path: "/", element: <IntroPage /> },
   { path: "/home", element: <HomePage /> },
   { path: "/projekty", element: <ProjectsPage /> },
   { path: "/projekty/:slug", element: <ProjectDetailPage /> },
