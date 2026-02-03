@@ -2,9 +2,9 @@
 node_modules/
 dist/
 .vite/
+
 # assets & media
-assets-webp/
-src/assets-webp/
+src/assets/
 public/
 **/*.png
 **/*.jpg
