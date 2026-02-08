@@ -1,11 +1,12 @@
 export default {
   hero: {
-    label: "Web, desktop, marketing & podpora",
+    label: "Web riešenia na mieru, technická podpora a vzdelávanie.",
     heading: "RedBlue",
-    subheading: "Partner pre weby, desktopové nástroje, marketing a IT podporu na jednom mieste.",
+    subheading: "Moderné digitálne riešenia pre firmy, ktoré chcú rásť rýchlejšie a bez kompromisov.",
     ctaPrimary: "Spojme sa",
   },
-  offerHeading: "Posledné voľné termíny pre február na tvorbu webu – teraz za akciové ceny so zľavou až 60 %.",
+  offerHeading:
+    "Každý deň bez moderného a spoľahlivého webu znamená stratené príležitosti, zbytočne unikajúce peniaze a náskok konkurencie – preto je začiatok roka ten najlepší moment investovať do riešenia, ktoré bude pracovať pre teba nonstop.",
 
   offerPromo: "",
   services: {
@@ -32,8 +33,8 @@ export default {
   },
   solutions: {
     web: {
-      title: " Web riešenia",
-      description: "Landingy, firemné weby, e-shopy, API a desktop nástroje s legislatívou na kľú.",
+      title: "🌐 Web riešenia",
+      description: "Landingy, firemné weby, e-shopy, API a desktop nástroje s legislatívou na kľúč.",
       cta: "Pozrieť web riešenia",
     },
     marketing: {

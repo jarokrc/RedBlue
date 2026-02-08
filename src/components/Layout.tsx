@@ -43,7 +43,6 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
   const servicesLinks = [
     { to: "/web-riesenia", label: t.nav.web, icon: "🌐" },
-    { to: "/marketing", label: t.nav.marketing, icon: "📣" },
     { to: "/podpora", label: t.nav.support, icon: "🛠️" },
     { to: "/vzdelavanie", label: t.nav.education, icon: "🎓" },
   ];
@@ -159,7 +158,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
         Skip to content
       </a>
       {!isIntro && (
-        <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/80 backdrop-blur">
+        <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
             <Link to="/home" className="flex items-center gap-3 md:flex">
               <picture>
@@ -214,9 +213,6 @@ const Layout = ({ children }: { children: ReactNode }) => {
           <div className="flex flex-wrap items-center justify-center gap-4 md:justify-end">
             <Link to="/web-riesenia" className="hover:text-blue-700">
               {t.nav.web}
-            </Link>
-            <Link to="/marketing" className="hover:text-blue-700">
-              {t.nav.marketing}
             </Link>
             <Link to="/podpora" className="hover:text-blue-700">
               {t.nav.support}

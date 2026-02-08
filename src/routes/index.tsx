@@ -4,8 +4,7 @@ import IntroPage from "@/pages/intro/IntroPage";
 
 const ProjectsPage = lazy(() => import("@/pages/projects/ProjectsPage"));
 const ProjectDetailPage = lazy(() => import("@/pages/projects/ProjectDetailPage"));
-const WebSolutionsPage = lazy(() => import("@/pages/web-solutions/WebSolutionsPage"));
-const MarketingPage = lazy(() => import("@/pages/marketing/MarketingPage"));
+const WebSolutionsPage2 = lazy(() => import("@/pages/web-solutions/WebSolutionsPage2"));
 const SupportPage = lazy(() => import("@/pages/support/SupportPage"));
 const EducationPage = lazy(() => import("@/pages/education/EducationPage"));
 const ContactPage = lazy(() => import("@/pages/contact/ContactPage"));
@@ -23,8 +22,8 @@ export const appRoutes: AppRoute[] = [
   { path: "/home", element: <HomePage /> },
   { path: "/projekty", element: <ProjectsPage /> },
   { path: "/projekty/:slug", element: <ProjectDetailPage /> },
-  { path: "/web-riesenia", element: <WebSolutionsPage /> },
-  { path: "/marketing", element: <MarketingPage /> },
+  { path: "/web-riesenia", element: <WebSolutionsPage2 /> },
+  { path: "/web-riesenia-2", element: <WebSolutionsPage2 /> },
   { path: "/podpora", element: <SupportPage /> },
   { path: "/vzdelavanie", element: <EducationPage /> },
   { path: "/kontakt", element: <ContactPage /> },

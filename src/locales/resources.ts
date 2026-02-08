@@ -2,6 +2,7 @@
 import skHome from "./sk/home";
 import skProjects from "./sk/projects";
 import skWeb from "./sk/web";
+import skWebSolutionsPage2 from "./sk/webSolutionsPage2";
 import skMarketing from "./sk/marketing";
 import skSupport from "./sk/support";
 import skEducation from "./sk/education";
@@ -13,6 +14,7 @@ import enCommon from "./en/common";
 import enHome from "./en/home";
 import enProjects from "./en/projects";
 import enWeb from "./en/web";
+import enWebSolutionsPage2 from "./en/webSolutionsPage2";
 import enMarketing from "./en/marketing";
 import enSupport from "./en/support";
 import enEducation from "./en/education";
@@ -24,6 +26,7 @@ import deCommon from "./de/common";
 import deHome from "./de/home";
 import deProjects from "./de/projects";
 import deWeb from "./de/web";
+import deWebSolutionsPage2 from "./de/webSolutionsPage2";
 import deMarketing from "./de/marketing";
 import deSupport from "./de/support";
 import deEducation from "./de/education";
@@ -36,7 +39,46 @@ import type { Translation } from "./types";
 const merge = (...parts: any[]) => parts.reduce((acc, part) => ({ ...acc, ...part }), {});
 
 export const translations: Record<string, Translation> = {
-  sk: merge(skCommon, skIntro, skHome, skProjects, skWeb, skMarketing, skSupport, skEducation, skPrivacy, skCookies, skContact) as Translation,
-  en: merge(enCommon, enIntro, enHome, enProjects, enWeb, enMarketing, enSupport, enEducation, enPrivacy, enCookies, enContact) as Translation,
-  de: merge(deCommon, deIntro, deHome, deProjects, deWeb, deMarketing, deSupport, deEducation, dePrivacy, deCookies, deContact) as Translation,
+  sk: merge(
+    skCommon,
+    skIntro,
+    skHome,
+    skProjects,
+    skWeb,
+    skWebSolutionsPage2,
+    skMarketing,
+    skSupport,
+    skEducation,
+    skPrivacy,
+    skCookies,
+    skContact,
+  ) as Translation,
+  en: merge(
+    enCommon,
+    enIntro,
+    enHome,
+    enProjects,
+    enWeb,
+    enWebSolutionsPage2,
+    enMarketing,
+    enSupport,
+    enEducation,
+    enPrivacy,
+    enCookies,
+    enContact,
+  ) as Translation,
+  de: merge(
+    deCommon,
+    deIntro,
+    deHome,
+    deProjects,
+    deWeb,
+    deWebSolutionsPage2,
+    deMarketing,
+    deSupport,
+    deEducation,
+    dePrivacy,
+    deCookies,
+    deContact,
+  ) as Translation,
 };

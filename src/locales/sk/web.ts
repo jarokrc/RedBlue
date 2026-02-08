@@ -25,7 +25,7 @@ export default {
       "Stabilné riešenia pre podnikateľov, organizácie a služby. Od prvého nápadu po hotový produkt so správou a podporou.",
     packagesTitle: "Možné riešenia podľa rozsahu projektu",
     packagesIntro:
-      "Každý projekt riešim individuálne. Nižšie sú orientačné balíky, ktoré pomáhajú rýchlo určiť rozsah a smer riešenia.",
+      "Každý projekt riešime individuálne. Nižšie sú orientačné balíky, ktoré pomáhajú rýchlo určiť rozsah a smer riešenia.",
     packages: [
       {
         icon: "🎯",
@@ -90,48 +90,48 @@ export default {
         icon: "☁️",
         title: "Hosting & správa",
         subtitle: "Prevádzka, bezpečnosť a technická starostlivosť",
-        description: "Postarám sa o to, aby váš web alebo systém fungoval spoľahlivo a bezpečne.",
+        description: "Postaráme sa o to, aby váš web alebo systém fungoval spoľahlivo a bezpečne.",
         bullets: [
           "nasadenie na hosting alebo VPS",
           "SSL, domény a emailové služby",
           "monitoring a technická podpora",
           "dlhodobá správa a údržba",
         ],
-        note: "👉 Vy riešite biznis, techniku riešim ja.",
+        note: "👉 Vy riešite biznis, techniku riešime my.",
       },
     ],
     packagesCtaTitle: "Neviete, ktorý variant je pre vás vhodný?",
-    packagesCtaText: "Navrhnem riešenie presne podľa vašich potrieb a cieľov.",
+    packagesCtaText: "Navrhneme riešenie presne podľa vašich potrieb a cieľov.",
     packagesCtaPrimary: "Chcem nezáväzný návrh riešenia",
     packagesCtaDownload: "Stiahnuť cenník v skratke (PDF)",
-    processTitle: "Ako postupujem",
+    processTitle: "Ako postupujeme",
     process: [
       {
-        title: "1️⃣ Najprv pochopím váš cieľ",
+        title: "1️⃣ Najprv pochopíme váš cieľ",
         description:
           "Spoločne si ujasníme, čo má web alebo systém riešiť – pre koho je určený, aký problém má odstrániť a aký výsledok má priniesť.",
         note: "👉 Žiadne zbytočné funkcie, len to, čo má reálny zmysel.",
       },
       {
-        title: "2️⃣ Navrhnem funkčnú logiku a štruktúru",
+        title: "2️⃣ Navrhneme funkčnú logiku a štruktúru",
         description:
-          "Navrhnem UX, obsah a dátovú logiku tak, aby bol systém prehľadný, rozšíriteľný a dlhodobo udržateľný.",
+          "Navrhneme UX, obsah a dátovú logiku tak, aby bol systém prehľadný, rozšíriteľný a dlhodobo udržateľný.",
         note: "👉 Myslí sa na budúcnosť, nie len na prvé spustenie.",
       },
       {
-        title: "3️⃣ Postavím riešenie – frontend, backend a API",
-        description: "Vyvíjam samotný web alebo systém vrátane administrácie, backendu a prepojení.",
+        title: "3️⃣ Postavíme riešenie – frontend, backend a API",
+        description: "Vyvíjame samotný web alebo systém vrátane administrácie, backendu a prepojení.",
         note: "👉 Všetko funguje spolu ako jeden celok.",
       },
       {
-        title: "4️⃣ Otestujem, zabezpečím a pripravím na reálnu prevádzku",
+        title: "4️⃣ Otestujeme, zabezpečíme a pripravíme na reálnu prevádzku",
         description: "Testovanie, zabezpečenie, SSL, monitoring a technická stabilita.",
         note: "👉 Web nie je len „hotový“, ale pripravený na ostrú prevádzku.",
       },
       {
-        title: "5️⃣ Nasadím a postarám sa o prevádzku",
-        description: "Riešenie nasadím na hosting/VPS a zabezpečím správu, podporu a ďalší rozvoj.",
-        note: "👉 Vy sa venujete podnikaniu, techniku riešim ja.",
+        title: "5️⃣ Nasadíme a postaráme sa o prevádzku",
+        description: "Riešenie nasadíme na hosting/VPS a zabezpečíme správu, podporu a ďalší rozvoj.",
+        note: "👉 Vy sa venujete podnikaniu, techniku riešime my.",
       },
     ],
     stackTitle: "Tech stack",
@@ -143,8 +143,8 @@ export default {
       { title: "Ops", items: ["Docker", "Git", "CI/CD", "SSL/monitoring"] },
     ],
     ctaTitle: "Potrebujete web alebo systém?",
-    ctaText: "Pripravím návrh, postavím riešenie a postarám sa o prevádzku.",
+    ctaText: "Pripravíme návrh, postavíme riešenie a postaráme sa o prevádzku.",
     ctaPrimary: "Chcem web alebo systém",
-    ctaSecondary: "Napíšte mi",
+    ctaSecondary: "Napíšte nám",
   },
 };

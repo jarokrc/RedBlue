@@ -1,16 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useI18n } from "@/app/I18nProvider";
-import heroSkPng from "@/assets/home/png/hero_sk.png";
-import heroSkWebp from "@/assets/home/webp/hero_sk.webp";
-import heroIntlPng from "@/assets/home/png/hero_en.png";
-import heroIntlWebp from "@/assets/home/webp/hero_en.webp";
+import heroPng from "@/assets/home/png/kancl.jpg";
+import heroWebp from "@/assets/home/webp/kancl.webp";
 
 const HomeHeroSection = () => {
   const { t, locale } = useI18n();
-  const heroImage = locale === "sk"
-    ? { png: heroSkPng, webp: heroSkWebp }
-    : { png: heroIntlPng, webp: heroIntlWebp };
+  const heroImage = { png: heroPng, webp: heroWebp };
 
   return (
     <>

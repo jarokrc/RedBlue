@@ -147,6 +147,47 @@
     ctaPrimary: string;
     ctaSecondary: string;
   };
+  webSolutionsPage2: {
+    intro: string;
+    hero: {
+      badge: string;
+      title: string;
+      subtitle: string;
+      positioning: string[];
+      ctaPrimary: string;
+      ctaSecondary: string;
+    };
+    whatWeCreateTitle: string;
+    whatWeCreate: string[];
+    showcase: {
+      alt: string;
+      caption: string;
+    };
+    forWhomTitle: string;
+    forWhomBullets: string[];
+    trustTitle: string;
+    trustSubtitle: string;
+    trustPoints: string[];
+    gallery: {
+      leftAlt: string;
+      rightAlt: string;
+    };
+    packagesTitle: string;
+    packagesIntro: string;
+    packages: { icon: string; title: string; subtitle: string; description: string; bullets: string[]; note?: string }[];
+    packagesHelpTitle: string;
+    packagesHelpText: string;
+    packagesHelpCta: string;
+    processTitle: string;
+    process: { number: string; title: string; text: string }[];
+    ctaBigTitle: string;
+    ctaBigText: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+    techStackTitle: string;
+    techStackIntro: string;
+    techStacks: { title: string; items: string[] }[];
+  };
   projects: {
     title: string;
     intro: string;

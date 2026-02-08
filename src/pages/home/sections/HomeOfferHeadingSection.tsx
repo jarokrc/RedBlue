@@ -51,7 +51,7 @@ const HomeOfferHeadingSection = ({ heading }: HomeOfferHeadingSectionProps) => {
       }`}
     >
       <div className="absolute left-3 top-1/2 h-1 w-12 -translate-y-1/2 bg-gradient-to-r from-blue-700 to-transparent opacity-80 blur-[1px]" aria-hidden />
-      <p className="relative pl-8 text-lg font-semibold text-red-600 md:pl-10 md:text-xl">
+      <p className="relative pl-8 text-lg font-semibold text-slate-700 md:pl-10 md:text-xl">
         <span className="pointer-events-none select-none opacity-0">{heading}</span>
         <span aria-hidden className="absolute inset-0 pl-8 md:pl-10">
           {typed}

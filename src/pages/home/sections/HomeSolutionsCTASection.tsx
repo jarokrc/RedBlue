@@ -13,13 +13,11 @@ type SolutionCard =
 
 const HomeSolutionsCTASection = () => {
   const { t } = useI18n();
-  const academyHref = "https://academy.redblue.sk/";
 
   const cards: SolutionCard[] = [
     { to: "/web-riesenia", data: t.solutions.web, external: false },
-    { to: "/marketing", data: t.solutions.marketing, external: false },
     { to: "/podpora", data: t.solutions.support, external: false },
-    { href: academyHref, data: t.solutions.academy, external: true },
+    { to: "/vzdelavanie", data: t.solutions.academy, external: false },
   ];
 
   return (
