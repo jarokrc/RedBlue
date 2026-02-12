@@ -17,6 +17,8 @@
     cookiesTitle: string;
     cookiesDescription: string;
     contactDescription: string;
+    proposalTitle: string;
+    proposalDescription: string;
   };
   nav: {
     home: string;
@@ -260,6 +262,90 @@
       heading: string;
       paragraphs: string[];
       email: string;
+    };
+  };
+  proposal: {
+    title: string;
+    subtitle: string;
+    metaTitle: string;
+    metaDescription: string;
+    meta: {
+      projectNameLabel: string;
+      projectNamePlaceholder: string;
+      clientNameLabel: string;
+      clientNamePlaceholder: string;
+      contactLabel: string;
+      contactPlaceholder: string;
+      notesLabel: string;
+      notesPlaceholder: string;
+    };
+    toolboxTitle: string;
+    toolboxHint: string;
+    canvasTitle: string;
+    emptyStateTitle: string;
+    emptyStateText: string;
+    exportTitle: string;
+    exportHint: string;
+    actions: {
+      addHeader: string;
+      addFooter: string;
+      addHero: string;
+      addText: string;
+      addImage: string;
+      addCta: string;
+      addFeatures: string;
+      importJson: string;
+      downloadJson: string;
+      copyJson: string;
+      reset: string;
+    };
+    blockLabels: {
+      header: string;
+      footer: string;
+      hero: string;
+      text: string;
+      image: string;
+      cta: string;
+      features: string;
+    };
+    fieldLabels: {
+      title: string;
+      subtitle: string;
+      body: string;
+      primaryCtaText: string;
+      primaryCtaUrl: string;
+      secondaryCtaText: string;
+      secondaryCtaUrl: string;
+      imageUrl: string;
+      caption: string;
+      layout: string;
+      buttonText: string;
+      buttonUrl: string;
+      itemsTitle: string;
+      itemsText: string;
+      uploadImage: string;
+      template: string;
+      templateSupportWebp: string;
+      templateSupportPng: string;
+    };
+    layoutOptions: {
+      left: string;
+      right: string;
+      full: string;
+    };
+    buttons: {
+      moveUp: string;
+      moveDown: string;
+      duplicate: string;
+      remove: string;
+      addItem: string;
+      removeItem: string;
+    };
+    notices: {
+      autoSave: string;
+      copied: string;
+      importError: string;
+      resetConfirm: string;
     };
   };
 };

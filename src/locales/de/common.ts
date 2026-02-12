@@ -19,6 +19,8 @@ export default {
     cookiesTitle: "Cookies | RedBlue.sk",
     cookiesDescription: "Informationen zu Cookies und Einwilligungseinstellungen für RedBlue.sk.",
     contactDescription: "Kontaktieren Sie RedBlue für Webprojekte, Marketing, IT-Support oder Beratung.",
+    proposalTitle: "Seitenentwurf | RedBlue.sk",
+    proposalDescription: "Interaktiver Seitenentwurf mit JSON-Export für Feedback.",
   },
   nav: {
     home: "Home",

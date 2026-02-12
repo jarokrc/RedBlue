@@ -18,6 +18,8 @@ export default {
     cookiesTitle: "Cookies | RedBlue.sk",
     cookiesDescription: "Cookie information and consent settings for RedBlue.sk.",
     contactDescription: "Contact RedBlue for web projects, marketing, IT support or consultations.",
+    proposalTitle: "Page draft | RedBlue.sk",
+    proposalDescription: "Interactive page draft with JSON export for feedback.",
   },
   nav: {
     home: "Home",

@@ -13,6 +13,7 @@ Current pages:
 - `privacy/PrivacyPage.tsx` - privacy policy
 - `cookies/CookiesPage.tsx` - cookie policy
 - `not-found/NotFoundPage.tsx` - 404 page
+- `navrh/NavrhPage.tsx` - interactive draft builder (client JSON export)
 - `intro/IntroPage.tsx` - active intro route (`/`)
 - `intro2/IntroPage2.tsx` - temporarily disabled (kept for later edits, not routed)
 

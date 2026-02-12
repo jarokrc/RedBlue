@@ -10,6 +10,7 @@ import skPrivacy from "./sk/privacy";
 import skCookies from "./sk/cookies";
 import skContact from "./sk/contact";
 import skIntro from "./sk/intro";
+import skProposal from "./sk/proposal";
 import enCommon from "./en/common";
 import enHome from "./en/home";
 import enProjects from "./en/projects";
@@ -22,6 +23,7 @@ import enPrivacy from "./en/privacy";
 import enCookies from "./en/cookies";
 import enContact from "./en/contact";
 import enIntro from "./en/intro";
+import enProposal from "./en/proposal";
 import deCommon from "./de/common";
 import deHome from "./de/home";
 import deProjects from "./de/projects";
@@ -34,6 +36,7 @@ import dePrivacy from "./de/privacy";
 import deCookies from "./de/cookies";
 import deContact from "./de/contact";
 import deIntro from "./de/intro";
+import deProposal from "./de/proposal";
 import type { Translation } from "./types";
 
 const merge = (...parts: any[]) => parts.reduce((acc, part) => ({ ...acc, ...part }), {});
@@ -52,6 +55,7 @@ export const translations: Record<string, Translation> = {
     skPrivacy,
     skCookies,
     skContact,
+    skProposal,
   ) as Translation,
   en: merge(
     enCommon,
@@ -66,6 +70,7 @@ export const translations: Record<string, Translation> = {
     enPrivacy,
     enCookies,
     enContact,
+    enProposal,
   ) as Translation,
   de: merge(
     deCommon,
@@ -80,5 +85,6 @@ export const translations: Record<string, Translation> = {
     dePrivacy,
     deCookies,
     deContact,
+    deProposal,
   ) as Translation,
 };

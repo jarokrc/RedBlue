@@ -8,6 +8,7 @@ const WebSolutionsPage2 = lazy(() => import("@/pages/web-solutions/WebSolutionsP
 const SupportPage = lazy(() => import("@/pages/support/SupportPage"));
 const EducationPage = lazy(() => import("@/pages/education/EducationPage"));
 const ContactPage = lazy(() => import("@/pages/contact/ContactPage"));
+const NavrhPage = lazy(() => import("@/pages/navrh/NavrhPage"));
 const PrivacyPage = lazy(() => import("@/pages/privacy/PrivacyPage"));
 const CookiesPage = lazy(() => import("@/pages/cookies/CookiesPage"));
 const NotFoundPage = lazy(() => import("@/pages/not-found/NotFoundPage"));
@@ -27,6 +28,7 @@ export const appRoutes: AppRoute[] = [
   { path: "/podpora", element: <SupportPage /> },
   { path: "/vzdelavanie", element: <EducationPage /> },
   { path: "/kontakt", element: <ContactPage /> },
+  { path: "/navrh", element: <NavrhPage /> },
   { path: "/zasady-ochrany-osobnych-udajov", element: <PrivacyPage /> },
   { path: "/privacy", element: <PrivacyPage /> },
   { path: "/cookies", element: <CookiesPage /> },

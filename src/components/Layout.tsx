@@ -19,10 +19,6 @@ const Layout = ({ children }: { children: ReactNode }) => {
   const country = detectCountryCode().toUpperCase();
   const location = useLocation();
   const isIntro = location.pathname === "/";
-  const academyHref =
-    locale === "sk" || country === "SK" || country === "CZ"
-      ? "https://redblueacademy.com/"
-      : "https://redblueacademy.com/en";
 
   useEffect(() => {
     if (!menuOpen) setServicesOpen(false);
