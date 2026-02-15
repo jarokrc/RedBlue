@@ -26,7 +26,7 @@
     projects: string;
     contact: string;
     web: string;
-    marketing: string;
+    audit: string;
     support: string;
     education: string;
     privacy: string;
@@ -59,6 +59,7 @@
   solutions: {
     web: { title: string; description: string; cta: string };
     marketing: { title: string; description: string; cta: string };
+    audit: { title: string; description: string; cta: string };
     support: { title: string; description: string; cta: string };
     academy: { title: string; description: string; cta: string };
   };

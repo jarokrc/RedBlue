@@ -1,6 +1,6 @@
 export default {
   hero: {
-    label: "Custom web solutions, technical support and training.",
+    label: "IT Audit, web solutions, technical support and training.",
     heading: "RedBlue",
     subheading: "Modern digital solutions for companies that want to grow faster and without compromise.",
     ctaPrimary: "Let's connect",
@@ -33,13 +33,19 @@ export default {
   solutions: {
     web: {
       title: "🌐 Web solutions",
-      description: "Landing pages, company websites, e-shops, APIs and desktop tools with legal requirements covered.",
+      description:
+        "Turnkey web solutions—from foundations to complex builds—professional with a quality guarantee. Ready for current (and future) EU/SK requirements: full accessibility (EAA / WCAG 2.2 AA), data protection (GDPR), marketplace transparency (DSA).",
       cta: "See web solutions",
     },
     marketing: {
       title: "📣 Marketing",
       description: "Promo videos, short reels, content plans and campaigns with reporting.",
       cta: "See marketing",
+    },
+    audit: {
+      title: "IT Audit",
+      description: "Avoid fines of tens of thousands of euros. An IT audit uncovers security, content, and technical weaknesses before the inspector does.",
+      cta: "See audit",
     },
     support: {
       title: "🛠 TechCare & IT Support",

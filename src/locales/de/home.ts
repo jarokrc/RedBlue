@@ -1,6 +1,6 @@
 export default {
   hero: {
-    label: "Maßgeschneiderte Weblösungen, technischer Support und Weiterbildung.",
+    label: "IT-Audit, Weblösungen, technischer Support und Weiterbildung.",
     heading: "RedBlue",
     subheading: "Moderne digitale Lösungen für Unternehmen, die schneller und ohne Kompromisse wachsen wollen.",
     ctaPrimary: "Kontakt aufnehmen",
@@ -34,13 +34,19 @@ export default {
   solutions: {
     web: {
       title: "🌐 Weblösungen",
-      description: "Landingpages, Unternehmenswebsites, E-Shops, APIs und Desktop-Tools mit rechtlicher Absicherung aus einer Hand.",
+      description:
+        "Web aus einer Hand – von der Basis bis zur komplexen Lösung, professionell mit Qualitätsgarantie. Bereit für aktuelle (und künftige) EU/SK-Anforderungen: volle Barrierefreiheit (EAA / WCAG 2.2 AA), Datenschutz (GDPR), Transparenz für Marktplätze (DSA).",
       cta: "Weblösungen ansehen",
     },
     marketing: {
       title: "📣 Marketing",
       description: "Promo-Videos, kurze Reels, Content-Pläne und Kampagnen mit Reporting.",
       cta: "Marketing ansehen",
+    },
+    audit: {
+      title: "IT-Audit",
+      description: "Vermeiden Sie Strafen in fünfstelliger Höhe. Ein IT-Audit deckt Sicherheits-, Inhalts- und technische Schwächen auf, bevor der Prüfer sie findet.",
+      cta: "Audit ansehen",
     },
     support: {
       title: "🛠 TechCare & IT-Support",

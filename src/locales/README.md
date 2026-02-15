@@ -7,7 +7,7 @@
   - `common.ts` – meta, navigácia, contact, notFound, odkazy na privacy/cookies.
   - `home.ts` – hero, services, solutions.
   - `web.ts` – web riešenia (stacks, process, legal, addons, audience).
-  - `marketing.ts` – marketing bloky, intro, support.
+  - `audit.ts` – audit bloky, intro, support.
   - `proposal.ts` – interaktívny návrh (JSON export pre klienta).
   - `projects.ts` – obsah projektov (zoznam + detaily).
   - `education.ts`, `support.ts` – obsah podstránok vzdelávanie / podpora.

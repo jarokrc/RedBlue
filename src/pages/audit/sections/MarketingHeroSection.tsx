@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import TypewriterText from "@/components/TypewriterText";
-import marketingPosterWebp from "@/assets/marketing/webp/marketing.webp";
-import marketingPosterPng from "@/assets/marketing/png/marketing.png";
-import promoVideoWebm from "@/assets/marketing/webm/promo.webm";
-import promoVideoMp4 from "@/assets/marketing/mp4/promo.mp4";
+import marketingPosterWebp from "@/assets/audit/webp/marketing.webp";
+import marketingPosterPng from "@/assets/audit/png/marketing.png";
+import promoVideoWebm from "@/assets/audit/webm/promo.webm";
+import promoVideoMp4 from "@/assets/audit/mp4/promo.mp4";
 import type { Translation } from "@/locales/types";
 
 type MarketingHeroSectionProps = {

@@ -3,14 +3,13 @@ import type { Translation } from "@/locales/types";
 type MarketingPackagesSectionProps = {
   title: string;
   packages: Translation["marketingPage"]["packages"];
-  positioningTags: string[];
 };
 
-const MarketingPackagesSection = ({ title, packages, positioningTags }: MarketingPackagesSectionProps) => (
+const MarketingPackagesSection = ({ title, packages }: MarketingPackagesSectionProps) => (
   <section id="packages" className="space-y-4">
     <div className="flex items-center justify-between">
       <h3 className="underline-sweep text-2xl font-bold text-slate-900 md:text-3xl">{title}</h3>
-      <span className="text-sm font-semibold text-blue-700">3 balĂ­ky +</span>
+      <span className="text-sm font-semibold text-blue-700">3 výstupy +</span>
     </div>
     <div className="grid gap-4 md:grid-cols-3">
       {packages.map((pack) => (
@@ -19,14 +18,21 @@ const MarketingPackagesSection = ({ title, packages, positioningTags }: Marketin
             <span aria-hidden>{pack.icon}</span>
             {pack.title}
           </div>
+          {pack.subtitle ? (
+            <p className="text-sm font-semibold text-slate-900 md:text-base">{pack.subtitle}</p>
+          ) : null}
           <p className="text-sm text-slate-700 md:text-base">{pack.description}</p>
-          <div className="flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
-            {positioningTags.map((tag) => (
-              <span key={`${pack.title}-${tag}`} className="rounded-full bg-slate-100 px-2 py-1 text-[11px] text-slate-700">
-                {tag}
-              </span>
-            ))}
-          </div>
+          {pack.bullets?.length ? (
+            <ul className="space-y-1 text-sm text-slate-600 md:text-base">
+              {pack.bullets.map((bullet) => (
+                <li key={`${pack.title}-${bullet}`} className="flex items-start gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-400" aria-hidden />
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+          {pack.note ? <p className="text-xs font-semibold text-slate-500">{pack.note}</p> : null}
         </article>
       ))}
     </div>

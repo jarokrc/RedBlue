@@ -6,7 +6,7 @@ Current pages:
 - `home/HomePage.tsx` - landing page
 - `projects/ProjectsPage.tsx` + `projects/ProjectDetailPage.tsx` - project list + detail
 - `web-solutions/WebSolutionsPage.tsx` - web solutions
-- `marketing/MarketingPage.tsx` - marketing
+- `audit/AuditPage.tsx` - IT audit
 - `support/SupportPage.tsx` - TechCare & IT Support
 - `education/EducationPage.tsx` - education
 - `contact/ContactPage.tsx` - contact

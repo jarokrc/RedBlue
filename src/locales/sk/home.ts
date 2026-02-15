@@ -1,6 +1,6 @@
 export default {
   hero: {
-    label: "Web riešenia na mieru, technická podpora a vzdelávanie.",
+    label: "IT Audit, Web riešenia, technická podpora a vzdelávanie.",
     heading: "RedBlue",
     subheading: "Moderné digitálne riešenia pre firmy, ktoré chcú rásť rýchlejšie a bez kompromisov.",
     ctaPrimary: "Spojme sa",
@@ -34,13 +34,19 @@ export default {
   solutions: {
     web: {
       title: "🌐 Web riešenia",
-      description: "Landingy, firemné weby, e-shopy, API a desktop nástroje s legislatívou na kľúč.",
+      description:
+        "Web na kľúč – od základu po komplex, profesionálne s garanciou kvality. Pripravené na súčasné (aj budúce) požiadavky EÚ/SK: plná prístupnosť (EAA / WCAG 2.2 AA), ochrana osobných údajov (GDPR), transparentnosť pre marketplaces (DSA).",
       cta: "Pozrieť web riešenia",
     },
     marketing: {
       title: "📣 Marketing",
       description: "Promo videá, krátke reels, content plány a kampane s reportingom.",
       cta: "Pozrieť marketing",
+    },
+    audit: {
+      title: "IT Audit",
+      description: "Predíďte pokutám za desaťtisíce eur. IT audit odhalí bezpečnostné aj obsahové a technické slabiny skôr než kontrolór.",
+      cta: "Pozrieť audit",
     },
     support: {
       title: "🛠 TechCare & IT Support",

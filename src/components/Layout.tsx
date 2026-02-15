@@ -38,6 +38,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   ];
 
   const servicesLinks = [
+    { to: "/audit", label: t.nav.audit, icon: "§" },
     { to: "/web-riesenia", label: t.nav.web, icon: "🌐" },
     { to: "/podpora", label: t.nav.support, icon: "🛠️" },
     { to: "/vzdelavanie", label: t.nav.education, icon: "🎓" },

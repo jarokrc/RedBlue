@@ -16,6 +16,7 @@ const HomeSolutionsCTASection = () => {
 
   const cards: SolutionCard[] = [
     { to: "/web-riesenia", data: t.solutions.web, external: false },
+    { to: "/audit", data: t.solutions.audit, external: false },
     { to: "/podpora", data: t.solutions.support, external: false },
     { to: "/vzdelavanie", data: t.solutions.academy, external: false },
   ];
