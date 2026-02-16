@@ -3,7 +3,7 @@ export default {
     heading: "Poďme tvoriť spolu",
     description: "Napíšte nám, odpovieme do jedného pracovného dňa.",
     regionTag: "Klienti v SK / CZ / AT",
-    responseTag: "Odpoveď do 1 pracovného dňa",
+    responseTag: "",
     captchaPrompt: "Rýchla kontrola či ste človek: koľko je",
     captchaPlaceholder: "Sem výsledok",
     captchaError: "Najprv prosím vyriešte rýchlu kontrolu.",

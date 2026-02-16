@@ -3,7 +3,7 @@ export default {
     heading: "Lassen Sie uns gemeinsam bauen",
     description: "Schreiben Sie uns, wir antworten innerhalb eines Werktags.",
     regionTag: "Kunden in SK / CZ / AT",
-    responseTag: "Antwort innerhalb eines Werktags",
+    responseTag: "",
     captchaPrompt: "Kurze Prüfung, ob Sie ein Mensch sind: Wie viel ist",
     captchaPlaceholder: "Ergebnis hier",
     captchaError: "Bitte zuerst die kurze Prüfung lösen.",

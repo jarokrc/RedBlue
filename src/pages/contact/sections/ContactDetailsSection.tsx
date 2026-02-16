@@ -1,6 +1,7 @@
-import ProtectedEmail from "@/components/ProtectedEmail";
 import mapPng from "@/assets/contact/png/mapa.png";
 import mapWebp from "@/assets/contact/webp/mapa.webp";
+import emailPng from "@/assets/contact/png/redblue.png";
+import emailWebp from "@/assets/contact/webp/redblue.webp";
 import type { Translation } from "@/locales/types";
 
 type ContactDetailsSectionProps = {
@@ -23,25 +24,18 @@ const ContactDetailsSection = ({ heroLabel, contactSection }: ContactDetailsSect
           <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 font-semibold text-slate-800">
             {contactSection.regionTag}
           </span>
-          <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 font-semibold text-slate-800">
-            {contactSection.responseTag}
-          </span>
+          {contactSection.responseTag ? (
+            <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 font-semibold text-slate-800">
+              {contactSection.responseTag}
+            </span>
+          ) : null}
         </div>
-        <ProtectedEmail
-          encodedEmail={[105, 110, 102, 111, 64, 114, 101, 100, 98, 108, 117, 101, 46, 115, 107]}
-          texts={{
-            prompt: contactSection.captchaPrompt,
-            placeholder: contactSection.captchaPlaceholder,
-            error: contactSection.captchaError,
-            revealCta: contactSection.revealCta,
-            openingCta: contactSection.openingCta,
-            copy: contactSection.copy,
-            copied: contactSection.copied,
-          }}
-          underline
-          buttonClassName="rounded-lg bg-red-600 px-6 py-3 text-base font-semibold text-white shadow hover:bg-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-700 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:bg-red-600 md:px-7 md:text-lg"
-          className="space-y-3"
-        />
+        <div className="inline-flex items-center rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
+          <picture>
+            <source srcSet={emailWebp} type="image/webp" />
+            <img src={emailPng} alt="Email RedBlue" className="h-8 w-auto" loading="lazy" decoding="async" />
+          </picture>
+        </div>
       </div>
       <div
         className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50/80 shadow-sm"
