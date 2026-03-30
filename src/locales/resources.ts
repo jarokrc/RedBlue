@@ -8,6 +8,7 @@ import skSupport from "./sk/support";
 import skEducation from "./sk/education";
 import skPrivacy from "./sk/privacy";
 import skCookies from "./sk/cookies";
+import skImpressum from "./sk/impressum";
 import skContact from "./sk/contact";
 import skIntro from "./sk/intro";
 import skProposal from "./sk/proposal";
@@ -21,6 +22,7 @@ import enSupport from "./en/support";
 import enEducation from "./en/education";
 import enPrivacy from "./en/privacy";
 import enCookies from "./en/cookies";
+import enImpressum from "./en/impressum";
 import enContact from "./en/contact";
 import enIntro from "./en/intro";
 import enProposal from "./en/proposal";
@@ -34,6 +36,7 @@ import deSupport from "./de/support";
 import deEducation from "./de/education";
 import dePrivacy from "./de/privacy";
 import deCookies from "./de/cookies";
+import deImpressum from "./de/impressum";
 import deContact from "./de/contact";
 import deIntro from "./de/intro";
 import deProposal from "./de/proposal";
@@ -54,6 +57,7 @@ export const translations: Record<string, Translation> = {
     skEducation,
     skPrivacy,
     skCookies,
+    skImpressum,
     skContact,
     skProposal,
   ) as Translation,
@@ -69,6 +73,7 @@ export const translations: Record<string, Translation> = {
     enEducation,
     enPrivacy,
     enCookies,
+    enImpressum,
     enContact,
     enProposal,
   ) as Translation,
@@ -84,6 +89,7 @@ export const translations: Record<string, Translation> = {
     deEducation,
     dePrivacy,
     deCookies,
+    deImpressum,
     deContact,
     deProposal,
   ) as Translation,

@@ -6,7 +6,7 @@ export default {
     ctaPrimary: "Kontakt aufnehmen",
   },
   offerHeading:
-    "Jeder Tag ohne moderne und zuverlässige Website bedeutet verpasste Chancen, unnötig entgehendes Geld und einen Vorsprung der Konkurrenz – deshalb ist der Jahresanfang der beste Moment, in eine Lösung zu investieren, die rund um die Uhr für dich arbeitet.",
+    "Eine veraltete Website und unübersichtliche technische Lösungen bremsen das Wachstum und das Vertrauen der Kunden. RedBlue hilft Unternehmen mit modernen Websites und Audits dabei, Schwachstellen zu erkennen, Chaos zu beseitigen und einen Online-Auftritt aufzubauen, der wirklich funktioniert.",
 
   offerPromo: "",
   services: {

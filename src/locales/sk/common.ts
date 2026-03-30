@@ -17,6 +17,8 @@ export default {
     privacyDescription: "Zásady ochrany osobných údajov a spracovanie dát v RedBlue.",
     cookiesTitle: "Cookies | RedBlue.sk",
     cookiesDescription: "Informácie o cookies a nastaveniach súhlasu na RedBlue.sk.",
+    impressumTitle: "Impressum | RedBlue.sk",
+    impressumDescription: "Právne a kontaktné informácie k prevádzkovateľovi webu RedBlue.sk.",
     contactDescription: "Kontaktujte RedBlue pre weby, marketing, IT podporu alebo konzultácie.",
     proposalTitle: "Návrh stránky | RedBlue.sk",
     proposalDescription: "Interaktívny návrh obsahu stránky s exportom do JSON pre spätnú väzbu.",
@@ -32,6 +34,7 @@ export default {
     education: "Vzdelávanie",
     privacy: "Ochrana osobných údajov (GDPR)",
     cookies: "Cookie politika",
+    impressum: "Impressum",
   },
   contact: {
     title: "Kontakt",

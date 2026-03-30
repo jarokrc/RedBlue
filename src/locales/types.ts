@@ -16,6 +16,8 @@
     privacyDescription: string;
     cookiesTitle: string;
     cookiesDescription: string;
+    impressumTitle: string;
+    impressumDescription: string;
     contactDescription: string;
     proposalTitle: string;
     proposalDescription: string;
@@ -31,6 +33,7 @@
     education: string;
     privacy: string;
     cookies: string;
+    impressum: string;
   };
   intro: {
     brand: string;
@@ -217,13 +220,6 @@
     description: string;
     regionTag: string;
     responseTag: string;
-    captchaPrompt: string;
-    captchaPlaceholder: string;
-    captchaError: string;
-    revealCta: string;
-    openingCta: string;
-    copy: string;
-    copied: string;
     mapAlt: string;
   };
   contact: {
@@ -248,7 +244,6 @@
     contact: {
       heading: string;
       paragraphs: string[];
-      email: string;
     };
   };
   cookies: {
@@ -262,8 +257,22 @@
     contact: {
       heading: string;
       paragraphs: string[];
-      email: string;
     };
+  };
+  impressum: {
+    title: string;
+    intro: string;
+    sections: {
+      heading: string;
+      paragraphs: string[];
+      list?: string[];
+      links?: { label: string; href: string }[];
+    }[];
+    contact: {
+      heading: string;
+      paragraphs: string[];
+    };
+    lastUpdated?: string;
   };
   proposal: {
     title: string;

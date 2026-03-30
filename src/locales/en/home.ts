@@ -6,7 +6,7 @@ export default {
     ctaPrimary: "Let's connect",
   },
   offerHeading:
-    "Every day without a modern and reliable website means missed opportunities, money needlessly slipping away, and a head start for competitors – that's why the start of the year is the best time to invest in a solution that will work for you nonstop.",
+    "An outdated website and unclear technical solutions slow down growth and weaken customer trust. RedBlue helps companies use modern websites and audits to identify weak points, eliminate chaos, and build an online presence that truly works.",
   offerPromo: "",
   services: {
     title: "What I can deliver",

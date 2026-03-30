@@ -12,6 +12,7 @@ const ContactPage = lazy(() => import("@/pages/contact/ContactPage"));
 const NavrhPage = lazy(() => import("@/pages/navrh/NavrhPage"));
 const PrivacyPage = lazy(() => import("@/pages/privacy/PrivacyPage"));
 const CookiesPage = lazy(() => import("@/pages/cookies/CookiesPage"));
+const ImpressumPage = lazy(() => import("@/pages/impressum/ImpressumPage"));
 const NotFoundPage = lazy(() => import("@/pages/not-found/NotFoundPage"));
 
 export type AppRoute = {
@@ -34,5 +35,6 @@ export const appRoutes: AppRoute[] = [
   { path: "/zasady-ochrany-osobnych-udajov", element: <PrivacyPage /> },
   { path: "/privacy", element: <PrivacyPage /> },
   { path: "/cookies", element: <CookiesPage /> },
+  { path: "/impressum", element: <ImpressumPage /> },
   { path: "*", element: <NotFoundPage /> },
 ];

@@ -50,32 +50,35 @@ const pickCountryFromList = (langs: string[]): string => {
 };
 
 export const detectLocale = (): Locale => {
-  // 1) zoznam preferencií prehliadača (poradie)
+  if (typeof window !== "undefined" && typeof localStorage !== "undefined") {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved === "sk" || saved === "en" || saved === "de") return saved;
+  }
+
   if (typeof navigator !== "undefined" && Array.isArray(navigator.languages)) {
     const fromList = pickLocaleFromList(navigator.languages);
     if (fromList) return fromList;
   }
-  // 2) primárny jazyk prehliadača
+
   if (typeof navigator !== "undefined") {
     const primary = mapLangToLocale(navigator.language || "");
     if (primary) return primary;
   }
-  // 3) fallback
+
   return "en";
 };
 
 export const detectCountryCode = (): string => {
-  // 1) primárny jazyk prehliadača
   if (typeof navigator !== "undefined") {
     const primary = pickCountryFromList([navigator.language || ""]);
     if (primary) return primary;
   }
-  // 2) zoznam preferencií
+
   if (typeof navigator !== "undefined" && Array.isArray(navigator.languages)) {
     const fromList = pickCountryFromList(navigator.languages as string[]);
     if (fromList) return fromList;
   }
-  // 3) fallback
+
   return "US";
 };
 

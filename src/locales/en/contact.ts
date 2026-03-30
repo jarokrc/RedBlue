@@ -4,13 +4,6 @@ export default {
     description: "Drop us a line and we'll respond within one business day.",
     regionTag: "Clients in SK / CZ / AT",
     responseTag: "",
-    captchaPrompt: "Quick check if you are human: what's",
-    captchaPlaceholder: "Answer here",
-    captchaError: "Please solve the quick check first.",
-    revealCta: "Write to us",
-    openingCta: "Opening email...",
-    copy: "Copy",
-    copied: "Copied",
     mapAlt: "Map of clients in SK/CZ/AT region",
   },
 };

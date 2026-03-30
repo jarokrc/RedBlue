@@ -6,7 +6,7 @@ export default {
     ctaPrimary: "Spojme sa",
   },
   offerHeading:
-    "Každý deň bez moderného a spoľahlivého webu znamená stratené príležitosti, zbytočne unikajúce peniaze a náskok konkurencie – preto je začiatok roka ten najlepší moment investovať do riešenia, ktoré bude pracovať pre teba nonstop.",
+    "Zastaralý web a neprehľadné technické riešenia brzdia rast aj dôveru zákazníkov. RedBlue pomáha firmám cez moderné weby a audit odhaliť slabé miesta, odstrániť chaos a postaviť online prezentáciu, ktorá reálne funguje.",
 
   offerPromo: "",
   services: {

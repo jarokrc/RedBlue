@@ -223,6 +223,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
             <Link to="/cookies" className="hover:text-blue-700">
               {t.nav.cookies}
             </Link>
+            <Link to="/impressum" className="hover:text-blue-700">
+              {t.nav.impressum || "Impressum"}
+            </Link>
           </div>
         </div>
         </footer>
