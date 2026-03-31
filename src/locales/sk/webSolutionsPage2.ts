@@ -133,15 +133,42 @@ export default {
     techStackIntro:
       "Používame overené nástroje, ktoré nám umožňujú dodať stabilné, rýchle a škálovateľné riešenia.",
     techStacks: [
-      { title: "Frontend", items: ["React", "React Router", "Bootstrap", "Tailwind", "FullCalendar"] },
-      { title: "Backend", items: ["Django", "Django REST Framework", "Node.js", "C#", "Blazor"] },
-      { title: "API & Auth", items: ["REST", "JSON", "JWT", "Integrácie"] },
-      { title: "Dáta", items: ["MySQL", "PostgreSQL", "SQLite", "MongoDB"] },
-      { title: "Automatizácia", items: ["Web scraping", "BeautifulSoup", "Selenium", "Import/Export"] },
-      { title: "E-commerce", items: ["Shopware 6 API", "Produktové dáta", "Import médií", "UUID"] },
-      { title: "Ops/Hosting", items: ["Linux (Debian)", "Docker", "Podman", "Git/GitHub", "SSL/DNS"] },
-      { title: "AI & Media", items: ["LLAMA (offline)", "Sora", "AI marketing", "Branding"] },
-      { title: "IoT/Maker", items: ["ESP32", "Arduino", "Raspberry Pi", "Hlasové LED"] },
-    ],
+  {
+    title: "Frontend",
+    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Bootstrap", "FullCalendar", "i18n / multilingual weby"]
+  },
+  {
+    title: "Backend",
+    items: ["Python", "Django", "Django REST Framework", "C#", "Blazor", ".NET desktop tools"]
+  },
+  {
+    title: "API & Integrations",
+    items: ["REST API", "JSON", "JWT", "3rd-party integrácie", "SMTP / formuláre", "Automatizácia toku dát"]
+  },
+  {
+    title: "Data & Storage",
+    items: ["MySQL", "PostgreSQL", "SQLite", "JSON transformácie", "Spracovanie dát"]
+  },
+  {
+    title: "Automation",
+    items: ["Web scraping", "BeautifulSoup", "Selenium", "ETL / transformácia dát", "Import/Export", "Automatizácia workflow"]
+  },
+  {
+    title: "E-commerce",
+    items: ["Shopware 6", "API integrácie", "Import produktových dát", "Mapovanie kategórií", "Práca s médiami"]
+  },
+  {
+    title: "Ops & Hosting",
+    items: ["Linux (Debian)", "Docker", "Podman", "Vercel", "Git/GitHub", "Deployment", "SSL/DNS", "Domény a hosting"]
+  },
+  {
+    title: "AI & Content",
+    items: ["Offline AI experimentation", "LLM workflow", "AI-assisted content", "Marketing visuals", "Content ideation"]
+  },
+  {
+    title: "IoT / Maker",
+    items: ["ESP32", "Arduino", "Raspberry Pi", "Prototyping"]
+  }
+],
   },
 };
