@@ -22,7 +22,7 @@ const ProjectDetailGallerySection = ({ images, title, imageMetaMap }: ProjectDet
             className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
           >
             <picture>
-              <source srcSet={img.webp} type="image/webp" />
+              {img.webp && <source srcSet={img.webp} type="image/webp" />}
               <img
                 src={img.fallback}
                 alt={title}

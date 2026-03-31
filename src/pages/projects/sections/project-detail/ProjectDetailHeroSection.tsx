@@ -13,7 +13,7 @@ const ProjectDetailHeroSection = ({ image, title, meta }: ProjectDetailHeroSecti
     <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
       <a href={image.fallback} target="_blank" rel="noreferrer">
         <picture>
-          <source srcSet={image.webp} type="image/webp" />
+          {image.webp && <source srcSet={image.webp} type="image/webp" />}
           <img
             src={image.fallback}
             alt={title}

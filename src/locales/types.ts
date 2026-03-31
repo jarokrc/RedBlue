@@ -211,6 +211,8 @@
       tech: string[];
       link?: string;
       linkLabel?: string;
+      githubLink?: string;
+      githubLabel?: string;
       image?: string;
       gallery?: string[];
     }[];

@@ -35,6 +35,21 @@ import miku2 from "@/assets/projects/MiKuBegleitung/webp/2.webp";
 import miku3 from "@/assets/projects/MiKuBegleitung/webp/3.webp";
 import miku4 from "@/assets/projects/MiKuBegleitung/webp/4.webp";
 import miku5 from "@/assets/projects/MiKuBegleitung/webp/5.webp";
+import baffiHero from "@/assets/projects/BaffiSk/webp/hero.webp";
+import baffi1 from "@/assets/projects/BaffiSk/webp/1.webp";
+import baffi2 from "@/assets/projects/BaffiSk/webp/2.webp";
+import baffi3 from "@/assets/projects/BaffiSk/webp/3.webp";
+import baffi4 from "@/assets/projects/BaffiSk/webp/4.webp";
+import auditHero from "@/assets/projects/Audit_web/webp/hero.webp";
+import audit1 from "@/assets/projects/Audit_web/webp/1.webp";
+import audit2 from "@/assets/projects/Audit_web/webp/2.webp";
+import audit3 from "@/assets/projects/Audit_web/webp/3.webp";
+import audit4 from "@/assets/projects/Audit_web/webp/4.webp";
+import regionHero from "@/assets/projects/Region/webp/hero.webp";
+import region1 from "@/assets/projects/Region/webp/1.webp";
+import region2 from "@/assets/projects/Region/webp/2.webp";
+import region3 from "@/assets/projects/Region/webp/3.webp";
+import region4 from "@/assets/projects/Region/webp/4.webp";
 
 import redblueAcademyImgFallback from "@/assets/projects/RedBlueAcademy/png/redblueacademy_sk.png";
 import eduMgmt1Fallback from "@/assets/projects/Sprava_vzdelavacich_institucii/png/picture1.png";
@@ -73,11 +88,26 @@ import miku2Fallback from "@/assets/projects/MiKuBegleitung/png/2.png";
 import miku3Fallback from "@/assets/projects/MiKuBegleitung/png/3.png";
 import miku4Fallback from "@/assets/projects/MiKuBegleitung/png/4.png";
 import miku5Fallback from "@/assets/projects/MiKuBegleitung/png/5.png";
+import baffiHeroFallback from "@/assets/projects/BaffiSk/png/hero.png";
+import baffi1Fallback from "@/assets/projects/BaffiSk/png/1.png";
+import baffi2Fallback from "@/assets/projects/BaffiSk/png/2.png";
+import baffi3Fallback from "@/assets/projects/BaffiSk/png/3.png";
+import baffi4Fallback from "@/assets/projects/BaffiSk/png/4.png";
+import auditHeroFallback from "@/assets/projects/Audit_web/png/hero.png";
+import audit1Fallback from "@/assets/projects/Audit_web/png/1.png";
+import audit2Fallback from "@/assets/projects/Audit_web/png/2.png";
+import audit3Fallback from "@/assets/projects/Audit_web/png/3.png";
+import audit4Fallback from "@/assets/projects/Audit_web/png/4.png";
+import regionHeroFallback from "@/assets/projects/Region/png/hero.png";
+import region1Fallback from "@/assets/projects/Region/png/1.png";
+import region2Fallback from "@/assets/projects/Region/png/2.png";
+import region3Fallback from "@/assets/projects/Region/png/3.png";
+import region4Fallback from "@/assets/projects/Region/png/4.png";
 
 export type ImageMeta = { width: number; height: number };
-export type ProjectImage = { webp: string; fallback: string };
+export type ProjectImage = { webp?: string; fallback: string };
 
-const createProjectImage = (webp: string, fallback: string): ProjectImage => ({ webp, fallback });
+const createProjectImage = (webp: string | undefined, fallback: string): ProjectImage => ({ webp, fallback });
 
 export const imageMap: Record<string, ProjectImage> = {
   "redblue-academy": createProjectImage(redblueAcademyImg, redblueAcademyImgFallback),
@@ -90,6 +120,9 @@ export const imageMap: Record<string, ProjectImage> = {
   "ozonex": createProjectImage(ozoneWeb1, ozoneWeb1Fallback),
   "miku-begleitung": createProjectImage(miku1, miku1Fallback),
   "web-calculator": createProjectImage(webCalc1, webCalc1Fallback),
+  "baffi-sk": createProjectImage(baffiHero, baffiHeroFallback),
+  "web-audit": createProjectImage(auditHero, auditHeroFallback),
+  "region-zahorie": createProjectImage(regionHero, regionHeroFallback),
 };
 
 export const galleryMap: Record<string, ProjectImage[]> = {
@@ -103,6 +136,24 @@ export const galleryMap: Record<string, ProjectImage[]> = {
   "ozonex": [createProjectImage(ozoneWeb1, ozoneWeb1Fallback), createProjectImage(ozoneWeb2, ozoneWeb2Fallback), createProjectImage(ozoneCode1, ozoneCode1Fallback), createProjectImage(ozoneCode2, ozoneCode2Fallback)],
   "miku-begleitung": [createProjectImage(miku2, miku2Fallback), createProjectImage(miku3, miku3Fallback), createProjectImage(miku4, miku4Fallback), createProjectImage(miku5, miku5Fallback)],
   "web-calculator": [createProjectImage(webCalc2, webCalc2Fallback), createProjectImage(webCalc3, webCalc3Fallback), createProjectImage(webCalc4, webCalc4Fallback), createProjectImage(webCalc5, webCalc5Fallback)],
+  "baffi-sk": [
+    createProjectImage(baffi1, baffi1Fallback),
+    createProjectImage(baffi2, baffi2Fallback),
+    createProjectImage(baffi3, baffi3Fallback),
+    createProjectImage(baffi4, baffi4Fallback),
+  ],
+  "web-audit": [
+    createProjectImage(audit1, audit1Fallback),
+    createProjectImage(audit2, audit2Fallback),
+    createProjectImage(audit3, audit3Fallback),
+    createProjectImage(audit4, audit4Fallback),
+  ],
+  "region-zahorie": [
+    createProjectImage(region1, region1Fallback),
+    createProjectImage(region2, region2Fallback),
+    createProjectImage(region3, region3Fallback),
+    createProjectImage(region4, region4Fallback),
+  ],
 };
 
 export const imageMeta: Record<string, ImageMeta> = {
@@ -143,4 +194,19 @@ export const imageMeta: Record<string, ImageMeta> = {
   [miku3Fallback]: { width: 1138, height: 706 },
   [miku4Fallback]: { width: 967, height: 878 },
   [miku5Fallback]: { width: 902, height: 420 },
+  [baffiHeroFallback]: { width: 1221, height: 912 },
+  [baffi1Fallback]: { width: 1087, height: 629 },
+  [baffi2Fallback]: { width: 1237, height: 716 },
+  [baffi3Fallback]: { width: 1243, height: 713 },
+  [baffi4Fallback]: { width: 1489, height: 906 },
+  [auditHeroFallback]: { width: 1221, height: 912 },
+  [audit1Fallback]: { width: 1087, height: 629 },
+  [audit2Fallback]: { width: 1237, height: 716 },
+  [audit3Fallback]: { width: 1243, height: 713 },
+  [audit4Fallback]: { width: 1489, height: 906 },
+  [regionHeroFallback]: { width: 892, height: 649 },
+  [region1Fallback]: { width: 1170, height: 818 },
+  [region2Fallback]: { width: 797, height: 648 },
+  [region3Fallback]: { width: 813, height: 604 },
+  [region4Fallback]: { width: 852, height: 689 },
 };

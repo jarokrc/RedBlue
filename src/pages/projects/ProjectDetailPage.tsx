@@ -44,10 +44,18 @@ const ProjectDetailPage = () => {
       <ProjectDetailContentSection paragraphs={post.content} />
       <ProjectDetailTechSection tech={post.tech} />
       <ProjectDetailGallerySection images={galleryImages} title={post.title} imageMetaMap={imageMeta} />
-      <ProjectDetailExternalLinkSection
-        href={post.link}
-        label={post.linkLabel || t.projects.githubLabel || "GitHub"}
-      />
+      <div className="flex flex-wrap gap-3">
+        <ProjectDetailExternalLinkSection
+          href={post.link}
+          label={post.linkLabel || t.projects.githubLabel || "GitHub"}
+        />
+        {post.githubLink && (
+          <ProjectDetailExternalLinkSection
+            href={post.githubLink}
+            label={post.githubLabel || "GitHub"}
+          />
+        )}
+      </div>
     </div>
   );
 };

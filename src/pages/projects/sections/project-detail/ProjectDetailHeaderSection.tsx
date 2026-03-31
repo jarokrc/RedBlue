@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import type { Translation } from "@/locales/types";
+import { renderProjectRichText } from "@/pages/projects/renderProjectRichText";
 
 type ProjectPost = Translation["projects"]["blog"][number];
 
@@ -17,7 +18,7 @@ const ProjectDetailHeaderSection = ({ post, backLabel }: ProjectDetailHeaderSect
       {post.date} - {post.readTime}
     </p>
     <h1 className="text-3xl font-bold text-slate-900 md:text-4xl">{post.title}</h1>
-    <p className="text-sm text-slate-700 md:text-base">{post.summary}</p>
+    <p className="text-sm text-slate-700 md:text-base">{renderProjectRichText(post.summary)}</p>
   </div>
 );
 
