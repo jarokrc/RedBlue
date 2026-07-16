@@ -4,11 +4,24 @@ export default {
     heading: "RedBlue",
     subheading: "Moderné digitálne riešenia pre firmy, ktoré chcú rásť rýchlejšie a bez kompromisov.",
     ctaPrimary: "Spojme sa",
+    ctaSecondary: "Pozrieť projekty",
+    headingPrefix: "Digitálne riešenia, ktoré",
+    headingAccent: "posúvajú firmy vpred.",
+    imageAlt: "Tím RedBlue v kancelárii",
+    imageCaption: "Technológie s ľudským prístupom",
+    trust: ["Moderné technológie", "Spoľahlivá podpora", "Riešenia na mieru"],
   },
+  offerEyebrow: "Štyri oblasti. Jeden partner.",
+  offerTitle: "Od prvého nápadu po stabilnú prevádzku.",
   offerHeading:
     "Zastaralý web a neprehľadné technické riešenia brzdia rast aj dôveru zákazníkov. RedBlue pomáha firmám cez moderné weby a audit odhaliť slabé miesta, odstrániť chaos a postaviť online prezentáciu, ktorá reálne funguje.",
 
   offerPromo: "",
+  finalCta: {
+    title: "Máte nápad alebo problém, ktorý treba vyriešiť?",
+    description: "Povedzte nám, kam sa chcete dostať. Navrhneme zrozumiteľnú a funkčnú cestu.",
+    cta: "Začať rozhovor",
+  },
   services: {
     title: "Čo viem doruiť",
     subtitle: "Weby, desktop mini-apky, marketing, podpora, vzdelávanie",

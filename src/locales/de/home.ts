@@ -4,11 +4,24 @@ export default {
     heading: "RedBlue",
     subheading: "Moderne digitale Lösungen für Unternehmen, die schneller und ohne Kompromisse wachsen wollen.",
     ctaPrimary: "Kontakt aufnehmen",
+    ctaSecondary: "Projekte ansehen",
+    headingPrefix: "Digitale Lösungen, die",
+    headingAccent: "Unternehmen voranbringen.",
+    imageAlt: "Das RedBlue-Team im Büro",
+    imageCaption: "Technologie mit menschlichem Ansatz",
+    trust: ["Moderne Technologie", "Zuverlässiger Support", "Individuelle Lösungen"],
   },
+  offerEyebrow: "Vier Bereiche. Ein Partner.",
+  offerTitle: "Von der ersten Idee bis zum stabilen Betrieb.",
   offerHeading:
     "Eine veraltete Website und unübersichtliche technische Lösungen bremsen das Wachstum und das Vertrauen der Kunden. RedBlue hilft Unternehmen mit modernen Websites und Audits dabei, Schwachstellen zu erkennen, Chaos zu beseitigen und einen Online-Auftritt aufzubauen, der wirklich funktioniert.",
 
   offerPromo: "",
+  finalCta: {
+    title: "Haben Sie eine Idee oder ein Problem, das gelöst werden muss?",
+    description: "Sagen Sie uns, wohin Sie möchten. Wir entwerfen einen klaren und funktionalen Weg.",
+    cta: "Gespräch beginnen",
+  },
   services: {
     title: "Was ich liefern kann",
     subtitle: "Websites, Desktop-Mini-Apps, Marketing, Support, Weiterbildung",

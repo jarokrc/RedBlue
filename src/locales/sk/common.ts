@@ -1,6 +1,6 @@
 export default {
   meta: {
-    homeTitle: "RedBlue.sk | Web riešenia, TechCare & IT Support, vzdelávanie",
+    homeTitle: "RedBlue.sk | Web riešenia, TechCare, IT Support, vzdelávanie",
     homeDescription:
       "Moderné digitálne riešenia na mieru: weby, e-shopy, desktop nástroje, marketing, IT podpora a tréningy na jednom mieste.",
     projectsTitle: "Projekty a case studies | RedBlue.sk",

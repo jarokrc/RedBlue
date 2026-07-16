@@ -88,6 +88,63 @@ body {
   contain-intrinsic-size: 1px 800px;
 }
 
+.hero-perspective-grid {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.22) 1px, transparent 1px);
+  background-size: 44px 44px;
+  transform: perspective(360px) rotateX(62deg) scale(1.35) translateY(44%);
+  transform-origin: center bottom;
+  mask-image: linear-gradient(to bottom, transparent, black 52%);
+}
+
+.page-orb {
+  border-radius: 9999px;
+  box-shadow: inset -26px -32px 52px rgba(0, 0, 0, 0.3), inset 18px 16px 32px rgba(255, 255, 255, 0.32), 0 34px 70px rgba(15, 23, 42, 0.2);
+  filter: saturate(1.15);
+  opacity: .9;
+  animation: pageOrbFloat 10s ease-in-out infinite;
+}
+
+.page-orb::after {
+  content: "";
+  position: absolute;
+  left: 21%;
+  top: 16%;
+  width: 30%;
+  height: 18%;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.42);
+  filter: blur(9px);
+  transform: rotate(-25deg);
+}
+
+.page-orb-blue { background: radial-gradient(circle at 32% 27%, #b9d9ff, #3b82f6 40%, #173d96 76%); }
+.page-orb-red { background: radial-gradient(circle at 32% 27%, #ffd0d3, #ef4444 40%, #941f29 77%); animation-delay: -4s; }
+.page-orb-small { opacity: .62; animation-delay: -7s; }
+
+.solution-depth-card {
+  transform: perspective(1000px) rotateX(0) rotateY(0) translateZ(0);
+  transform-style: preserve-3d;
+}
+
+.solution-depth-card:hover {
+  transform: perspective(1000px) rotateX(1.5deg) rotateY(-1.5deg) translateY(-7px) translateZ(12px);
+  box-shadow: 0 32px 70px -35px rgba(15, 23, 42, 0.48);
+}
+
+.solution-depth-card > * { position: relative; z-index: 1; transform: translateZ(18px); }
+
+@keyframes pageOrbFloat {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-4deg); }
+  50% { transform: translate3d(0, -18px, 0) rotate(4deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-orb { animation: none; }
+  .solution-depth-card { transition: none; }
+}
+
 .wiggle-cta {
   animation: wigglePulse 7s ease-in-out infinite;
   transform-origin: center;
