@@ -147,7 +147,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   );
 
   return (
-    <div className="flex min-h-screen flex-col bg-slate-50 text-slate-900">
+    <div className="relative isolate flex min-h-screen flex-col overflow-x-hidden bg-slate-50 text-slate-900">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:shadow-lg focus:ring-2 focus:ring-blue-700"
@@ -199,12 +199,25 @@ const Layout = ({ children }: { children: ReactNode }) => {
         </header>
       )}
 
-      <main id="main-content" className={isIntro ? "flex-1" : "mx-auto max-w-6xl flex-1 px-6 py-10"}>
+      {!isIntro && (
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 top-24 z-0" aria-hidden>
+          <span className="layout-orb-left page-orb page-orb-edge page-orb-blue absolute top-[11%]" />
+          <span className="layout-orb-right-tiny page-orb page-orb-red page-orb-faint absolute top-[22%]" />
+          <span className="layout-orb-right page-orb page-orb-edge page-orb-red absolute top-[38%]" />
+          <span className="layout-orb-left-medium page-orb page-orb-blue page-orb-faint absolute top-[49%]" />
+          <span className="layout-orb-left-small page-orb page-orb-blue page-orb-small absolute top-[68%]" />
+          <span className="layout-orb-right-medium page-orb page-orb-red page-orb-faint absolute top-[76%]" />
+          <span className="layout-orb-right-small page-orb page-orb-red page-orb-small absolute top-[87%]" />
+          <span className="layout-orb-left-tiny page-orb page-orb-blue page-orb-faint absolute top-[94%]" />
+        </div>
+      )}
+
+      <main id="main-content" className={isIntro ? "flex-1" : "relative z-10 mx-auto w-full max-w-6xl flex-1 px-6 py-10"}>
         {children}
       </main>
 
       {!isIntro && (
-        <footer className="border-t border-slate-200 bg-white/80 backdrop-blur">
+        <footer className="relative z-10 border-t border-slate-200 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-6 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
           <span className="text-center md:text-left">© {new Date().getFullYear()} RedBlue.sk</span>
           <div className="flex flex-wrap items-center justify-center gap-4 md:justify-end">

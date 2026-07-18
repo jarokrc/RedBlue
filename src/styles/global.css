@@ -103,7 +103,8 @@ body {
   box-shadow: inset -26px -32px 52px rgba(0, 0, 0, 0.3), inset 18px 16px 32px rgba(255, 255, 255, 0.32), 0 34px 70px rgba(15, 23, 42, 0.2);
   filter: saturate(1.15);
   opacity: .9;
-  animation: pageOrbFloat 10s ease-in-out infinite;
+  --orb-drift-x: -1.25rem;
+  animation: pageOrbFloat 26s ease-in-out infinite;
 }
 
 .page-orb::after {
@@ -120,8 +121,80 @@ body {
 }
 
 .page-orb-blue { background: radial-gradient(circle at 32% 27%, #b9d9ff, #3b82f6 40%, #173d96 76%); }
-.page-orb-red { background: radial-gradient(circle at 32% 27%, #ffd0d3, #ef4444 40%, #941f29 77%); animation-delay: -4s; }
-.page-orb-small { opacity: .62; animation-delay: -7s; }
+.page-orb-red { background: radial-gradient(circle at 32% 27%, #ffd0d3, #ef4444 40%, #941f29 77%); --orb-drift-x: 1.25rem; animation-delay: -11s; }
+.page-orb-edge { opacity: .58; }
+.page-orb-small { opacity: .48; animation-duration: 32s; animation-delay: -19s; }
+.page-orb-faint { opacity: .36; }
+
+.layout-orb-left {
+  --orb-size: clamp(10rem, 18vw, 20rem);
+  left: calc(max(1.5rem, calc(50% - 36rem)) - (var(--orb-size) / 2));
+  width: var(--orb-size);
+  height: var(--orb-size);
+}
+
+.layout-orb-right {
+  --orb-size: clamp(12rem, 20vw, 22rem);
+  right: calc(max(1.5rem, calc(50% - 36rem)) - (var(--orb-size) / 2));
+  width: var(--orb-size);
+  height: var(--orb-size);
+}
+
+.layout-orb-left-small {
+  --orb-size: clamp(7rem, 10vw, 9rem);
+  --orb-drift-x: -0.75rem;
+  left: calc(max(1.5rem, calc(50% - 36rem)) - (var(--orb-size) / 2));
+  width: var(--orb-size);
+  height: var(--orb-size);
+}
+
+.layout-orb-right-small {
+  --orb-size: clamp(6rem, 9vw, 8rem);
+  --orb-drift-x: 0.75rem;
+  right: calc(max(1.5rem, calc(50% - 36rem)) - (var(--orb-size) / 2));
+  width: var(--orb-size);
+  height: var(--orb-size);
+}
+
+.layout-orb-left-medium,
+.layout-orb-right-medium {
+  --orb-size: clamp(8rem, 13vw, 13rem);
+  width: var(--orb-size);
+  height: var(--orb-size);
+  animation-duration: 38s;
+}
+
+.layout-orb-left-medium {
+  --orb-drift-x: -1rem;
+  left: calc(max(1.5rem, calc(50% - 36rem)) - (var(--orb-size) / 2));
+  animation-delay: -7s;
+}
+
+.layout-orb-right-medium {
+  --orb-drift-x: 1rem;
+  right: calc(max(1.5rem, calc(50% - 36rem)) - (var(--orb-size) / 2));
+  animation-delay: -27s;
+}
+
+.layout-orb-left-tiny,
+.layout-orb-right-tiny {
+  --orb-size: clamp(4rem, 6vw, 6rem);
+  width: var(--orb-size);
+  height: var(--orb-size);
+  animation-duration: 30s;
+}
+
+.layout-orb-left-tiny {
+  --orb-drift-x: -0.625rem;
+  left: calc(max(1.5rem, calc(50% - 36rem)) - (var(--orb-size) / 2));
+  animation-delay: -22s;
+}
+
+.layout-orb-right-tiny {
+  --orb-drift-x: 0.625rem;
+  right: calc(max(1.5rem, calc(50% - 36rem)) - (var(--orb-size) / 2));
+  animation-delay: -3s;
+}
 
 .solution-depth-card {
   transform: perspective(1000px) rotateX(0) rotateY(0) translateZ(0);
@@ -136,8 +209,10 @@ body {
 .solution-depth-card > * { position: relative; z-index: 1; transform: translateZ(18px); }
 
 @keyframes pageOrbFloat {
-  0%, 100% { transform: translate3d(0, 0, 0) rotate(-4deg); }
-  50% { transform: translate3d(0, -18px, 0) rotate(4deg); }
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-3deg); }
+  28% { transform: translate3d(var(--orb-drift-x), -1.5rem, 0) rotate(2deg); }
+  58% { transform: translate3d(0, 1rem, 0) rotate(4deg); }
+  82% { transform: translate3d(var(--orb-drift-x), -0.5rem, 0) rotate(-1deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {

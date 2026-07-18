@@ -11,12 +11,7 @@ const HomePage = () => {
   const { t } = useI18n();
 
   return (
-    <div className="relative isolate space-y-4 pb-6 md:space-y-6 md:pb-10">
-      <div className="pointer-events-none absolute inset-0 -z-10 hidden lg:block" aria-hidden>
-        <span className="page-orb page-orb-blue absolute -left-36 top-[24rem] h-56 w-56" />
-        <span className="page-orb page-orb-red absolute -right-40 top-[50rem] h-64 w-64" />
-        <span className="page-orb page-orb-blue page-orb-small absolute -left-24 top-[83rem] h-36 w-36" />
-      </div>
+    <div className="space-y-4 pb-6 md:space-y-6 md:pb-10">
       <Seo title={t.meta.homeTitle} description={t.meta.homeDescription} path="/home" />
       <HomeHeroSection />
       <HomeOfferHeadingSection heading={t.offerHeading} eyebrow={t.offerEyebrow} title={t.offerTitle} />
