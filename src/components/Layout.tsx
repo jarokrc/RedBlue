@@ -2,8 +2,8 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState, type ReactNode } from "react";
 import { useI18n } from "@/app/I18nProvider";
 import { detectCountryCode, Locale } from "@/lib/locale";
-import logoWebp from "@/assets/logo/webp/logo.webp";
-import logoPng from "@/assets/logo/png/logo.png";
+// orezany variant loga - zdrojovy subor ma okolo kresby cca 20 % prazdneho miesta
+import logoSvg from "@/assets/logo/svg/redblue-logo-tight.svg";
 import BackToTopButton from "@/components/BackToTopButton";
 
 const localeOptions: { value: Locale; label: string }[] = [
@@ -156,15 +156,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
       </a>
       {!isIntro && (
         <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-            <Link to="/home" className="flex items-center gap-3 md:flex">
-              <picture>
-                <source srcSet={logoWebp} type="image/webp" />
-                <img src={logoPng} alt="RedBlue.sk logo" className="h-9 w-auto" width={90} height={36} />
-              </picture>
-              <span className="hidden text-xs font-semibold uppercase tracking-[0.22em] text-slate-500 md:inline">
-                Think Forward. Think Beyond Code.
-              </span>
+        <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-6 lg:h-20">
+            <Link to="/home" className="flex h-full items-center gap-3">
+              {/* logo vypina celu vysku listy - orezany SVG variant nema prazdny okraj */}
+              <img src={logoSvg} alt="RedBlue.sk logo" className="h-full w-auto shrink-0" width={391} height={80} />
             </Link>
           <div className="hidden items-center gap-4 text-sm font-semibold text-slate-800 md:text-base md:flex">
             <NavLinks />

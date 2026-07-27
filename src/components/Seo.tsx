@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useI18n } from "@/app/I18nProvider";
 import type { Locale } from "@/lib/locale";
-import ogImage from "@/assets/logo/webp/logo.webp";
+import ogImage from "@/assets/logo/png/redblue-logo-1200.png";
 import logo512 from "@/assets/favicon/android-chrome-512x512.png";
 
 const SITE_URL = "https://www.redblue.sk";

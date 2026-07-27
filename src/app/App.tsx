@@ -7,10 +7,10 @@ import { appRoutes } from "@/routes";
 import faviconIco from "@/assets/favicon/favicon.ico";
 import favicon16 from "@/assets/favicon/favicon-16x16.png";
 import favicon32 from "@/assets/favicon/favicon-32x32.png";
+import favicon48 from "@/assets/favicon/favicon-48x48.png";
 import appleTouchIcon from "@/assets/favicon/apple-touch-icon.png";
 import android192 from "@/assets/favicon/android-chrome-192x192.png";
 import android512 from "@/assets/favicon/android-chrome-512x512.png";
-import siteManifest from "@/assets/favicon/site.webmanifest";
 import manrope400LatinExt from "@/assets/fonts/Manrope-400-latin-ext.woff2";
 import manrope700LatinExt from "@/assets/fonts/Manrope-700-latin-ext.woff2";
 import { useI18n } from "./I18nProvider";
@@ -97,13 +97,15 @@ const App = () => {
   return (
     <>
       <Helmet>
+        <link rel="icon" type="image/png" sizes="48x48" href={favicon48} />
         <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
         <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
         <link rel="icon" type="image/x-icon" href={faviconIco} />
+        <meta name="theme-color" content="#1261D8" />
         <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon} />
         <link rel="icon" type="image/png" sizes="192x192" href={android192} />
         <link rel="icon" type="image/png" sizes="512x512" href={android512} />
-        <link rel="manifest" href={siteManifest} />
+        <link rel="manifest" href="/site.webmanifest" />
         <link rel="preload" as="font" href={manrope400LatinExt} type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" as="font" href={manrope700LatinExt} type="font/woff2" crossOrigin="anonymous" />
       </Helmet>
