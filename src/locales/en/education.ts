@@ -24,6 +24,6 @@ export default {
     comms: ["Professional mentor", "Interactive learning (learning by doing)", "Motivating environment and community"],
     academyTitle: "Join our IT community",
     academyText: "Education from the very basics, personal guidance, and a community that supports you at every step.",
-    academyLink: "https://academy.redblue.sk/",
+    academyLink: "https://redblueacademy.com/",
   },
 };

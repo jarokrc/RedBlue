@@ -52,8 +52,22 @@
     heading: string;
     subheading: string;
     ctaPrimary: string;
+    ctaSecondary: string;
+    headingPrefix: string;
+    headingAccent: string;
+    imageAlt: string;
+    imageCaption: string;
+    trust: string[];
   };
+  offerEyebrow: string;
+  offerTitle: string;
   offerHeading: string;
+  offerPromo: string;
+  finalCta: {
+    title: string;
+    description: string;
+    cta: string;
+  };
   services: {
     title: string;
     subtitle: string;

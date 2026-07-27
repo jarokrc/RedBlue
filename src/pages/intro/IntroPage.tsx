@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useI18n } from "@/app/I18nProvider";
 import Seo from "@/components/Seo";
 import introLogoPng from "@/assets/logo/png/redblue-logo-1200.png";
+import introSoundMp3 from "@/assets/intro/mp3/intro-logo.mp3";
 import IntroSplashSection from "@/pages/intro/sections/IntroSplashSection";
 
 /**
@@ -27,6 +28,7 @@ const IntroPage = () => {
       <IntroSplashSection
         bootDone={bootDone}
         introLogoPng={introLogoPng}
+        introSoundMp3={introSoundMp3}
         onComplete={handleBootComplete}
       />
     </div>

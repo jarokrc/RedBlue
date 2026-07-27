@@ -21,7 +21,7 @@ const redblueAcademy: ProjectPost = {
     "Die technische Umsetzung basiert auf einer **Django REST API** mit **MySQL-Datenbank** für zuverlässige Datenoperationen und Skalierbarkeit. Das **React-Frontend** mit modernen Komponenten sorgt für **responsives Design** und ein **flüssiges Nutzererlebnis** auf allen Geräten. Das Ergebnis? Eine **production-ready Plattform**, die Studierende und Lehrkräfte in **einer effizienten Lösung** für modernes Online-Lernen verbindet.",
   ],
   tech: ["Django", "React", "REST API", "MySQL"],
-  link: "https://academy.redblue.sk/",
+  link: "https://redblueacademy.com/",
   linkLabel: "WEB",
   image: "projects/RedBlueAcademy/redblueacademy_sk.png",
   gallery: ["projects/RedBlueAcademy/redblueacademy_sk.png"],

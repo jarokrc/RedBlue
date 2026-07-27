@@ -24,6 +24,6 @@ export default {
     comms: ["Profesionálny lektor", "Interaktívne učenie (Škola hrou)", "Motivujúce prostredie a komunita"],
     academyTitle: "Pridajte sa k našej IT komunite",
     academyText: "Vzdelávanie od úplných základov, osobný prístup a komunita, ktorá vás podporí na každom kroku.",
-    academyLink: "https://academy.redblue.sk/",
+    academyLink: "https://redblueacademy.com/",
   },
 };

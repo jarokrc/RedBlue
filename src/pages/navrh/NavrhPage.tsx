@@ -259,7 +259,7 @@ const normalizeBlock = (raw: any, index: number): Block | null => {
   }
 
   if (type === "features") {
-    const itemsRaw = Array.isArray(raw.items) ? raw.items : [];
+    const itemsRaw: any[] = Array.isArray(raw.items) ? raw.items : [];
     const items = itemsRaw
       .map((item) => ({
         id: typeof item?.id === "string" && item.id ? item.id : createId(),
@@ -281,7 +281,7 @@ const normalizeBlock = (raw: any, index: number): Block | null => {
 
 const normalizeLayout = (raw: any): { meta: LayoutMeta; blocks: Block[] } | null => {
   if (!raw) return null;
-  const blocksRaw = Array.isArray(raw) ? raw : Array.isArray(raw.blocks) ? raw.blocks : null;
+  const blocksRaw: any[] | null = Array.isArray(raw) ? raw : Array.isArray(raw.blocks) ? raw.blocks : null;
   if (!blocksRaw) return null;
 
   const metaRaw = raw.meta ?? {};
@@ -388,18 +388,17 @@ const NavrhPage = () => {
   };
 
   const duplicateBlock = (id: string) => {
-    let cloned: Block | null = null;
+    const source = blocks.find((block) => block.id === id);
+    if (!source) return;
+    const cloned = cloneBlock(source);
     setBlocks((prev) => {
       const idx = prev.findIndex((block) => block.id === id);
       if (idx === -1) return prev;
       const next = [...prev];
-      cloned = cloneBlock(prev[idx]);
       next.splice(idx + 1, 0, cloned);
       return next;
     });
-    if (cloned) {
-      setSelectedBlockId(cloned.id);
-    }
+    setSelectedBlockId(cloned.id);
   };
 
   const handleReset = () => {

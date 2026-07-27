@@ -9,7 +9,7 @@ import EducationAcademySection from "@/pages/education/sections/EducationAcademy
 
 const EducationPage = () => {
   const { t } = useI18n();
-  const academyHref = "https://academy.redblue.sk/";
+  const academyHref = "https://redblueacademy.com/";
 
   const { hero, intro, offeringsTitle, offerings, marketingTitle, marketingText, commsTitle, comms, academyTitle, academyText } = t.educationPage;
 

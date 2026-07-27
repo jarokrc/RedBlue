@@ -162,10 +162,11 @@ const renderLightSplash = (
 type IntroSplashSectionProps = {
   bootDone: boolean;
   introLogoPng: string;
+  introSoundMp3: string;
   onComplete: () => void;
 };
 
-const IntroSplashSection = ({ bootDone, introLogoPng, onComplete }: IntroSplashSectionProps) => {
+const IntroSplashSection = ({ bootDone, introLogoPng, introSoundMp3, onComplete }: IntroSplashSectionProps) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const rafRef = useRef<number | null>(null);
   const finishedRef = useRef(false);
@@ -206,6 +207,27 @@ const IntroSplashSection = ({ bootDone, introLogoPng, onComplete }: IntroSplashS
     const logoImage = new Image();
     logoImage.src = introLogoPng;
 
+    // Zvuk: prehliadace blokuju autoplay so zvukom, kym stranka nema "media engagement".
+    // Skusime prehrat hned, a ak to prehliadac odmietne, spustime pri prvom dotyku/kliku.
+    const sound = new Audio(introSoundMp3);
+    sound.volume = 0.55;
+    sound.preload = "auto";
+    let unlockSound: (() => void) | null = null;
+    const playSound = () => {
+      const attempt = sound.play();
+      if (!attempt) return;
+      attempt.catch(() => {
+        if (unlockSound) return;
+        unlockSound = () => {
+          if (!running) return;
+          sound.play().catch(() => undefined);
+        };
+        window.addEventListener("pointerdown", unlockSound, { once: true });
+        window.addEventListener("keydown", unlockSound, { once: true });
+      });
+    };
+    playSound();
+
     const resize = () => {
       const dpr = window.devicePixelRatio || 1;
       const { clientWidth, clientHeight } = canvas;
@@ -238,8 +260,14 @@ const IntroSplashSection = ({ bootDone, introLogoPng, onComplete }: IntroSplashS
       running = false;
       if (rafRef.current) window.cancelAnimationFrame(rafRef.current);
       window.removeEventListener("resize", resize);
+      if (unlockSound) {
+        window.removeEventListener("pointerdown", unlockSound);
+        window.removeEventListener("keydown", unlockSound);
+      }
+      sound.pause();
+      sound.currentTime = 0;
     };
-  }, [fadeStartMs, introLogoPng, onComplete, totalDurationMs]);
+  }, [fadeStartMs, introLogoPng, introSoundMp3, onComplete, totalDurationMs]);
 
   return (
     <div

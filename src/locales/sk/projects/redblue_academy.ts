@@ -20,7 +20,7 @@ const redblueAcademy: ProjectPost = {
     "Technická realizácia stavia na **Django REST API** s **MySQL databázou** pre spoľahlivé dátové operácie a škálovateľnosť. **React frontend** s modernými komponentami zabezpečuje **responzívny dizajn** a **plynulý používateľský zážitok** na všetkých zariadeniach. Výsledok? **Production-ready platforma**, ktorá spája študentov a lektorov v **jednom efektívnom riešení** pre moderné online vzdelávanie.",
   ],
   tech: ["Django", "React", "REST API", "MySQL"],
-  link: "https://academy.redblue.sk/",
+  link: "https://redblueacademy.com/",
   linkLabel: "WEB",
   githubLink: "https://github.com/SZF-KRC/RedBlue",
   githubLabel: "GITHUB",

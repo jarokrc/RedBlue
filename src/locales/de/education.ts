@@ -24,6 +24,6 @@ export default {
     comms: ["Professioneller Trainer", "Interaktives Lernen (Learning by Doing)", "Motivierendes Umfeld und Community"],
     academyTitle: "Werde Teil unserer IT-Community",
     academyText: "Ausbildung von den Grundlagen an, persönliche Begleitung und eine Community, die dich auf jedem Schritt unterstützt.",
-    academyLink: "https://academy.redblue.sk/",
+    academyLink: "https://redblueacademy.com/",
   },
 };
