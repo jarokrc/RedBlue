@@ -57,7 +57,7 @@ export default {
       cta: "Pozrieť marketing",
     },
     audit: {
-      title: "IT Audit",
+      title: "📋 IT Audit",
       description: "Predíďte pokutám za desaťtisíce eur. IT audit odhalí bezpečnostné aj obsahové a technické slabiny skôr než kontrolór.",
       cta: "Pozrieť audit",
     },

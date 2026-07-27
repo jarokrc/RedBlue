@@ -57,7 +57,7 @@ export default {
       cta: "Marketing ansehen",
     },
     audit: {
-      title: "IT-Audit",
+      title: "📋 IT-Audit",
       description: "Vermeiden Sie Strafen in fünfstelliger Höhe. Ein IT-Audit deckt Sicherheits-, Inhalts- und technische Schwächen auf, bevor der Prüfer sie findet.",
       cta: "Audit ansehen",
     },

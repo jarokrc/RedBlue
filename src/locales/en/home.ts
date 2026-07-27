@@ -56,7 +56,7 @@ export default {
       cta: "See marketing",
     },
     audit: {
-      title: "IT Audit",
+      title: "📋 IT Audit",
       description: "Avoid fines of tens of thousands of euros. An IT audit uncovers security, content, and technical weaknesses before the inspector does.",
       cta: "See audit",
     },

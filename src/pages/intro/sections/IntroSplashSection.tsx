@@ -7,7 +7,7 @@ import symbolDots, {
   SYMBOL_DOT_RADIUS,
   SYMBOL_DOT_SHADOW_OFFSET,
   WORDMARK_CLIP_X,
-} from "@/pages/intro/sections/redblueSymbolDots";
+} from "@/lib/redblueSymbolDots";
 
 /**
  * Intro - ciste biele pozadie.

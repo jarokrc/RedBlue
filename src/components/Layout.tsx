@@ -2,8 +2,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState, type ReactNode } from "react";
 import { useI18n } from "@/app/I18nProvider";
 import { detectCountryCode, Locale } from "@/lib/locale";
-// orezany variant loga - zdrojovy subor ma okolo kresby cca 20 % prazdneho miesta
-import logoSvg from "@/assets/logo/svg/redblue-logo-tight.svg";
+import AnimatedLogo from "@/components/AnimatedLogo";
 import BackToTopButton from "@/components/BackToTopButton";
 
 const localeOptions: { value: Locale; label: string }[] = [
@@ -38,7 +37,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   ];
 
   const servicesLinks = [
-    { to: "/audit", label: t.nav.audit, icon: "§" },
+    { to: "/audit", label: t.nav.audit, icon: "📋" },
     { to: "/web-riesenia", label: t.nav.web, icon: "🌐" },
     { to: "/podpora", label: t.nav.support, icon: "🛠️" },
     { to: "/vzdelavanie", label: t.nav.education, icon: "🎓" },
@@ -158,8 +157,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
         <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-6 lg:h-20">
             <Link to="/home" className="flex h-full items-center gap-3">
-              {/* logo vypina celu vysku listy - orezany SVG variant nema prazdny okraj */}
-              <img src={logoSvg} alt="RedBlue.sk logo" className="h-full w-auto shrink-0" width={391} height={80} />
+              {/* logo vypina celu vysku listy a v slucke sa prekresluje ako v intre */}
+              <AnimatedLogo alt="RedBlue.sk logo" className="h-14 w-[274px] shrink-0 lg:h-20 lg:w-[391px]" />
             </Link>
           <div className="hidden items-center gap-4 text-sm font-semibold text-slate-800 md:text-base md:flex">
             <NavLinks />
